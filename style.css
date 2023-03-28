@@ -1,0 +1,25 @@
+header {
+  background-color: cadetblue;
+}
+
+.header-container {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container nav a {
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+main {
+  height: 80vh;
+  background-color: darkgray;
+}
+
+footer {
+  height: 200px;
+  background-color: darkslategray;
+}
