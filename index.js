@@ -1,12 +1,12 @@
 const openMenu = () => {
   const menuButton = document.querySelector('#menu-container');
-  menuButton.style.display = 'block';
+  menuButton.style.right = '0';
 };
 
 
 const closeMenu = () => {
   const menuButton = document.querySelector('#menu-container');
-  menuButton.style.display = 'none';
+  menuButton.style.right = '-70%';
 }
 
 

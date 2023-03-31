@@ -22,13 +22,13 @@ body {
 }
 
 #menu-container {
-  display: none;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -70%;
   width: 70%;
   background-color: #f8f8ff;
   border-radius: 0 0 0 10px;
+  transition: all 0.5s;
 }
 
 #container-close-menu {
@@ -116,7 +116,6 @@ footer {
   }
 
   #menu-container {
-    display: block;
     position: static;
     width: auto;
     background-color: transparent;
