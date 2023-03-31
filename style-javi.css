@@ -25,7 +25,9 @@
     bottom: 0%;
     width: 100%;
   }
-
+.container{
+  width: 80%;
+}
 .row{
   height: 500px;
 }
