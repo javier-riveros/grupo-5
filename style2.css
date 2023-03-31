@@ -1,6 +1,3 @@
-body {
-    color: #ffffff;
-  }
   main{    
     background-color: #000000;
   }
@@ -24,8 +21,6 @@ body {
     text-decoration: none;
     color: #ffffff;
   }
-
-
   footer {
     height: 100px;
     background-color: #181818;
@@ -33,3 +28,18 @@ body {
     bottom: 0%;
     width: 100%;
   }
+
+.row{
+  height: 500px;
+}
+body{
+  background-color: rgb(4, 5, 45);
+  background-image: url(https://i.gifer.com/4FQ2.gif);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: right;
+}
+#vacio{
+  opacity: .5;
+  color: aliceblue;
+}
