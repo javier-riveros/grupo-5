@@ -24,7 +24,7 @@ body {
 #menu-container {
   position: absolute;
   top: 0;
-  right: -70%;
+  right: -71%;
   width: 70%;
   background-color: #f8f8ff;
   border-radius: 0 0 0 10px;
@@ -44,18 +44,17 @@ nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin-bottom: 0;
-  margin-left: -32px;
+  margin: 0 0 0 -32px;
 }
 
 nav li {
-  text-align: center;
-  padding: 15px 0;
   border-top: 1px solid rgb(197, 196, 196);
 }
 
 nav a {
   display: block;
+  text-align: center;
+  padding: 15px 0;
   text-decoration: none;
   color: #000000;
 }
@@ -108,7 +107,7 @@ footer {
 
 @media screen and (min-width: 576px) {
   .header-container {
-    padding: 0;
+    padding: 0 0 0 18px;
   }
 
   #responsive-menu-button {
@@ -128,15 +127,15 @@ footer {
 
   nav ul {
     flex-direction: row;
-    margin: 0;
   }
 
   nav li {
     border: none;
-    padding: 0 20px;
   }
 
   nav a {
     color: #ffffff;
+    padding: 5px 15px;
+    margin: 0 3px;
   }
 }
