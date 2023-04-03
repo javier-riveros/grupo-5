@@ -93,6 +93,9 @@
     padding-top: 0;
     color: #ffffff;
   }
+  .card-text{
+    overflow: scroll;
+  }
   #menu-container{
     background-color: #181818;
   }
