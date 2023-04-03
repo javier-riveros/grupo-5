@@ -94,7 +94,7 @@
     color: #ffffff;
   }
   .card-text{
-    overflow: scroll;
+    overflow: hidden;
   }
   #menu-container{
     background-color: #181818;
