@@ -1,26 +1,22 @@
 
-const animales= ["cheetah", "Bengal Tiger", "Sea Turtle", "Polar Bear", "Giant Panda Bear", "cheetah"]            // LISTDO DE ANIMALES A MOSTRAR
+const animales= ["Fishing Cat", "Canadian Horse", "Canadian Eskimo Dog", "Brown Hyena", 
+"Bowhead Whale", "Bornean Orang-utan", "Bearded Vulture","Aye Aye", "African Wild Dog", 
+"cheetah", "Tiger Rattlesnake", "Bengal Tiger", "Sea Turtle", "Polar Bear", "Giant Panda Bear", "cheetah"]            // ARRAY CON ANIMALES PARA CONSULTAR A LA API
 
 
-var animalInfoID = setInterval(iterarAnimalInfo, 5000);
-let x=0;
+let animalAlAzar;
+
+var delay=5000;                                                                     // DELAY DE CADA ITERACION   
+var animalInfoID = setInterval(iterarAnimalInfo, delay);        
 
 function iterarAnimalInfo(a) {
 
-
-    console.log("animal " + x + " de " + animales.length);      // MUESTRO EN CONSOLA CUANTOS ANIMALES MOSTRE DE LA LISTA
-
-    if (x < animales.length){
-     
-        showAnimalInfo(x);
-        x++;
-
-
-    }else{
-
-        clearInterval (animalInfoID);
-    }
+    animalAlAzar = Math.floor(Math.random() * animales.length+1);                  // GENERO UN NUMERO DE ANIMAL AL AZAR
+    console.log("animal al azar " + animalAlAzar + " de " + animales.length);      // MUESTRO EN CONSOLA CUANTOS ANIMALES MOSTRE DE LA LISTA, PARA DEBUG DESPUES SE PUEDE SACAR
     
+    showAnimalInfo(animalAlAzar);
+  
+
 }
 
 
@@ -32,7 +28,7 @@ const showAnimalInfo = (i) => {
     let animalCharacteristics;
 
 
-    $.ajax({                                                              // CONSULTO LA API
+    $.ajax({                                                                        // CONSULTO LA API
         method: 'GET',            
         url: 'https://api.api-ninjas.com/v1/animals?name=' + animales[i],
         headers: { 'X-Api-Key': 'Kukygbvlj/Hfvv/HoF4ieQ==7bSQFvdCMcN8qvDz'},
@@ -40,9 +36,9 @@ const showAnimalInfo = (i) => {
         success: function(result) {
            
 
-            animalName=result[0].name;
-            animalLocations=result[0].locations;
-            animalCharacteristics=result[0].characteristics;
+            animalName = result[0].name;                                              // ME GUARDO EL NOMBRE
+            animalLocations = result[0].locations;                                    // ME GUARDO LA ZONA DEL ANIMAL
+            animalCharacteristics = result[0].characteristics;                        // ME GUARDO LAS CARACTERISTICAS
 
 
         }, error: function ajaxError(jqXHR) {
@@ -50,18 +46,15 @@ const showAnimalInfo = (i) => {
         }
     })
 
-setTimeout (() => {                         // espero 2 segundos a tener la respuesta de la API
+setTimeout (() => {                                                                    // ESPERO 2 SEGUNDOS A TENER RESPUESTA DE LA API, SINO PUEDE TIRAR ERROR
  
- //   console.log (animalName + animalLocations + animalCharacteristics.age_of_weaning);
 
-document.getElementById("info").innerHTML = 
-"Animal: " + animalName + "<br>" + 
-"Locacion: " + animalLocations + "<br>" + 
-"Presa: " + animalCharacteristics.prey + "<br>" +
-"Comportamiento de grupo: " + animalCharacteristics.group_behavior + "<br>" +
-"Ejemplares estimados: " + animalCharacteristics.estimated_population_size + "<br>" +
-"Periodo de gestacion: " + animalCharacteristics.gestation_period + "<br>" +    // ESCRIBO EL VALOR EN EL <p>
-"Esperanza de vida: " + animalCharacteristics.lifespan + "<br>";
+    document.getElementById("infoAnimales").innerHTML = 
+    "Solo quedan " + animalCharacteristics.estimated_population_size + " ejemplares de " + 
+    animalName + " en " + animalLocations + " y su esperanza de vida es de " + 
+    animalCharacteristics.lifespan + "<br><br>" + 
+    "<h3> Salvémoslos!!!</h3>";                                                        // ESCRIBO LA INFO QUE QUEREMOS MOSTRAR EN  <p>            
+
 
 }, 2000);
  
