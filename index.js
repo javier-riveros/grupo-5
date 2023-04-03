@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", loadListeners);
-
+/*
 window.addEventListener('resize', () => {
   if(window.innerWidth >= 576) {
     openMenu();
   }else {
     closeMenu();
   }
-});
+});*/
 
 function loadListeners() {
   document.querySelector('#responsive-menu-button').addEventListener('click', openMenu);
