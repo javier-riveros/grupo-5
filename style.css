@@ -101,6 +101,11 @@ nav a {
 footer {
   height: 200px;
   background-color: #18171c;
+  text-decoration-color: hsl(240, 100%, 99%);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0 -32px;
 }
 
 
@@ -138,4 +143,13 @@ footer {
     padding: 5px 15px;
     margin: 0 3px;
   }
+.terminos {
+  display: flex;
+  text-align: center;
+  padding: 15px 0;
+  text-decoration: none;
+  
+}
+.iconos {
+  
 }
