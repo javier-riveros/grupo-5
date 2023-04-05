@@ -42,18 +42,13 @@ body {
   color: #000000;
 }
 
-nav ul {
+header nav ul {
   list-style: none;
-  display: flex;
-  flex-direction: column;
   margin: 0 0 0 -32px;
 }
 
-nav li {
+header nav a {
   border-top: 1px solid rgb(197, 196, 196);
-}
-
-nav a {
   display: block;
   text-align: center;
   padding: 15px 0;
@@ -103,16 +98,35 @@ nav a {
 /* Footer */
 
 footer {
-  height: 200px;
-  background-color: #18171c;
-  text-decoration-color: hsl(240, 100%, 99%);
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 0 0 -32px;
+  padding: 25px 0;
 }
 
+footer ul {
+  list-style: none;
+  margin: 0;
+}
 
+footer ul a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+footer ul a:hover {
+  text-decoration: underline;
+}
+
+.iconos {
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.iconos button {
+  height: 40px;
+}
 
 @media screen and (min-width: 576px) {
 /* Header */
@@ -135,36 +149,15 @@ footer {
     display: none;
   }
 
-  nav ul {
+  header nav ul {
+    display: flex;
     flex-direction: row;
   }
 
-  nav li {
+  header nav a {
     border: none;
-  }
-
-  nav a {
     color: #ffffff;
     padding: 5px 15px;
     margin: 0 3px;
-  }
-
-  /* Footer */
-
-  .terminos {
-    display: flex;
-    text-align: center;
-    padding: 15px 0;
-    text-decoration: none;
-  }
-
-  .iconos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .iconos button {
-    height: 40px;
   }
 }
