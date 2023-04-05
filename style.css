@@ -1,0 +1,163 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Header */
+
+.header-container {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.header-container > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.header-container i {
+  font-size: x-large;
+}
+
+#menu-container {
+  position: absolute;
+  top: 0;
+  right: -71%;
+  width: 70%;
+  background-color: #f8f8ff;
+  border-radius: 0 0 0 10px;
+  transition: all 0.5s;
+}
+
+#container-close-menu {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 30px;
+  color: #000000;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0 0 0 -32px;
+}
+
+header nav a {
+  border-top: 1px solid rgb(197, 196, 196);
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  text-decoration: none;
+  color: #000000;
+}
+
+.presentation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.presentation-container h2 {
+  margin-bottom: 25px;
+}
+
+.presentation-container p {
+  line-height: 2;
+}
+
+#guepardo {
+  width: 100%;
+}
+
+.we-need-you {
+  color: #000000;
+  background-color: #f8f8ff;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.we-need-you p {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.we-need-you button {
+  background-color: #808080;
+  border-radius: 25px;
+  padding: 10px 50px;
+  border: none;
+  color: #ffffff;
+}
+
+/* Footer */
+
+footer {
+  padding: 25px 0;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+}
+
+footer ul a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+footer ul a:hover {
+  text-decoration: underline;
+}
+
+.iconos {
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.iconos button {
+  height: 40px;
+}
+
+@media screen and (min-width: 576px) {
+/* Header */
+  .header-container {
+    padding: 0 0 0 18px;
+  }
+
+  #responsive-menu-button {
+    display: none;
+  }
+
+  #menu-container {
+    position: static;
+    width: auto;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  #container-close-menu {
+    display: none;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  header nav a {
+    border: none;
+    color: #ffffff;
+    padding: 5px 15px;
+    margin: 0 3px;
+  }
+}
