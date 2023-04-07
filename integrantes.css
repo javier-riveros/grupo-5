@@ -116,13 +116,13 @@ body{
   background-color: #1a6a93;
   opacity: .9;
 }
-img{
+#foto__personal{
   height: 260px;
   border-radius: 50%;
   border: 2px solid #000000;
   transition: height .8s, margin-top .8s, margin-bottom .8s;
 }
-img:hover{
+#foto__personal:hover{
   height: 330px;
   margin-top: -20px;
   margin-bottom: -50px;
@@ -159,19 +159,22 @@ img:hover{
   background-image: url(img/background-ge7313af80_1280.jpg);
   text-align: center;
   padding: 50px 0;
+  height: 265px;
 }
-.we-need-you p {
-  margin-top: 30px;
-  margin-bottom: 50px;
+.carousel-item{
+  height: 170px;
 }
-.we-need-you button {
-  background-color: #808080;
-  border-radius: 25px;
-  padding: 10px 50px;
-  border: none;
-  color: #ffffff;
+.carousel-control-prev{
+  left: 10%;
 }
-
+.carousel-control-next{
+  right: 10%;
+}
+.natu{
+  max-width: 882px;
+  height: 100%;
+  margin: auto;
+}
 /*footer*/
 
 footer {
