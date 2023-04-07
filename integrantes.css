@@ -147,6 +147,12 @@ img:hover{
 
 /*pre-footer*/
 
+.modal-content{
+  margin-top: 180px;
+  background-color: #185a7b;
+  color: #f8f8ff;
+}
+
 .we-need-you {
   color: #000000;
   background-color: #f8f8ff;
