@@ -156,7 +156,7 @@ mark{
 
 .modal-content{
   margin-top: 180px;
-  background-color: #1a6a93;
+  background: linear-gradient(180deg,#1d2c48,#1a6a93);
   color: #f8f8ff;
 }
 
