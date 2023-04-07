@@ -115,6 +115,9 @@ body{
   padding: 20px;
   background-color: #1a6a93;
   opacity: .9;
+  box-shadow: #1d2c48 0px 0px 20px;
+  border-image: url(img/background-ge7313af80_1280.jpg) 30 round;
+  border-width: 5px;
 }
 #foto__personal{
   height: 260px;
@@ -131,7 +134,7 @@ body{
   height: 140px;
   padding-top: 0;
   color: #ffffff;
-  text-align: center;
+  text-align: center;  
 }
 .card-body button{
   position: absolute;
@@ -175,6 +178,7 @@ body{
   height: 100%;
   margin: auto;
 }
+
 /*footer*/
 
 footer {
