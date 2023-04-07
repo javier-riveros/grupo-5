@@ -25,7 +25,7 @@ header{
   top: 0;
   right: -70%;
   width: 70%;
-  background-color: #f8f8ff;
+  background-color: #181818;
   border-radius: 0 0 0 10px;
   transition: all 0.5s;
 }
@@ -132,27 +132,31 @@ body{
 }
 .card-body{
   height: 140px;
-  padding-top: 0;
+  padding-top: 1px;
   color: #ffffff;
   text-align: center;  
 }
 .card-body button{
   position: absolute;
   bottom: 2%;
-  left: 41%;
+  left: 40%;
 }
 .card-text{
   overflow: hidden;
 }
-#menu-container{
-  background-color: #181818;
+mark{
+  margin-top: 2px;
+  padding: 0;
+  color: #ffffff;
+  background-color: #1a6a93;
+  opacity: .9;
 }
 
 /*pre-footer*/
 
 .modal-content{
   margin-top: 180px;
-  background-color: #185a7b;
+  background-color: #1a6a93;
   color: #f8f8ff;
 }
 
