@@ -19,7 +19,7 @@ body {
   font-size: 28px;
 }
 
-.header-container i {
+.header-container > i {
   font-size: x-large;
 }
 
@@ -55,6 +55,8 @@ header nav a {
   text-decoration: none;
   color: #000000;
 }
+
+/* Main de Home */
 
 .presentation-container {
   display: flex;
@@ -127,6 +129,135 @@ footer ul a:hover {
 
 .iconos button {
   height: 40px;
+}
+
+/* Donaciones */
+
+.form {
+  background-color: #f8f8ff;
+  color: #000000;
+  border-radius: 25px;
+  border: 1px solid rgb(197, 196, 196);
+  margin: 50px auto;
+  padding: 60px;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 420px;
+  margin: auto;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  counter-reset: step;
+  padding: 25px 0;
+}
+
+.progress-bar::before, .progress {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: rgb(197, 196, 196);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.progress {
+  background-color: #91FBB4;
+  width: 0%;
+}
+
+.progress-step {
+  width: 45px;
+  height: 45px;
+  background-color: rgb(197, 196, 196);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 75%;
+  color: rgb(172, 172, 172);
+}
+
+.progress-step-active {
+  background-color: #91FBB4;
+}
+
+.form-step {
+  display: none;
+  animation: animate 0.5s;
+  transform-origin: top;
+}
+
+.form-step-active {
+  display: block;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1,0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1,1);
+    opacity: 1;
+  }
+}
+
+.input-style {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+.btns-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns-group > button {
+  width: 49%;
+
+}
+
+.button {
+  border: none;
+  background-color: #91FBB4;
+  border-radius: 5px;
+  display: block;
+  height: 40px;
+}
+
+.button:hover {
+  background-color: green;
+}
+
+.width-50 {
+  width: 49%;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 @media screen and (min-width: 576px) {
