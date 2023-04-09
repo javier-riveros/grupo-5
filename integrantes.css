@@ -1,4 +1,7 @@
 /*general*/
+::-webkit-scrollbar{
+  display: none;
+}
 
 /*header*/
 
