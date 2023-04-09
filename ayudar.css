@@ -92,12 +92,14 @@
     /*main*/
 
 		main{		
-			background-image: url(img/natu2.jpg);
-			background-repeat: repeat;
+			background-color: #12360e;
+			background-image: url(img/rio.jpg);
+			background-repeat: no-repeat;
 		}
 		#negro{
 			padding: 40px 0;			
-			background-color: #246683;	
+			background: linear-gradient(180deg,#d6cfcf,#1a6a93);
+			border-top: #181818 solid 5px;	
 		}
     #principal{
         padding-top: 130px;
@@ -126,6 +128,14 @@
         z-index: 1;
         padding-top: 60px;
     }
+		a{
+			text-decoration: none;
+			color: #181818;
+		}
+		#div__aside aside ul li a i{
+			font-size: 20px;
+			color: #181818;
+		}
 		ul{			
   		list-style: none;
 		}
@@ -133,7 +143,7 @@
 			position: relative;
         height: 200px;
         min-width: 240px;
-        background-color: chartreuse;
+        background-color: #c6c2c2;
     }
 		.texto a button{
 			position: absolute;
@@ -186,11 +196,11 @@
 			width: 100%;
     }
 		#voluntad{
-			width: 50%;
+			width: 60%;
 		}
 		.valores button{			
 			margin: 0;
-			width: 48.4%;
+			width: 38.4%;
 			height: 40px;
 			border-radius: 10px;
 		}
