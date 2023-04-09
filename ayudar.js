@@ -25,6 +25,17 @@ const closeMenu = () => {
   menuContainer.style.right = '-71%';
 };
 
+//toas
+
+const toastTrigger = document.getElementById('contribuir')
+const toastLiveExample = document.getElementById('aca__esta')
+
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+  toastTrigger.addEventListener('click', () => {
+    toastBootstrap.show()
+  })
+}
 //formulario
 
 const d100=()=>{
