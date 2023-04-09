@@ -24,3 +24,18 @@ const closeMenu = () => {
   const menuContainer = document.querySelector('#menu-container');
   menuContainer.style.right = '-71%';
 };
+
+//formulario
+
+const d100=()=>{
+  let d1=100;
+  document.getElementById("voluntad").value=d1;
+}
+const d500=()=>{
+  let d1=500;
+  document.getElementById("voluntad").value=d1;
+}
+const d1000=()=>{
+  let d1=1000;
+  document.getElementById("voluntad").value=d1;
+}
