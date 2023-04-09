@@ -225,6 +225,15 @@
 			height: 40px;
 			border-radius: 10px;
 		}
+    .toast-header{
+      background-color: #137727;
+      color: #000000;
+    }
+    #aca__esta{
+      background-color: #7db92f;
+      color: #000000;
+      opacity: .8;
+    }
     /*pre-footer*/
     
     .modal-content{
