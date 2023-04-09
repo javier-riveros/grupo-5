@@ -143,14 +143,27 @@
 			position: relative;
         height: 200px;
         min-width: 240px;
-        background-color: #c6c2c2;
+        background-color: #dedede;
+        border: #6885bb solid 1px;
+        border-radius: 10px 0 0 10px;
+    }
+    .texto0{
+      border-radius: 10px;
+    }
+    .texto2{
+      border-radius: 0 10px 10px 0;
+    }
+    @media screen and (max-width: 479px){
+      .texto{
+        border-radius: 10px;
+      }
     }
 		.texto a button{
 			position: absolute;
 			bottom: 10%;
 			right: 10%;
 			width: 18%;
-			height: 24px;
+			height: 28px;
 			border-radius: 20px;
 		}
     @media screen and (max-width: 688px) {
