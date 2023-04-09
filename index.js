@@ -10,15 +10,19 @@ window.addEventListener('resize', () => {
 function loadListeners() {
   document.querySelector('#responsive-menu-button').addEventListener('click', openMenu);
   document.querySelector('#close-menu-button').addEventListener('click', closeMenu);
-  document.querySelectorAll('.btn-next')
-  .forEach(btn => btn.addEventListener('click', () => { formStepsNum++; updateFormSteps(); }));
-  document.querySelectorAll('.btn-prev')
-  .forEach(btn => btn.addEventListener('click', () => { formStepsNum--; updateFormSteps(); }));
+  document.querySelectorAll('.btn-next').forEach(btn => btn.addEventListener('click', () => { 
+    formStepsNum++; 
+    updateFormSteps(); 
+    updateProgressBar();
+  }));
+  document.querySelectorAll('.btn-prev').forEach(btn => btn.addEventListener('click', () => { 
+    formStepsNum--; 
+    updateFormSteps(); 
+    updateProgressBar();
+  }));
 };
 
 //VARIABLES
-const formSteps = document.querySelectorAll('.form-step');
-const progress = document.querySelector('#progress');
 let formStepsNum = 0;
 
 
@@ -37,6 +41,26 @@ const closeMenu = () => {
 
 
 const updateFormSteps = () => {
-  formSteps.forEach(formStep => {formStep.classList.contains('form-step-active') && formStep.classList.remove('form-step-active');});
+  const formSteps = document.querySelectorAll('.form-step');
+
+  formSteps.forEach(formStep => {
+    formStep.classList.contains('form-step-active') && formStep.classList.remove('form-step-active');
+  });
+
   formSteps[formStepsNum].classList.add('form-step-active');
+};
+
+
+const updateProgressBar = () => {
+  const progressSteps = document.querySelectorAll('.progress-step');
+
+  progressSteps.forEach((progressStep, index) => {
+    if(index <= formStepsNum) {
+      progressStep.classList.add('progress-step-active');
+    }else {
+      progressStep.classList.remove('progress-step-active');
+    };
+  });
+  
+  document.querySelector('#progress').style.width = `${((formStepsNum / (progressSteps.length - 1)) * 100)}%`; 
 };

@@ -139,11 +139,11 @@ footer ul a:hover {
   border-radius: 25px;
   border: 1px solid rgb(197, 196, 196);
   margin: 50px auto;
-  padding: 60px;
+  padding: 60px 50px;
 }
 
 .form-container {
-  width: 90%;
+  width: 100%;
   max-width: 420px;
   margin: auto;
 }
@@ -157,7 +157,7 @@ footer ul a:hover {
   padding: 25px 0;
 }
 
-.progress-bar::before, .progress {
+.progress-bar::before, #progress {
   content: "";
   height: 4px;
   width: 100%;
@@ -167,9 +167,10 @@ footer ul a:hover {
   transform: translateY(-50%);
 }
 
-.progress {
+#progress {
   background-color: #91FBB4;
   width: 0%;
+  transition: 0.3s;
 }
 
 .progress-step {
@@ -197,6 +198,7 @@ footer ul a:hover {
 
 .progress-step-active {
   background-color: #91FBB4;
+  transition: 0.5s;
 }
 
 .form-step {
@@ -291,5 +293,11 @@ footer ul a:hover {
     color: #ffffff;
     padding: 5px 15px;
     margin: 0 3px;
+  }
+
+  /* Donaciones */
+
+  .form {
+    padding: 60px 60px;
   }
 }
