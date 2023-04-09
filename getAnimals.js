@@ -80,12 +80,17 @@ async function showAnimalInfo(i) {
 
 
 
-        document.getElementById("infoAnimales").innerHTML =
+        /*document.getElementById("infoAnimales").innerHTML =
             "Solo quedan " + animalCharacteristicsPopulationES + " ejemplares de " +
             animalNameEs + " en " + animalLocationsEs + " y su esperanza de vida es de " +
             animalCharacteristicsLifeEs + "<br><br>" +
             "<h3> Salvémoslos!!!</h3>";                                                        // ESCRIBO LA INFO QUE QUEREMOS MOSTRAR EN <p> EN ESP 
+        */
 
+        document.getElementById("infoAnimales").innerHTML =
+            "Solo quedan " + animalCharacteristicsPopulationES + " ejemplares de " +
+            animalNameEs + " en " + animalLocationsEs + " y su esperanza de vida es de " +
+            animalCharacteristicsLifeEs;                                                        // ESCRIBO LA INFO QUE QUEREMOS MOSTRAR EN <p> EN ESP 
 
     }, 2000);
 
