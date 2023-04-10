@@ -2,17 +2,23 @@ const animales = ["Fishing Cat", "Canadian Horse", "Canadian Eskimo Dog", "Brown
     "Bowhead Whale", "Bornean Orang-utan", "Bearded Vulture", "Aye Aye", "African Wild Dog",
     "cheetah", "Tiger Rattlesnake", "Bengal Tiger", "Sea Turtle", "Polar Bear", "Giant Panda Bear", "cheetah"]            // ARRAY CON ANIMALES PARA CONSULTAR A LA API
 
+let animalLocations;
+let animalName;
+let animalCharacteristicsPopulation;
+let animalCharacteristicsLife;
 
 let animalNameEs;
 let animalLocationsEs;
 let animalCharacteristicsPopulationES;
 let animalCharacteristicsLifeEs;
 
+
+
 let animalAlAzar;
 
 ///////// GENERO UN INTERVALO QUE INVOCA A LA FUNCION QUE GENERA LOS ANIMALES AL AZAR    /////////////
 var delay = 7000;                                                                     // DELAY DE CADA ITERACION
-var animalInfoID = setInterval(iterarAnimalInfo, delay);
+var animalInfoID = setInterval(iterarAnimalInfo, delay);     
 
 
 
@@ -24,44 +30,6 @@ function iterarAnimalInfo(a) {
     console.log("animal al azar " + animalAlAzar + " de " + animales.length);       // MUESTRO EN CONSOLA CUANTOS ANIMALES MOSTRE DE LA LISTA, PARA DEBUG DESPUES SE PUEDE SACAR
 
     showAnimalInfo(animalAlAzar);                                                   // INVOCO A LA FUNCION ShowAnimalInfo
-
-
-}
-
-
-
-
-//////////// FUNCION QUE EN BASE A LA POSICION DEL ARRAY CONSULTA UN AMINAL EN LA API Y MUESTRA LA INFO EN EL HTML ///////////////
-
-
-async function showAnimalInfo(i) {
-
-    let animalLocations;
-    let animalName;
-    let animalCharacteristicsPopulation;
-    let animalCharacteristicsLife;
-
-
-    const respuestaShowAnimalInfo = await fetch(`https://api.api-ninjas.com/v1/animals?name=${animales[i]}`, {
-        method: "GET",
-        headers: {
-            "Content-type": "application/json; charset=UTF-8",
-            "X-Api-Key": "Kukygbvlj/Hfvv/HoF4ieQ==7bSQFvdCMcN8qvDz"
-        }
-
-    })
-        .then(response => response.json())
-        .then(json => {
-
-
-            animalName = json[0].name;                                                                  // ME GUARDO EL NOMBRE EN INGLES
-            animalLocations = json[0].locations;                                                        // ME GUARDO LA ZONA DEL ANIMAL EN INGLES
-            animalCharacteristicsPopulation = json[0].characteristics.estimated_population_size;        // ME GUARDO LA POBLACION EN INGLES
-            animalCharacteristicsLife = json[0].characteristics.lifespan;                               // ME GUARDO LA ESPERANZA DE VIDA EN INGLES
-
-
-        })
-
 
     setTimeout(() => {                                                       // ESPERO 2 SEGUNDOS A TENER RESPUESTA DE LA API, SINO PUEDE TIRAR ERROR
 
@@ -93,6 +61,35 @@ async function showAnimalInfo(i) {
             animalCharacteristicsLifeEs;                                                        // ESCRIBO LA INFO QUE QUEREMOS MOSTRAR EN <p> EN ESP 
 
     }, 2000);
+}
+
+
+
+
+//////////// FUNCION QUE EN BASE A LA POSICION DEL ARRAY CONSULTA UN AMINAL EN LA API Y MUESTRA LA INFO EN EL HTML ///////////////
+
+
+async function showAnimalInfo(i) {
+
+    const respuestaShowAnimalInfo = await fetch(`https://api.api-ninjas.com/v1/animals?name=${animales[i]}`, {
+        method: "GET",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            "X-Api-Key": "Kukygbvlj/Hfvv/HoF4ieQ==7bSQFvdCMcN8qvDz"
+        }
+
+    })
+        .then(response => response.json())
+        .then(json => {
+
+
+            animalName = json[0].name;                                                                  // ME GUARDO EL NOMBRE EN INGLES
+            animalLocations = json[0].locations;                                                        // ME GUARDO LA ZONA DEL ANIMAL EN INGLES
+            animalCharacteristicsPopulation = json[0].characteristics.estimated_population_size;        // ME GUARDO LA POBLACION EN INGLES
+            animalCharacteristicsLife = json[0].characteristics.lifespan;                               // ME GUARDO LA ESPERANZA DE VIDA EN INGLES
+
+
+        })
 
 }
 
