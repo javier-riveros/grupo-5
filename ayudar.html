@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ayudar</title>
+    <title>Adoptar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="ayudar.css" type="text/css">
@@ -20,7 +20,7 @@
               <nav>
                 <ul>
                   <li><a href="">SECCION1</a></li>
-                  <li><a href="ayudar.html">AYUDAR</a></li>
+                  <li><a href="ayudar.html">ADOPTAR</a></li>
                   <li><a href="integrantes.html" target="_blank" >INTEGRANTES</a></li>
                   <li><a href="">SUMATE</a></li>
                 </ul>
@@ -35,7 +35,7 @@
 						<div id="div__formulario" class="col">
 							<form action="">
 								<div>
-									<h2>Ayudanos</h2>
+									<h2>Adopcion virtual</h2>
 									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, magnam facilis commodi officia omnis quos atque.</p>
 								</div>
 								<div class="valores">
@@ -56,14 +56,14 @@
 									<input id="email" type="email" placeholder="Correo electronico">
 								</div>
 								<div id="montos">
-									<h5>Elija su donacion</h4>
-									<button type="button" class="btn btn-success" onclick="d100()">100$</button>
-									<button type="button" class="btn btn-success" onclick="d500()">500$</button>
-									<button type="button" class="btn btn-success" onclick="d1000()">1000$</button>
+									<h5>Elija el nombre</h4>
+                  <button type="button" class="btn btn btn-success" data-bs-toggle="modal" data-bs-target="#modal__imagen" data-bs-whatever="tigre">Vealo</button>
+                  <button type="button" class="btn btn btn-success" data-bs-toggle="modal" data-bs-target="#modal__descripcion" data-bs-whatever="tigre">Descripcion</button>
+                  <button type="button" class="btn btn btn-success" data-bs-toggle="modal" data-bs-target="#modal__Abitad" data-bs-whatever="tigre">Abitad</button>
 								</div>
 								<div class="valores">
-									<input id="voluntad" type="number" placeholder="Ingrese la cantidad">
-									<button type="button" id="contribuir" class="btn btn-success">Contribuir<i class="bi bi-heart-fill"></i></button>
+									<input id="voluntad" type="text" placeholder="Nombre del adoptado">
+									<button type="button" id="contribuir" class="btn btn-success">Poner nombre<i class="bi bi-heart-fill"></i></button>
 								</div>
 							</form>
 						</div>
@@ -87,6 +87,60 @@
 						</ul>
 					</aside>
 				</div>
+        <div class="modal fade" id="modal__imagen" tabindex="-1" aria-labelledby="modal__titulo" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal__titulo">Ponle un nombre al</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div id="modal__img"></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modal__descripcion" tabindex="-1" aria-labelledby="modal__titulo" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal__titulo">Descripcion</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div id="modal__descripcion">
+                  <h4>Descripcion</h4>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequuntur rem sunt, tempore sed, minima accusantium qui natus aut corporis illum aliquam porro illo eligendi consequatur delectus autem voluptates nisi.</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modal__Abitad" tabindex="-1" aria-labelledby="modal__titulo" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal__titulo">Abitad</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div id="modal__Abitad">
+                  <h4>Abitad</h4>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequuntur rem sunt, tempore sed, minima accusantium qui natus aut corporis illum aliquam porro illo eligendi consequatur delectus autem voluptates nisi.</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
           <div id="aca__esta" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
@@ -95,8 +149,8 @@
               <small>Ahora</small>
               <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
-            <div class="toast-body">
-              Muchas gracias, en breve nos comunicaremos con usted para concretar la donacion.
+            <div id="toas__dato" class="toast-body">
+              Muchas gracias, en breve nos comunicaremos con usted en caso de ganar el concurso para poner un nombre.
             </div>
           </div>
         </div>
