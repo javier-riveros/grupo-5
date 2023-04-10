@@ -87,7 +87,7 @@ const arrayDeAnimales = [
     {
         name: "African Wild Dog",
         continent: "Africa",
-        img: "https://i.imgur.com/rG93WYa.png",
+        img: "https://i.imgur.com/oymH4Vm.png",
         id: 11,
 
     },
