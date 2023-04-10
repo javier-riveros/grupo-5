@@ -32,9 +32,15 @@ const toastLiveExample = document.getElementById('aca__esta')
 
 if (toastTrigger) {
   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-  toastTrigger.addEventListener('click', () => {
+  toastTrigger.addEventListener('click', () => {    
+    agregar();
     toastBootstrap.show()
   })
+}
+const agregar=()=>{
+  let nombre;
+  nombre=document.getElementById("voluntad").value;
+  document.getElementById("toas__dato").innerText="Muchas gracias, en breve nos comunicaremos con usted en caso de ganar el concurso para poner de nombre: "+`${nombre}`+" a su adopcion virtual";
 }
 //formulario
 
