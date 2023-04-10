@@ -2,6 +2,9 @@
 ::-webkit-scrollbar{
     display: none;
   }
+  html{
+    min-width: 280px;
+  }
   /*header*/
   
   .header-container {
@@ -203,11 +206,10 @@
 			display: flex;
 		}  
     #codigo{
-			width: 70px;
+			width: 99%;
     }
     #telefono{
-      margin-left: 5px;
-			width: 175px;
+			width: 100%;
     }
     #email{
 			width: 100%;
@@ -216,7 +218,7 @@
 			width: 60%;
 		}
     .bi-heart-fill{
-      padding-left: 5px;
+      font-size: 10px;
     }
 		.valores button{			
 			margin: 0;
@@ -237,10 +239,17 @@
     /*pre-footer*/
     
     .modal-content{
-      margin-top: 180px;
-      background: linear-gradient(180deg,#1d2c48,#1a6a93);
+      margin-top: 140px;
+      background: linear-gradient(180deg,#12360e,#4f6138);
       color: #f8f8ff;
-    }  
+    }
+    #modal__img{
+      height: 350px;
+      background-image: url(img/guepardo-img.jpeg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
     .we-need-you {
       color: #000000;
       background-color: #f8f8ff;
