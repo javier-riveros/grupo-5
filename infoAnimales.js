@@ -185,19 +185,53 @@ function continentSelected() {
 
         
 
-        setTimeout(() => {                                                       // ESPERO 2 SEGUNDOS A TENER RESPUESTA DE LA API, SINO PUEDE TIRAR ERROR
+        setTimeout(() => {                                                       // ESPERO 2 SEGUNDOS A TENER RESPUESTA DE LA API DE ANIMALES, SINO PUEDE TIRAR ERROR
 
-            console.log(animalCharacteristicsPopulation);
+                            
+                       
             
+            console.log(arrayDeAnimales[animalesEnContinente[i].id].name);
             
-            document.getElementById(`fotoAnimal${i+1}`).src = arrayDeAnimales[animalesEnContinente[i].id].img;
+       
+            
+       
+            translate(arrayDeAnimales[animalesEnContinente[i].id].name).then((value) => { arrayDeAnimales[animalesEnContinente[i].id].nameEs = value; });                 // TRADUZCO AL ESP EL NOMBRE
+            translate(arrayDeAnimales[animalesEnContinente[i].id].continent).then((value) => { arrayDeAnimales[animalesEnContinente[i].id].continentEs = value; });       // TRADUZCO AL ESP EL CONTINENTE
+            translate(arrayDeAnimales[animalesEnContinente[i].id].population).then((value) => { arrayDeAnimales[animalesEnContinente[i].id].populationEs = value; });     // TRADUZCO AL ESP LA POBLACION
+            translate(arrayDeAnimales[animalesEnContinente[i].id].life).then((value) => { arrayDeAnimales[animalesEnContinente[i].id].lifeEs = value; });                 // TRADUZCO AL ESP LA ESPERANZA DE VIDA
+            translate(arrayDeAnimales[animalesEnContinente[i].id].gestacion).then((value) => { arrayDeAnimales[animalesEnContinente[i].id].gestacionEs = value; });                 // TRADUZCO AL ESP LA ESPERANZA DE VIDA
 
 
-            document.getElementById(`nombreAnimal${i+1}`).innerHTML = arrayDeAnimales[animalesEnContinente[i].id].name;
-            
-            document.getElementById(`infoAnimal${i+1}`).innerHTML = "Continente " + arrayDeAnimales[animalesEnContinente[i].id].continent + "<br>" + 
-            "Poblacion estimada " + arrayDeAnimales[animalesEnContinente[i].id].poblacion + "<br>" + 
-            "Esperanza de vida " + arrayDeAnimales[animalesEnContinente[i].id].vida;
+                setTimeout(() => {                                                              // ESPERO 500ms SEGUNDOS A TENER RESPUESTA DE LA API TRANSLATE, SINO PUEDE TIRAR ERROR
+
+                    console.log(arrayDeAnimales[animalesEnContinente[i].id].nameEs);            // VERIFICO QUE ESTE BIEN LA TRADUCCION, DESPUES SE PEUDE SACAR
+                    console.log(arrayDeAnimales[animalesEnContinente[i].id].continentEs);       // VERIFICO QUE ESTE BIEN LA TRADUCCION, DESPUES SE PEUDE SACAR
+                    console.log(arrayDeAnimales[animalesEnContinente[i].id].populationEs);      // VERIFICO QUE ESTE BIEN LA TRADUCCION, DESPUES SE PEUDE SACAR
+                    console.log(arrayDeAnimales[animalesEnContinente[i].id].lifeEs);            // VERIFICO QUE ESTE BIEN LA TRADUCCION, DESPUES SE PEUDE SACAR
+
+
+
+
+                    document.getElementById(`fotoAnimal${i+1}`).src = arrayDeAnimales[animalesEnContinente[i].id].img;
+
+
+                    document.getElementById(`nombreAnimal${i+1}`).innerHTML = arrayDeAnimales[animalesEnContinente[i].id].nameEs;
+                    
+                    document.getElementById(`infoAnimal${i+1}`).innerHTML = "Continente " + arrayDeAnimales[animalesEnContinente[i].id].continentEs + "<br>" + 
+                    "Poblacion estimada " + arrayDeAnimales[animalesEnContinente[i].id].populationEs + "<br>" + 
+                    "Esperanza de vida " + arrayDeAnimales[animalesEnContinente[i].id].lifeEs + "<br>" +
+                    "Periodo de Gestación " + arrayDeAnimales[animalesEnContinente[i].id].gestacionEs;
+
+
+
+
+
+
+                }, 500);
+
+
+
+          
 
         }, 2000);
 
@@ -224,10 +258,37 @@ async function showAnimalInfo(name, id) {
 
             //animalName = json[0].name;                                                                  // ME GUARDO EL NOMBRE EN INGLES
             //animalLocations = json[0].locations;                                                        // ME GUARDO LA ZONA DEL ANIMAL EN INGLES
-            arrayDeAnimales[id].poblacion = json[0].characteristics.estimated_population_size;        // ME GUARDO LA POBLACION EN INGLES
-            arrayDeAnimales[id].vida = json[0].characteristics.lifespan;                               // ME GUARDO LA ESPERANZA DE VIDA EN INGLES
+            arrayDeAnimales[id].population = json[0].characteristics.estimated_population_size;           // ME GUARDO LA POBLACION EN INGLES
+            arrayDeAnimales[id].life = json[0].characteristics.lifespan;                                  // ME GUARDO LA ESPERANZA DE VIDA EN INGLES
+            arrayDeAnimales[id].gestacion = json[0].characteristics.gestation_period;                     // ME GUARDO EL PERIODO DE GESTACION
 
 
         })
+
+}
+
+
+//////////// FUNCION PARA TRADUCIR PALABRAS AL ESPAÑOL CON LA API DE GOOGLE ///////////////
+
+async function translate(palabra) {
+
+    let traduccion;
+
+    const respuestaTranslate = await fetch(`https://translation.googleapis.com/language/translate/v2?q=${palabra}&target=es&format=text&source=en&model=base&key=AIzaSyBDgFQLYvh072-BFnLMmBn4AZ1fhLC384I`, {
+        method: "POST",
+        /*headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            "X-Api-Key": "AIzaSyBDgFQLYvh072-BFnLMmBn4AZ1fhLC384I"
+        }*/
+
+    })
+        .then(response => response.json())
+        .then(json => {
+
+            traduccion = json.data.translations[0].translatedText;    // GUARDO EN TRADUCCION EL STRING EN ESP
+
+        })
+
+    return traduccion;  // DEVUELVO LA TRADUCCION
 
 }
