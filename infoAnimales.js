@@ -199,7 +199,7 @@ function continentSelected() {
             translate(arrayDeAnimales[animalesEnContinente[i].id].continent).then((value) => { arrayDeAnimales[animalesEnContinente[i].id].continentEs = value; });       // TRADUZCO AL ESP EL CONTINENTE
             translate(arrayDeAnimales[animalesEnContinente[i].id].population).then((value) => { arrayDeAnimales[animalesEnContinente[i].id].populationEs = value; });     // TRADUZCO AL ESP LA POBLACION
             translate(arrayDeAnimales[animalesEnContinente[i].id].life).then((value) => { arrayDeAnimales[animalesEnContinente[i].id].lifeEs = value; });                 // TRADUZCO AL ESP LA ESPERANZA DE VIDA
-            translate(arrayDeAnimales[animalesEnContinente[i].id].gestacion).then((value) => { arrayDeAnimales[animalesEnContinente[i].id].gestacionEs = value; });                 // TRADUZCO AL ESP LA ESPERANZA DE VIDA
+            translate(arrayDeAnimales[animalesEnContinente[i].id].gestacion).then((value) => { arrayDeAnimales[animalesEnContinente[i].id].gestacionEs = value; });       // TRADUZCO AL ESP EL PERIODO DE GESTACION
 
 
                 setTimeout(() => {                                                              // ESPERO 500ms SEGUNDOS A TENER RESPUESTA DE LA API TRANSLATE, SINO PUEDE TIRAR ERROR
