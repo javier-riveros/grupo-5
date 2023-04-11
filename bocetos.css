@@ -154,8 +154,6 @@
 	img{
 		width: 100%;
 	}
-	figure{
-	}
 	@media screen and (max-width: 656px) {
 				#div__aside {
 					position: fixed;
@@ -180,25 +178,26 @@
 
 	.we-need-you {
 		color: #000000;
-		background-color: #f8f8ff;
-		background-image: url(img/background-ge7313af80_1280.jpg);
+		background-color: #9f9fa3;
+		background-image: url(img/background-g62873116f_1280.jpg);
+		background-repeat: repeat;
+		background-size: 5%;
 		text-align: center;
-		padding: 50px 0;
+		padding: 10px 0;
 		height: 265px;
+		opacity: .8;
 	}
-	.carousel-item{
-		height: 170px;
+	#div_acordion{
+		max-width: 1222px;
 	}
-	#prev{
-		left: 10%;
+	#acordion__footer{
+		margin: 0px 40px;
+		border: #7d7d7d solid 1px;
+		box-shadow: #4f5052 1px 1px 10px;
+		border-radius: 5px;
 	}
-	#next{
-		right: 10%;
-	}
-	.natu{
-		max-width: 882px;
-		height: 100%;
-		margin: auto;
+	.accordion-body{
+		background-color: #bdd3dd;
 	}
 	
 	/*footer*/
