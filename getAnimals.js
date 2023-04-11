@@ -18,7 +18,7 @@ let animalAlAzar;
 
 ///////// GENERO UN INTERVALO QUE INVOCA A LA FUNCION QUE GENERA LOS ANIMALES AL AZAR    /////////////
 var delay = 7000;                                                                     // DELAY DE CADA ITERACION
-var animalInfoID = setInterval(iterarAnimalInfo, delay);     
+//var animalInfoID = setInterval(iterarAnimalInfo, delay);                          
 
 
 
