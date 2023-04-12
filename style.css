@@ -1,9 +1,33 @@
+:root {
+  --body-color: #000000;
+  --header-color: transparent;
+  --footer-color: #181818;
+  --menu-color: #f8f8ff;
+  --primary-color: #f8f8ff;
+  --body-font-color: #000000;
+  --header-font-color: #ffffff;
+  --menu-font-color: #000000;
+  --footer-font-color: #ffffff;
+  --grey: rgb(197, 196, 196);
+  --button-color: #91FBB4;
+  --button-hover-color: #74cf92;
+  --input-color: #dcdcdc;
+}
+
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--body-color);
+  color: var(--body-font-color);
+  overflow-x: hidden;
 }
 
 /* Header */
+
+header {
+  background-color: var(--header-color);
+  color: var(--header-font-color);
+  /* position: sticky;
+  top: 0; */
+}
 
 .header-container {
   height: 60px;
@@ -15,11 +39,11 @@ body {
 
 .header-container > a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--header-font-color);
   font-size: 28px;
 }
 
-.header-container i {
+.header-container > i {
   font-size: x-large;
 }
 
@@ -28,9 +52,10 @@ body {
   top: 0;
   right: -71%;
   width: 70%;
-  background-color: #f8f8ff;
+  background-color: var(--menu-color);
   border-radius: 0 0 0 10px;
   transition: all 0.5s;
+  z-index: 10;
 }
 
 #container-close-menu {
@@ -39,7 +64,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   padding: 0 30px;
-  color: #000000;
+  color: var(--menu-font-color);
 }
 
 header nav ul {
@@ -48,15 +73,18 @@ header nav ul {
 }
 
 header nav a {
-  border-top: 1px solid rgb(197, 196, 196);
+  border-top: 1px solid var(--grey);
   display: block;
   text-align: center;
   padding: 15px 0;
   text-decoration: none;
-  color: #000000;
+  color: var(--menu-font-color);
 }
 
+/* Main de Home */
+
 .presentation-container {
+  color: var(--footer-font-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,8 +104,7 @@ header nav a {
 }
 
 .we-need-you {
-  color: #000000;
-  background-color: #f8f8ff;
+  background-color: var(--primary-color);
   text-align: center;
   padding: 50px 0;
 }
@@ -88,17 +115,17 @@ header nav a {
 }
 
 .we-need-you button {
-  background-color: #808080;
+  background-color: var(--grey);
   border-radius: 25px;
   padding: 10px 50px;
   border: none;
-  color: #ffffff;
+  color: var(--body-font-color);
 }
 
 /* Footer */
 
 footer {
-  background-color: #181818;
+  background-color: var(--footer-color);
   padding: 25px 0;
 }
 
@@ -108,7 +135,7 @@ footer ul {
 }
 
 footer ul a {
-  color: #ffffff;
+  color: var(--footer-font-color);
   text-decoration: none;
   display: block;
   padding: 5px 0;
@@ -127,6 +154,160 @@ footer ul a:hover {
 
 .iconos button {
   height: 40px;
+}
+
+/* Donaciones */
+
+.form {
+  background-color: var(--primary-color);
+  color: var(--body-font-color);
+  border-radius: 25px;
+  margin: 50px auto;
+  padding: 50px 50px;
+}
+
+.form-container {
+  height: 430px;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  counter-reset: step;
+  padding: 25px 0;
+}
+
+.progress-bar::before, #progress {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: var(--grey);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#progress {
+  background-color: #91FBB4;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 45px;
+  height: 45px;
+  background-color: var(--grey);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 75%;
+  color: var(--grey);
+}
+
+.progress-step-active {
+  background-color: var(--button-color);
+  transition: 0.5s;
+}
+
+.form-step {
+  display: none;
+  animation: animate 0.5s;
+  transform-origin: top;
+}
+
+.form-step-active {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  justify-content: space-between;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1,0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1,1);
+    opacity: 1;
+  }
+}
+
+.input-style {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: var(--input-color);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+.check-container {
+  margin-bottom: 10px;
+  height: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.check-container > label {
+  padding-bottom: 6px;
+  margin-right: 10px;
+}
+
+.check-container > input {
+  height: 15px;
+  width: 15px;
+}
+
+#resumen > p {
+  height: 40px;
+}
+
+.btns-group, .inline-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  border: none;
+  background-color: var(--button-color);
+  border-radius: 5px;
+  display: block;
+  height: 40px;
+}
+
+.button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.width-2 {
+  width: 47%;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 @media screen and (min-width: 576px) {
@@ -157,8 +338,14 @@ footer ul a:hover {
 
   header nav a {
     border: none;
-    color: #ffffff;
+    color: var(--header-font-color);
     padding: 5px 15px;
     margin: 0 3px;
+  }
+
+  /* Donaciones */
+
+  .form {
+    padding: 60px 60px;
   }
 }
