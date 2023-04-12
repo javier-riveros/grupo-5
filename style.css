@@ -84,6 +84,7 @@ header nav a {
 /* Main de Home */
 
 .presentation-container {
+  color: var(--footer-font-color);
   display: flex;
   flex-direction: column;
   justify-content: center;

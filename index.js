@@ -11,9 +11,6 @@ let formStepsNum = 0;
 let cuitNumber = '';
 let cardNumber = '';
 let cardExpiration = '';
-const cardNumberInput = document.querySelector('#card-number');
-const cardExpirationInput = document.querySelector('#card-expiration');
-const cuitNumberInput = document.querySelector('#cuit-number');
 
 
 function loadListeners() {
@@ -31,9 +28,9 @@ function loadListeners() {
     updateProgressBar();
   }));
 
-  cardNumberInput.addEventListener('input', formatCardNumber);
-  cardExpirationInput.addEventListener('input', formatCardExpiration);
-  cuitNumberInput.addEventListener('input', formatCuitNumber);
+  document.querySelector('#card-number')?.addEventListener('input', formatCardNumber);
+  document.querySelector('#card-expiration')?.addEventListener('input', formatCardExpiration);
+  document.querySelector('#cuit-number')?.addEventListener('input', formatCuitNumber);
 };
 
 
@@ -85,6 +82,7 @@ const formatCardNumber = (e) => {
     const separation = cardNumber.match(/.{1,4}/g);
     if(separation) {
       const newValue = separation.join('-');
+      const cardNumberInput = document.querySelector('#card-number');
       cardNumberInput.value = newValue;
     };  
   };
@@ -98,6 +96,7 @@ const formatCardExpiration = (e) => {
     const separation = cardExpiration.match(/.{1,2}/g);
     if(separation) {
       const newValue = separation.join('/');
+      const cardExpirationInput = document.querySelector('#card-expiration');
       cardExpirationInput.value = newValue;
     };
   };
@@ -121,6 +120,8 @@ const formatCuitNumber = (e) => {
         newValue += `${number}`;
       }
     });
+
+    const cuitNumberInput = document.querySelector('#cuit-number');
 
     cuitNumberInput.value = newValue;
   };
