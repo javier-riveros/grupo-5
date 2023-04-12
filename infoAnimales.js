@@ -225,10 +225,17 @@ function continentSelected() {
 
 
         
+    //for (let i = 5; i >= animalesEnContinente.length; i--) {                                  // 
+    //    document.getElementById(`cuadroInformativoId${i+1}`).style.display = 'none';          // OCULTO CUADROS NO NECESARIOS (V)
+    //}                                                                                         //
+    
     for (let i = 5; i >= animalesEnContinente.length; i--) {                                  // 
-        document.getElementById(`cuadroInformativoId${i+1}`).style.display = 'none';          // OCULTO CUADROS NO NECESARIOS
+        $(`#cuadroInformativoId${i+1}`).hide();                                               // OCULTO CUADROS NO NECESARIOS CON JQUERY
     }                                                                                         //
 
+   
+
+    
 
     console.log(animalesEnContinente.length);                                                 // PARA DEBUG, DESPUES SE PUEDE SACAR
 
@@ -241,7 +248,9 @@ function continentSelected() {
 
         showAnimalInfo(animalesEnContinente[i].name, animalesEnContinente[i].id);       // LLAMO A LA FUNCION QUE CONSULTA A LA API, LE PASO NOMBRE DEL ANIMAL Y ID PARA GUARDAR LOS DATOS EN LA POSICION CORRECTA DEL ARRAY
 
-        document.getElementById(`cuadroInformativoId${i+1}`).style.display = 'inline';  //MUESTRO CUADROS NECESARIOS
+        //document.getElementById(`cuadroInformativoId${i+1}`).style.display = 'inline';  //MUESTRO CUADROS NECESARIOS
+        $(`#cuadroInformativoId${i+1}`).show();                                           //MUESTRO CUADROS NECESARIOS CON JQUERY
+
 
         
 
@@ -264,19 +273,24 @@ function continentSelected() {
 
 
                     document.getElementById(`fotoAnimal${i+1}`).src = arrayDeAnimales[animalesEnContinente[i].id].img;                                              // CARGO LA IMAGEN DEL ANIMAL EN EL CUADRO CORRESPONDIENTE
+                    $(`#fotoAnimal${i+1}`).html(arrayDeAnimales[animalesEnContinente[i].id].img);
 
-                    document.getElementById(`nombreAnimal${i+1}`).innerHTML = arrayDeAnimales[animalesEnContinente[i].id].nameEs;                                   // PONGO EL NOMBRE DEL ANIMAL EN EL CUADRO CORRESPONDIENTE
-                    
+                    //document.getElementById(`nombreAnimal${i+1}`).innerHTML = arrayDeAnimales[animalesEnContinente[i].id].nameEs;                                   // PONGO EL NOMBRE DEL ANIMAL EN EL CUADRO CORRESPONDIENTE
+                    $(`#nombreAnimal${i+1}`).html(arrayDeAnimales[animalesEnContinente[i].id].nameEs);                                                                // PONGO EL NOMBRE DEL ANIMAL EN EL CUADRO CORRESPONDIENTE CON JQUERY
+
                     document.getElementById(`infoAnimal${i+1}`).innerHTML = "Continente " + arrayDeAnimales[animalesEnContinente[i].id].continentEs + "<br>" +      //
                     "Poblacion estimada " + arrayDeAnimales[animalesEnContinente[i].id].populationEs + "<br>" +                                                     // ESCRIBO LA INFORMACION RELEVANTE DEL ANIMAL
                     "Esperanza de vida " + arrayDeAnimales[animalesEnContinente[i].id].lifeEs + "<br>" +                                                            //
                     "Periodo de Gestación " + arrayDeAnimales[animalesEnContinente[i].id].gestacionEs;                                                              //
 
 
+                    
+
+
                 }, 500);
 
 
-        }, 2000);
+        }, 2200);
 
     }
 
