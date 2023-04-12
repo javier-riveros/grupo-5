@@ -21,12 +21,12 @@ window.addEventListener('load', () => {
     }], function(errores, evento) {                                                 //
         if (errores.length> 0) {                                                    //
             let mensaje = '';                                                       //
-                                                                                    // NO SE TOCA
-            errores.forEach(function(campo, indice, arreglo) {                      //
+            errores.forEach(function(campo, indice, arreglo) {                      // NO SE TOCA
                 mensaje += `${campo.message} <br/>`;                                //
             });                                                                     //
 
             document.querySelector('#resultadoValidacion').innerHTML = mensaje;     // DONDE VA A ESCRIBIR LOS MENSAJES DE ERROR           }
+        }
     })
     
 });
