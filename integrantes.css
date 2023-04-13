@@ -92,41 +92,69 @@ nav a {
 
 /*main*/
 
-#integrantes{
-  padding: 80px;
+.titulo{
+  text-align: center;
+  margin-top: 15px;
 }
-#integrantes__row{
-  padding-top: 40px;
+.titulo p{
+  color: #f8f8ff;
+  text-shadow: #050344 1px 1px;
+  opacity: .9;
+}
+h1{
+  color: #050344;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+#integrantes{
+  padding-top: 100px;
+  padding-bottom: 0px;
 }
 main{
   position: relative;
 }
 body{    
-  background-color: #0c121c;
-  background-image: url(img/background-gc5ba777b1_1280.jpg);
-  background-size: 50%;
+  background-color: #85adf8;
 }
 .row{
   width: 100%;
   margin: auto;
 }
+#integrantes__row{
+  margin-bottom: 36px;
+}
 .col{
+  padding: 0;
   max-width: 450px;
-  min-width: 300px;
+  min-width: 336px;
+  text-align: -webkit-center;
+}
+.invi{
+  opacity: 0;
+}
+@media screen and (max-width: 767px) {
+  .invi{
+    display: none;
+  }
 }
 .card{
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 70px;
+  max-width: 336px;
   background-color: #1a6a93;
   opacity: .9;
   box-shadow: #1d2c48 0px 0px 20px;
-  border-image: url(img/background-ge7313af80_1280.jpg) 30 round;
   border-width: 5px;
 }
 .foto__persona{
   height: 260px;
   border-radius: 50%;
   border: 2px solid #000000;
-  transition: height .8s, margin-top .8s, margin-bottom .8s;
+  transition: height .8s, margin-top .8s, margin-bottom .8s, transform .8s;
+}
+.foto__persona:active{
+  transform:rotatey(180deg);
 }
 .foto__persona:hover{
   height: 330px;
@@ -140,12 +168,14 @@ body{
   text-align: center;  
 }
 .card-body button{
-  position: absolute;
-  bottom: 2%;
-  left: 40%;
+  background-color: #181818;
+  color: #f8f8ff;
+  opacity: 1;
 }
 .card-text{
   overflow: hidden;
+  min-height: 72px;
+  max-height: 72px;
 }
 mark{
   margin-top: 2px;
@@ -153,35 +183,37 @@ mark{
   color: #ffffff;
   background-color: #1a6a93;
   opacity: .9;
+  font-weight: bold;
+  text-shadow: #050344 1px 1px;
 }
 
 /*pre-footer*/
 
 .modal-content{
   margin-top: 180px;
-  background: linear-gradient(180deg,#1d2c48,#1a6a93);
+  background: linear-gradient(180deg,#1a6a93,#85adf8);
   color: #f8f8ff;
 }
-
+.modal-dialog{
+  width: 350px;
+}
 .we-need-you {
   color: #000000;
-  background-color: #f8f8ff;
-  background-image: url(img/background-ge7313af80_1280.jpg);
+  background-color: #1a6a93;
   text-align: center;
-  padding: 50px 0;
   height: 265px;
 }
 .carousel-item{
-  height: 170px;
+  height: 265px;
 }
 .carousel-control-prev{
-  left: 10%;
+  left: 13%;
 }
 .carousel-control-next{
-  right: 10%;
+  right: 13%;
 }
 .natu{
-  max-width: 882px;
+  max-width: 100%;
   height: 100%;
   margin: auto;
 }
