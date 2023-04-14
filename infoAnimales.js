@@ -1,11 +1,4 @@
-/*const animales = ["Fishing Cat", "Canadian Horse", "Canadian Eskimo Dog", "Brown Hyena",
-    "Bowhead Whale", "Bornean Orang-utan", "Bearded Vulture", "Aye Aye", "African Wild Dog",
-    "cheetah", "Tiger Rattlesnake", "Bengal Tiger", "Sea Turtle", "Polar Bear", "Giant Panda Bear", "cheetah"]            // ARRAY CON ANIMALES PARA CONSULTAR A LA API
-
-*/
-
-
-// SIN IMAGEN https://i.imgur.com/yXer6md.png
+// URL PARA USAR CUANDO NO HAY IMAGEN https://i.imgur.com/yXer6md.png
 
 const arrayDeAnimales = [
     {
@@ -208,10 +201,6 @@ const arrayDeAnimales = [
   ];
   
   
-//let animalLocations;                                                        // NO SE USA MAS, DEJAR POR LAS DUDAS, SACAR MAS ADELANTE
-//let animalName;                                                             // NO SE USA MAS, DEJAR POR LAS DUDAS, SACAR MAS ADELANTE
-//let animalCharacteristicsPopulation;                                        // NO SE USA MAS, DEJAR POR LAS DUDAS, SACAR MAS ADELANTE
-//let animalCharacteristicsLife;                                              // NO SE USA MAS, DEJAR POR LAS DUDAS, SACAR MAS ADELANTE
 
 function continentSelected() {
 
@@ -223,11 +212,6 @@ function continentSelected() {
     );                                                                        //
 
 
-
-        
-    //for (let i = 5; i >= animalesEnContinente.length; i--) {                                  // 
-    //    document.getElementById(`cuadroInformativoId${i+1}`).style.display = 'none';          // OCULTO CUADROS NO NECESARIOS (V)
-    //}                                                                                         //
     
     for (let i = 5; i >= animalesEnContinente.length; i--) {                                  // 
         $(`#cuadroInformativoId${i+1}`).hide();                                               // OCULTO CUADROS NO NECESARIOS CON JQUERY
@@ -248,7 +232,6 @@ function continentSelected() {
 
         showAnimalInfo(animalesEnContinente[i].name, animalesEnContinente[i].id);       // LLAMO A LA FUNCION QUE CONSULTA A LA API, LE PASO NOMBRE DEL ANIMAL Y ID PARA GUARDAR LOS DATOS EN LA POSICION CORRECTA DEL ARRAY
 
-        //document.getElementById(`cuadroInformativoId${i+1}`).style.display = 'inline';  //MUESTRO CUADROS NECESARIOS
         $(`#cuadroInformativoId${i+1}`).show();                                           //MUESTRO CUADROS NECESARIOS CON JQUERY
 
 
@@ -282,9 +265,6 @@ function continentSelected() {
                     "Poblacion estimada " + arrayDeAnimales[animalesEnContinente[i].id].populationEs + "<br>" +                                                     // ESCRIBO LA INFORMACION RELEVANTE DEL ANIMAL
                     "Esperanza de vida " + arrayDeAnimales[animalesEnContinente[i].id].lifeEs + "<br>" +                                                            //
                     "Periodo de Gestación " + arrayDeAnimales[animalesEnContinente[i].id].gestacionEs;                                                              //
-
-
-                    
 
 
                 }, 500);
