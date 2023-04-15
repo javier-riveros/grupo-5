@@ -113,7 +113,9 @@ h1{
 main{
   position: relative;
 }
-body{    
+body{
+  background-image: url(img/fondos/watercolor-g3d28a15c5_1280.jpg);
+  background-size: cover;    
   background-color: #85adf8;
 }
 .row{

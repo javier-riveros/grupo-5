@@ -103,8 +103,10 @@
 			background-color: #12360e;
 		}
 		#negro{
-			padding: 40px 0;			
-			background: linear-gradient(180deg,#bacabe,#31799e);
+			padding: 40px 0;
+      background-image: url(img/fondos/forest-ge636ca080_1280.jpg);
+      background-size: cover;			
+			/*background: linear-gradient(180deg,#bacabe,#31799e);*/
 			border-top: #181818 solid 5px;	
 		}
     #principal{
