@@ -8,9 +8,6 @@ window.addEventListener('resize', () => {
 
 //VARIABLES
 let formStepsNum = 0;
-let cuitNumber = '';
-let cardNumber = '';
-let cardExpiration = '';
 
 
 function loadListeners() {
@@ -77,55 +74,57 @@ const updateProgressBar = () => {
 const formatCardNumber = (e) => {
   const value = e.target.value.replace(/-/g, '');
 
-  if(value !== cardNumber) {
-    cardNumber = value;
-    const separation = cardNumber.match(/.{1,4}/g);
-    if(separation) {
-      const newValue = separation.join('-');
-      const cardNumberInput = document.querySelector('#card-number');
-      cardNumberInput.value = newValue;
-    };  
+  let newValue = '';
+
+  for (let i = 0; i < value.length; i++) {
+    if(i === 4 || i === 8 || i === 12) {
+      newValue += '-';
+    };
+
+    newValue += value[i];
   };
+
+  const cardNumberInput = document.querySelector('#card-number');
+  cardNumberInput.value = newValue;
 };
+
 
 const formatCardExpiration = (e) => {
   const value = e.target.value.replace(/\//g, '');
 
-  if(value !== cardExpiration) {
-    cardExpiration = value;
-    const separation = cardExpiration.match(/.{1,2}/g);
-    if(separation) {
-      const newValue = separation.join('/');
-      const cardExpirationInput = document.querySelector('#card-expiration');
-      cardExpirationInput.value = newValue;
+  let newValue = '';
+
+  for (let i = 0; i < value.length; i++) {
+    if(i === 2) {
+      newValue += '/';
     };
+
+    newValue += value[i];
   };
+
+  const cardExpirationInput = document.querySelector('#card-expiration');
+  cardExpirationInput.value = newValue;
 };
+
 
 const formatCuitNumber = (e) => {
   const value = e.target.value.replace(/-/g, '');
 
-  if(value !== cuitNumber) {
-    cuitNumber = value;
-    const arrayNumbers = cuitNumber.split('');
+  let newValue = '';
 
-    let newValue = '';
-   
-    arrayNumbers.forEach((number, index) => {
-      if(index === 2) {
-        newValue += `-${number}`;
-      }if(index === 10) {
-        newValue += `-${number}`;
-      }else {
-        newValue += `${number}`;
-      }
-    });
+  for (let i = 0; i < value.length; i++) {
+    if(i === 2 || i === 10) {
+      newValue += '-';
+    };
 
-    const cuitNumberInput = document.querySelector('#cuit-number');
-
-    cuitNumberInput.value = newValue;
+    newValue += value[i];
   };
+
+  const cuitNumberInput = document.querySelector('#cuit-number');
+
+  cuitNumberInput.value = newValue;
 };
+
 
 const cargarResumen = (index) => {
   if(index === 2) {
