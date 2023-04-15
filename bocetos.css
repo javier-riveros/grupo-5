@@ -2,7 +2,36 @@
 ::-webkit-scrollbar{
 	display: none;
 }
-
+#negro{
+	background-color: #dedede;
+}
+.boceto__img{
+	background-color: #dedede;
+}
+.texto h1{
+	font-size: 2rem;
+	font-weight: bold;
+}
+.texto h2{
+	font-size: 2rem;
+	font-weight: bold;
+}
+.texto p{
+	font-size: 1.2rem;
+}
+h4{
+	font-weight: bold;
+}
+.explicacion p{
+	font-size: 1.2rem;
+}
+mark{
+	color: #000000;
+	font-weight: bold;
+}
+.aside__ico i{
+	color: #000000;
+}
 /*header*/
 
 .header-container {
@@ -94,33 +123,34 @@
 
 	#negro{
 		padding: 40px 0;
-		background-image: url(img/fondos/sunbeams-gb051a7a5a_1280.jpg);
-    background-size: cover;				
+		/*background-image: url(img/fondos/sunbeams-gb051a7a5a_1280.jpg);
+    background-size: cover;*/				
 		/*background: linear-gradient(180deg,#d6cfcf,#93a6af);*/
 	}
-	.row{
+	.negro__row{
 			margin-top: 20px;
 			margin-bottom: 20px;
 	}
 	#div__aside{
 			padding-top: 60px;
 	}
+	#div__aside aside ul li a i:hover{
+		color: #24744d;
+	  }
 	a{
 		text-decoration: none;
-		color: #181818;
 	}
 	#div__aside aside ul li a i{
 		font-size: 20px;
-		color: #181818;
 	}
 	ul{			
 		list-style: none;
 	}	
 	.cajon {
   	position: fixed;
-		width: 135px;
+		width: 155px;
 		top: 0%;
-		right: 2%;
+		right: 1%;
 		border-left: 10px;
 		border-right: 10px;
   	z-index: 1;
@@ -128,7 +158,7 @@
 	}
 	.cajoncaja {
   	padding: 10px;
-		width: 150px;
+		width: 155px;
 		height: 350px;
 	}
 	mark{
@@ -143,13 +173,12 @@
 		margin-top: 40px;
 		margin-bottom: 20px;
 		min-width: 240px;
-		background-color: #dedede;
 		border-radius: 10px;
 	}
 	.boceto__img{	
 		min-width: 175px;
 		position: relative;
-		background-color: #dedede;
+		/*background-color: #dedede;*/
 		border: #4f5052 solid 1px;
 		box-shadow: #181818 5px 10px 15px;
 		margin: 20px;
@@ -158,6 +187,7 @@
 		padding-top: 10px;
 		padding-bottom: 15px;
 		transition: transform 1s;
+		transition-delay: .1s;
 	}
 	.boceto__img:active{
 		transform: scale(1.5,1.5);
@@ -228,17 +258,12 @@
 		height: 100%;
 		margin: auto;
 	}
-
+	
 	/*footer*/
-
+	
 	footer {
 		background-color: #181818;
-		width: 100%;
-		bottom: 0%;
-	}
-	#footer__bajo{
-			margin: 0;
-		padding: 25px 0px;
+		padding: 25px 0;
 	}
 	footer ul {
 		list-style: none;

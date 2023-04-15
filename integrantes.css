@@ -2,7 +2,31 @@
 ::-webkit-scrollbar{
   display: none;
 }
-
+body{   
+  background-color: #85adf8;
+}
+h1{
+  color: #050344;
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 3rem;
+}
+.titulo p{
+  color: #f8f8ff;
+  text-shadow: #050344 1px 1px;
+  font-size: 1.5rem;
+  opacity: .9;
+}
+.card{
+  background-color: #1a6a93;
+}
+.card-title{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.card-text{
+  font-size: 1.1rem;
+}
 /*header*/
 
 .header-container {
@@ -96,16 +120,6 @@ nav a {
   text-align: center;
   margin-top: 15px;
 }
-.titulo p{
-  color: #f8f8ff;
-  text-shadow: #050344 1px 1px;
-  opacity: .9;
-}
-h1{
-  color: #050344;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
 #integrantes{
   padding-top: 100px;
   padding-bottom: 0px;
@@ -113,12 +127,7 @@ h1{
 main{
   position: relative;
 }
-body{
-  background-image: url(img/fondos/watercolor-g3d28a15c5_1280.jpg);
-  background-size: cover;    
-  background-color: #85adf8;
-}
-.row{
+.negro__row{
   width: 100%;
   margin: auto;
 }
@@ -144,7 +153,7 @@ body{
   padding-bottom: 20px;
   margin-bottom: 70px;
   max-width: 336px;
-  background-color: #1a6a93;
+  /*background-color: #1a6a93;*/
   opacity: .9;
   box-shadow: #1d2c48 0px 0px 20px;
   border-width: 5px;
@@ -176,8 +185,8 @@ body{
 }
 .card-text{
   overflow: hidden;
-  min-height: 72px;
-  max-height: 72px;
+  min-height: 82px;
+  max-height: 82px;
 }
 mark{
   margin-top: 2px;

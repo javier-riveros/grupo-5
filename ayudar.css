@@ -5,6 +5,25 @@
   html{
     min-width: 280px;
   }
+  h2{
+    color: #12360e;  
+    font-size: 3rem;
+  }
+  h3{
+    color: #12360e;
+    font-size: 2.5rem;  
+  }
+  .parrafo{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: .9;
+  }
+  #negro{
+    background-color: #93b4af;
+  }
+
   /*header*/
   
   .header-container {
@@ -99,14 +118,12 @@
     
     /*main*/
 
-		main{		
-			background-color: #12360e;
-		}
 		#negro{
 			padding: 40px 0;
-      background-image: url(img/fondos/forest-ge636ca080_1280.jpg);
-      background-size: cover;			
+      /*background-image: url(img/fondos/forest-ge636ca080_1280.jpg);
+      background-size: cover;*/
 			/*background: linear-gradient(180deg,#bacabe,#31799e);*/
+      /*background-color: #93b4af;*/
 			border-top: #181818 solid 5px;	
 		}
     #principal{
@@ -121,9 +138,12 @@
       background-position: 0% 5%;
 
     }
-    .row{
+    .negro__row{
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 100px;
+    }
+    #linea{
+      margin-bottom: 0;
     }
     #div__formulario{
         max-width: 350px;        
@@ -164,32 +184,31 @@
       position: absolute;
       right: 5px;
     }
-    .linea{
-      margin-top: 50px;
-    }
     .texto{
 			position: relative;
-        height: 280px;
-        min-width: 280px;
-        background-color: #dedede;
+        height: 430px;
+        min-width: 430px;
         border-radius: 10px 0 0 10px;
         padding: 5px;
         text-align: center;
+        display: flex;
+    }
+    .texto div{
+      margin: auto;
     }
     .derecha{
       text-align: center;
       padding: 5px;
     }
     .texto img{
-      width: 270px;
-      height: 270px;
+      border-radius: 5px;
+      width: 420px;
+      height: 420px;
     }
     .texto0{
       text-align: center;
       padding: 10px;
-      border-radius: 10px;
-      height: 170px;
-      background-color: #dedede;      
+      border-radius: 10px;   
       min-width: 280px;
     }
     .texto2{
@@ -279,6 +298,7 @@
       color: #000000;
       opacity: .8;
     }
+    
     /*pre-footer*/
     
     .modal-content{
@@ -295,21 +315,21 @@
     }
     .we-need-you {
       color: #000000;
-      background-color: #f8f8ff;
+      background-color: #1a6a93;
       text-align: center;
       height: 265px;
     }
     .carousel-item{
       height: 265px;
     }
-    #prev{
+    .carousel-control-prev{
       left: 13%;
     }
-    #next{
+    .carousel-control-next{
       right: 13%;
     }
     .natu{
-      width: 100%;
+      max-width: 100%;
       height: 100%;
       margin: auto;
     }
@@ -318,12 +338,7 @@
     
     footer {
       background-color: #181818;
-      width: 100%;
-      bottom: 0%;
-    }
-    #footer__bajo{
-        margin: 0;
-      padding: 25px 0px;
+      padding: 25px 0;
     }
     footer ul {
       list-style: none;
