@@ -1,0 +1,321 @@
+body {
+  background: #a8ff78;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #5bbbab, #5bbbab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #5bbbab, #5bbbab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  color: #000000; 
+  font-size: 18px;
+}
+
+/* Header */
+
+/*general*/
+::-webkit-scrollbar{
+  display: none;
+}
+
+/*header*/
+
+.logo{
+  width: 150px;
+  height: 50px;
+  margin-top: 0.1%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+.header-container > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+h1{
+  margin-top: -36%;
+  text-align: center;
+}
+
+header{
+  background-color: #2C3639;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+#menu-container {
+  position: absolute;
+  top: 0;
+  right: -70%;
+  width: 70%;
+  background-color: #181818;
+  border-radius: 0 0 0 10px;
+  transition: all 0.5s;
+}
+#container-close-menu {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 30px;
+  color: #000000;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  margin-left: -22px;
+}
+nav li {
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid rgb(197, 196, 196);
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+}
+.wave{
+  margin-top: -140px;
+  width: 100%;
+ 
+}
+
+
+@media screen and (min-width: 800px) {
+    nav ul {
+    flex-direction: row;
+    margin: 0;
+  }
+  h1{
+    margin-top: -36%;
+    text-align: center;
+  }
+  nav li {
+    border: none;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .header-container {
+    padding: 0;
+  }
+  #responsive-menu-button {
+    display: none;
+  }
+  #menu-container {
+    position: static;
+    width: auto;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  #container-close-menu {
+    display: none;
+  }
+  nav ul {
+    flex-direction: row;
+    margin: 0;
+  }
+  nav li {
+    border: none;
+    padding: 0 20px;
+  }
+  nav a {
+    color: #ffffff;
+  }
+}
+.header-button{
+  color: #481d3b;
+  font-size: 32px;
+}
+
+h1{
+  margin-top: 6%;
+  text-align: center;
+}
+
+.header-container {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+  background: #2C3639 ;
+}
+
+.header-container > a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 28px;
+}
+
+.header-container i {
+  font-size: x-large;
+}
+
+#menu-container {
+  position: absolute;
+  top: 0;
+  right: -71%;
+  width: 70%;
+  background-color: #ffffff;
+  border-radius: 0 0 0 10px;
+  transition: all 0.5s;
+}
+
+#container-close-menu {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 30px;
+  color: #ffffff;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0 0 0 -32px;
+}
+
+header nav a {
+  border-top: 1px solid rgb(197, 196, 196);
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  text-decoration: none;
+  color: #000000;
+} */
+
+.presentation-container {
+  margin-top: -80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.presentation-container h2 {
+  margin-bottom: 25px;
+}
+
+.presentation-container p {
+  line-height: 2;
+}
+
+.wave{
+  margin-top: -65px;
+  width: 100%;
+ 
+}
+.we-need-you {
+  color: #382929;
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.we-need-you p {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* Moisés cambia color de boton a azul */
+
+.we-need-you button {
+  background-color: #1075f8;
+  border-radius: 25px;
+  padding: 10px 50px;
+  border: none;
+  color: #ffffff;
+}
+
+.fa-otter{
+  font-size: 40px;
+  color: #000000;
+}
+.fa-solid{
+  font-size: 40px;
+  color: #000000;
+}
+
+.carousel__elemento p{
+  text-align: center;
+  font-weight: 700;
+}
+/* Footer */
+
+footer {
+  background-color: #2C3639;
+  padding: 25px 0;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+}
+
+footer ul a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+footer ul a:hover {
+  text-decoration: underline;
+}
+
+.iconos {
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.iconos button {
+  height: 40px;
+}
+
+@media screen and (min-width: 576px) {
+/* Header */
+  .header-container {
+    padding: 0 0 0 18px;
+  }
+
+  #responsive-menu-button {
+    display: none;
+  }
+
+  #menu-container {
+    position: static;
+    width: auto;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  #container-close-menu {
+    display: none;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  header nav a {
+    border: none;
+    color: #ffffff;
+    padding: 5px 15px;
+    margin: 0 3px;
+  }
+}
+
+.wave{
+
+}
