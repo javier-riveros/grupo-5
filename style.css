@@ -262,6 +262,25 @@ footer ul a:hover {
   height: 40px;
 }
 
+.input-error {
+  border: 2px solid #ff0000;
+}
+
+.relative {
+  position: relative;
+}
+
+.error-message {
+  background-color: #ff0000; 
+  color: white; 
+  position: absolute; 
+  top: -12px; 
+  font-size: small; 
+  border-radius: 5px; 
+  margin-left: 5px; 
+  padding: 0 5px;
+}
+
 .check-container {
   margin-bottom: 10px;
   height: 40px;

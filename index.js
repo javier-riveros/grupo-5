@@ -14,10 +14,7 @@ function loadListeners() {
   document.querySelector('#responsive-menu-button').addEventListener('click', openMenu);
   document.querySelector('#close-menu-button').addEventListener('click', closeMenu);
   document.querySelectorAll('.btn-next').forEach((btn, index) => btn.addEventListener('click', () => { 
-    formStepsNum++; 
-    updateFormSteps(); 
-    updateProgressBar();
-    cargarResumen(index);
+    handleNextButton(index);
   }));
   document.querySelectorAll('.btn-prev').forEach(btn => btn.addEventListener('click', () => { 
     formStepsNum--; 
@@ -25,9 +22,10 @@ function loadListeners() {
     updateProgressBar();
   }));
 
-  document.querySelector('#card-number')?.addEventListener('input', formatCardNumber);
-  document.querySelector('#card-expiration')?.addEventListener('input', formatCardExpiration);
-  document.querySelector('#cuit-number')?.addEventListener('input', formatCuitNumber);
+  document.querySelector('#cardNumber')?.addEventListener('input', formatCardNumber);
+  document.querySelector('#expiration')?.addEventListener('input', formatCardExpiration);
+  document.querySelector('#cuit')?.addEventListener('input', formatCuitNumber);
+  //document.querySelector('#donation-form')?.addEventListener('submit', submitDonation);
 };
 
 
@@ -84,7 +82,7 @@ const formatCardNumber = (e) => {
     newValue += value[i];
   };
 
-  const cardNumberInput = document.querySelector('#card-number');
+  const cardNumberInput = document.querySelector('#cardNumber');
   cardNumberInput.value = newValue;
 };
 
@@ -102,7 +100,7 @@ const formatCardExpiration = (e) => {
     newValue += value[i];
   };
 
-  const cardExpirationInput = document.querySelector('#card-expiration');
+  const cardExpirationInput = document.querySelector('#expiration');
   cardExpirationInput.value = newValue;
 };
 
@@ -120,27 +118,161 @@ const formatCuitNumber = (e) => {
     newValue += value[i];
   };
 
-  const cuitNumberInput = document.querySelector('#cuit-number');
+  const cuitNumberInput = document.querySelector('#cuit');
 
   cuitNumberInput.value = newValue;
 };
 
 
-const cargarResumen = (index) => {
+const handleNextButton = (index) => {
+
+  if(index === 0) {
+    const validat = new FormValidator('donation-form', [{ 
+      name: 'nombre',    
+      display: 'Nombre', 
+      rules: 'required|alpha'       
+    }, {
+      name: 'apellido',
+      display: 'Apellido',
+      rules: 'required|alpha'
+    }, {
+      name: 'cuit',
+      display: 'CUIT',
+      rules: 'required|exact_length[13]|alpha_dash'
+    }, {
+      name: 'email',
+      display: 'Email',
+      rules: 'required|valid_email'
+    }], function(errors, event) {
+      event.preventDefault();
+
+      document.querySelectorAll('.input-error').forEach(node => {
+        node.classList.remove('input-error');
+        document.querySelector(`#error-${node.id}`).innerText = '';
+      });
+      
+      if (errors.length> 0) {
+        errors.forEach(err => {
+          document.querySelector(`#error-${err.id}`).innerText = `${err.messages[0]}`;
+          document.querySelector(`#${err.id}`).classList.add('input-error');
+        });
+
+      }else {
+        formStepsNum++; 
+        updateFormSteps(); 
+        updateProgressBar();  
+      };
+    });
+
+    validat.setMessage('required', 'Completa el campo');
+    validat.setMessage('alpha', 'Ingresa solo caracteres alfabéticos');
+    validat.setMessage('exact_length', 'Ingresa un CUIT válido');
+    validat.setMessage('alpha_dash', 'Ingresa un CUIT válido');
+    validat.setMessage('valid_email', 'Ingresa un e-mail válido');
+  };
+
+  if(index === 1) {
+    document.querySelectorAll('.input-error').forEach(node => {
+      node.classList.remove('input-error');
+      document.querySelector(`#error-${node.id}`).innerText = '';
+    });
+
+    const causa = document.querySelector('#causa');
+    const tipo = document.querySelector('#tipo');
+    const monto = document.querySelector('#monto');
+    const message = 'Debes seleccionar una opción';
+
+    if(!causa.value) {
+      document.querySelector(`#${causa.id}`).classList.add('input-error');
+      document.querySelector(`#error-${causa.id}`).innerText = message;
+    };
+
+    if(!tipo.value) {
+      document.querySelector(`#${tipo.id}`).classList.add('input-error');
+      document.querySelector(`#error-${tipo.id}`).innerText = message;
+    };
+
+    if(!monto.value) {
+      document.querySelector(`#${monto.id}`).classList.add('input-error');
+      document.querySelector(`#error-${monto.id}`).innerText = message;
+    };
+
+    if(causa.value !== '' && tipo.value !== '' && monto.value !== '') {
+      formStepsNum++; 
+      updateFormSteps(); 
+      updateProgressBar();  
+    };
+
+  };
+
+
   if(index === 2) {
+    const validat = new FormValidator('donation-form', [{ 
+      name: 'cardNumber',                                             
+      display: 'Numero de Tarjeta',                                  
+      rules: 'required|valid_credit_card|exact_length[19]'                           
+    }, {
+      name: 'cardholder',
+      display: 'Nombre del titular',
+      rules: 'required'
+    }, {
+      name: 'expiration',
+      display: 'Vencimiento',
+      rules: 'required|exact_length[5]'
+    }, {
+      name: 'ccv',
+      display: 'CCV',
+      rules: 'required|numeric|exact_length[3]'
+    }], function(errors, event) {
+      event.preventDefault();
+
+      document.querySelectorAll('.input-error').forEach(node => {
+        node.classList.remove('input-error');
+        document.querySelector(`#error-${node.id}`).innerText = '';
+      });
+
+      const card = document.querySelector('#card');
+
+      if(!card.value) {
+        document.querySelector(`#${card.id}`).classList.add('input-error');
+        document.querySelector(`#error-${card.id}`).innerText = 'Debes seleccionar una opción';
+      };
+      
+      if (errors.length> 0) {
+        errors.forEach(err => {
+          document.querySelector(`#error-${err.id}`).innerText = `${err.messages[0]}`;
+          document.querySelector(`#${err.id}`).classList.add('input-error');
+        });
+
+      };
+      
+      if(card.value !== '' && errors.length === 0) {
+        formStepsNum++; 
+        updateFormSteps(); 
+        updateProgressBar();  
+      }
+    });
+
+    validat.setMessage('required', 'Completa el campo');
+    validat.setMessage('valid_credit_card', 'Ingresa un número de tarjeta válido');
+    validat.setMessage('exact_length', 'Ingresa un dato válido');
+    validat.setMessage('numeric', 'Ingresa solo números');
+  };
+
+  if(index === 3) {
     const nombre = document.querySelector('#nombre').value;
     const apellido = document.querySelector('#apellido').value;
-    const valor = document.querySelector('#valor').value;
+    const monto = document.querySelector('#monto').value;
     const tipo = document.querySelector('#tipo').value;
     const causa = document.querySelector('#causa').value;
-    const tarjeta = document.querySelector('#tarjeta').value;
+    const card = document.querySelector('#card').value;
     const resumenContainer = document.querySelector('#resumen');
     const textoTipo = `${tipo === 'unica'? 'por única vez' : tipo === 'mensual'? 'mensuales' : 'anuales'}`
     const textoCausa = `${causa === 'animales'? 'Salvar animales' : causa === 'risiduos'? 'Reducción de residuos' : 'Combatir la contaminación'}`;
-    const textoTarjeta = `${tarjeta === 'mastercard'? 'Mastercard' : tarjeta === 'visa'? 'Visa' : 'American Express'}`;
+    const textoTarjeta = `${card === 'mastercard'? 'Mastercard' : card === 'visa'? 'Visa' : 'American Express'}`;
 
     const template = `<p><b>Nombre completo:</b> ${nombre} ${apellido}</p>
-                      <p><b>Donación:</b> $${valor} ${textoTipo}</p>
+                      <p><b>Donación:</b> $${monto} ${textoTipo}</p>
                       <p><b>Causa:</b> ${textoCausa}</p>
                       <p><b>Medio de pago:</b> Tarjeta de crédito ${textoTarjeta}</p>`;
 
@@ -148,3 +280,4 @@ const cargarResumen = (index) => {
     resumenContainer.innerHTML = template;
   };
 };
+
