@@ -176,6 +176,7 @@ mark{
 		border-radius: 10px;
 	}
 	.boceto__img{	
+		cursor: zoom-in;
 		min-width: 175px;
 		position: relative;
 		/*background-color: #dedede;*/
