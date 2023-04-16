@@ -40,16 +40,17 @@
               <div class="progress-step" data-title="Causa"></div>
               <div class="progress-step" data-title="Tarjeta"></div>
               <div class="progress-step" data-title="Donar"></div>
+              <div class="progress-step" data-title="Gracias"></div>
             </div>
             <fieldset class="form-step form-step-active">
               <legend>Información Personal</legend>
               <label class="relative">
-                <input type="text" id="nombre" class="input-style" placeholder="Nombre">
-                <p id="error-nombre" class="error-message"></p>
+                <input type="text" id="name" class="input-style" placeholder="Nombre">
+                <p id="error-name" class="error-message"></p>
               </label>
               <label class="relative">
-                <input type="text" id="apellido" class="input-style" placeholder="Apellido">
-                <p id="error-apellido" class="error-message"></p>
+                <input type="text" id="lastName" class="input-style" placeholder="Apellido">
+                <p id="error-lastName" class="error-message"></p>
               </label>
               <label class="relative">
                 <input type="text" id="cuit" maxlength="13" class="input-style" placeholder="CUIT">
@@ -66,32 +67,32 @@
             <fieldset class="form-step">
               <legend>¿A qué causa querés aportar?</legend>
               <div class="relative">
-                <select id="causa" class="input-style">
+                <select id="cause" class="input-style">
                   <option value="" selected>Elegir causa</option>
                   <option value="animales" >Salvar animales</option>
                   <option value="contaminacion" >Combatir la contaminación</option>
                   <option value="risiduos">Reducción de residuos</option>
                 </select>
-                <p id="error-causa" class="error-message"></p>
+                <p id="error-cause" class="error-message"></p>
               </div>
               <div class="relative">
-                <select id="tipo" class="input-style">
+                <select id="type" class="input-style">
                   <option value="" selected>Elegir tipo de donación</option>
                   <option value="unica" >Única vez</option>
                   <option value="mensual" >Mensual</option>
                   <option value="anual">Anual</option>
                 </select>
-                <p id="error-tipo" class="error-message"></p>
+                <p id="error-type" class="error-message"></p>
               </div>
               <div class="relative">
-                <select id="monto" class="input-style">
+                <select id="amount" class="input-style">
                   <option value="" selected>Elegir valor</option>
                   <option value="1000" >$1.000</option>
                   <option value="2000" >$2.000</option>
                   <option value="5000">$5.000</option>
                   <option value="10000">$10.000</option>
                 </select>
-                <p id="error-monto" class="error-message"></p>
+                <p id="error-amount" class="error-message"></p>
               </div>
               <div class="check-container">
                 <label for="check-recibir">Recibir e-mails sobre esta causa:</label>
@@ -99,7 +100,7 @@
               </div>
               <div class="btns-group">
                 <button type="button" class="button width-2 btn-prev">Volver</button>
-                <button type="button" class="button width-2 btn-next">Siguiente</button>
+                <button type="submit" class="button width-2 btn-next">Siguiente</button>
               </div>
             </fieldset>
             <fieldset class="form-step">
@@ -154,20 +155,47 @@
               </div>
               <div class="btns-group">
                 <button type="button" class="button width-2 btn-prev">Volver</button>
-                <button type="submit" class="button width-2 btn-next ">Siguiente</button>
+                <button type="submit" class="button width-2 btn-next">Siguiente</button>
               </div>
             </fieldset>
             <fieldset class="form-step">
-              <legend>Resumen:</legend>
-              <div id="resumen">
-                <p><b>Nombre completo:</b></p>
-                <p><b>Donación:</b></p>
-                <p><b>Causa:</b></p>
-                <p><b>Medio de pago:</b></p>
+              <div id="donation-summary-wrapper">
+                <legend>Resumen:</legend>
+                <div id="resumen">
+                  <p><b>Nombre completo:</b></p>
+                  <p><b>Donación:</b></p>
+                  <p><b>Causa:</b></p>
+                  <p><b>Medio de pago:</b></p>
+                </div>
+                <div class="btns-group">
+                  <button type="button" class="button width-2 btn-prev">Volver</button>
+                  <button type="submit" class="button width-2 btn-next">Donar</button>
+                </div>
+              </div>
+              <div id="spinner-wrapper">
+                <div class="sk-circle">
+                  <div class="sk-circle1 sk-child"></div>
+                  <div class="sk-circle2 sk-child"></div>
+                  <div class="sk-circle3 sk-child"></div>
+                  <div class="sk-circle4 sk-child"></div>
+                  <div class="sk-circle5 sk-child"></div>
+                  <div class="sk-circle6 sk-child"></div>
+                  <div class="sk-circle7 sk-child"></div>
+                  <div class="sk-circle8 sk-child"></div>
+                  <div class="sk-circle9 sk-child"></div>
+                  <div class="sk-circle10 sk-child"></div>
+                  <div class="sk-circle11 sk-child"></div>
+                  <div class="sk-circle12 sk-child"></div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="form-step">
+              <div id="thank-you">
+                <h5>Gracias por tu colaboboración!!</h5>
               </div>
               <div class="btns-group">
-                <button type="button" class="button width-2 btn-prev">Volver</button>
-                <button type="submit" class="button width-2">Donar</button>
+                <button type="button" class="button width-2">Ir a Home</button>
+                <button type="button" class="button width-2">Descargar comprobante</button>
               </div>
             </fieldset>
           </div>
