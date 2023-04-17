@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3b1efa2a45.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
@@ -47,8 +48,8 @@
               <div class="progress-step" data-title="Donar"></div>
               <div class="progress-step" data-title="Gracias"></div>
             </div>
-            <fieldset class="form-step form-step-active">
-              <legend>Información Personal</legend>
+            <div class="form-step form-step-active">
+              <h5>Información Personal</h5>
               <label class="relative">
                 <input type="text" id="name" class="input-style" placeholder="Nombre">
                 <p id="error-name" class="error-message"></p>
@@ -68,9 +69,9 @@
               <div>
                 <button type="submit" class="button width-2 ml-auto btn-next">Siguiente</button>
               </div>
-            </fieldset>
-            <fieldset class="form-step">
-              <legend>¿A qué causa querés aportar?</legend>
+            </div>
+            <div class="form-step">
+              <h5>¿A qué causa querés aportar?</h5>
               <div class="relative">
                 <select id="cause" class="input-style">
                   <option value="" selected>Elegir causa</option>
@@ -107,9 +108,9 @@
                 <button type="button" class="button width-2 btn-prev">Volver</button>
                 <button type="submit" class="button width-2 btn-next">Siguiente</button>
               </div>
-            </fieldset>
-            <fieldset class="form-step">
-              <legend>Datos de tarjeta de crédito</legend>
+            </div>
+            <div class="form-step">
+              <h5>Datos de tarjeta de crédito</h5>
               <div class="relative">
                 <select id="card" class="input-style">
                   <option value="" selected>Elegir tarjeta</option>
@@ -154,18 +155,14 @@
                   <p id="error-ccv" class="error-message"></p>
                 </label>
               </div>
-              <div class="check-container">
-                <label for="check-terminos">Acepto <a href="">Términos y Condiciones</a>:</label>
-                <input type="checkbox" id="check-terminos" value="recibir">
-              </div>
               <div class="btns-group">
                 <button type="button" class="button width-2 btn-prev">Volver</button>
                 <button type="submit" class="button width-2 btn-next">Siguiente</button>
               </div>
-            </fieldset>
-            <fieldset class="form-step">
+            </div>
+            <div class="form-step">
               <div id="donation-summary-wrapper">
-                <legend>Resumen:</legend>
+                <h5>Resumen:</h5>
                 <div id="resumen">
                   <p><b>Nombre completo:</b></p>
                   <p><b>Donación:</b></p>
@@ -193,16 +190,16 @@
                   <div class="sk-circle12 sk-child"></div>
                 </div>
               </div>
-            </fieldset>
-            <fieldset class="form-step">
+            </div>
+            <div class="form-step">
               <div id="thank-you">
                 <h5>Gracias por tu colaboboración!!</h5>
               </div>
               <div class="btns-group">
-                <a href="index.html"><button type="button" class="button width-2">Ir a Home</button></a>
+                <a href="index.html" class="button width-2">Ir a Home</a>
                 <button id="download" type="button" class="button width-2">Descargar comprobante</button>
               </div>
-            </fieldset>
+            </div>
           </div>
         </form>
       </div>
@@ -214,6 +211,7 @@
       </svg>
 
       <div class="we-need-you">
+        <i class="fa-solid fa-otter"></i>
         <p>Sé parte importante de nuestra organización sin fines de lucro, conviertete en un héroe sin capa.</p>
       </div>
       
