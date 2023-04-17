@@ -70,7 +70,7 @@ mark{
 		top: 0;
 		right: -70%;
 		width: 70%;
-		background-color: #2C3639;
+		background-color: #181818;
 		border-radius: 0 0 0 10px;
 		transition: all 0.5s;
 	}
@@ -161,7 +161,7 @@ mark{
 	}	
 	.cajon {
   	position: fixed;
-		width: 155px;
+		width: 180px;
 		top: 0%;
 		right: 1%;
 		border-left: 10px;
@@ -171,7 +171,7 @@ mark{
 	}
 	.cajoncaja {
   	padding: 10px;
-		width: 155px;
+		width: 180px;
 		height: 350px;
 	}
 	mark{

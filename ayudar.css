@@ -62,7 +62,7 @@
       top: 0;
       right: -70%;
       width: 70%;
-      background-color: #2C3639;
+      background-color: #181818;
       border-radius: 0 0 0 10px;
       transition: all 0.5s;
     }
@@ -90,11 +90,6 @@
       display: block;
       text-decoration: none;
       color: #ffffff;
-    }
-    @media screen and (max-width:578px){
-      .container{
-        max-width: 540px;
-      }      
     }
     @media screen and (min-width: 578px) {
       .header-container {
@@ -138,7 +133,12 @@
 			/*background: linear-gradient(180deg,#bacabe,#31799e);*/
       /*background-color: #93b4af;*/
 			border-top: #181818 solid 5px;	
-		}
+		}    
+    @media screen and (max-width:578px){
+      .container{
+        max-width: 540px;
+      }      
+    }
     #principal{
         padding-top: 130px;
         padding-bottom: 140px;
