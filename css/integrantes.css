@@ -1,0 +1,124 @@
+/*general*/
+::-webkit-scrollbar{
+  display: none;
+}
+
+body{   
+  background-color: #5bbbab;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+}
+h1{
+  color: #050344;
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 3rem;
+}
+.titulo p{
+  color: #f8f8ff;
+  text-shadow: #050344 1px 1px;
+  font-size: 1.5rem;
+  opacity: .9;
+}
+.card{
+  background-color: #1a6a93;
+}
+.card-title{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.card-text{
+  font-size: 1.1rem;
+}
+
+/*main*/
+
+.titulo{
+  text-align: center;
+  margin-top: 15px;
+}
+#integrantes{
+  padding-top: 100px;
+  padding-bottom: 0px;
+}
+main{
+  position: relative;
+}
+.negro__row{
+  width: 100%;
+  margin: auto;
+}
+#integrantes__row{
+  margin-bottom: 36px;
+}
+.col{
+  padding: 0;
+  max-width: 450px;
+  min-width: 336px;
+  text-align: -webkit-center;
+}
+.invi{
+  opacity: 0;
+}
+@media screen and (max-width: 767px) {
+  .invi{
+    display: none;
+  }
+}
+.card{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 70px;
+  max-width: 336px;
+  /*background-color: #1a6a93;*/
+  opacity: .9;
+  box-shadow: #1d2c48 0px 0px 20px;
+  border-width: 5px;
+}
+.foto__persona{
+  height: 260px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  transition: height .8s, margin-top .8s, margin-bottom .8s, transform .8s;
+}
+.foto__persona:active{
+  transform:rotatey(180deg);
+}
+.foto__persona:hover{
+  height: 330px;
+  margin-top: -20px;
+  margin-bottom: -50px;
+}
+.card-body{
+  height: 140px;
+  padding-top: 1px;
+  color: #ffffff;
+  text-align: center;  
+}
+.card-body button{
+  background-color: #181818;
+  color: #f8f8ff;
+  opacity: 1;
+}
+.card-text{
+  overflow: hidden;
+  min-height: 82px;
+  max-height: 82px;
+}
+mark{
+  margin-top: 2px;
+  padding: 0;
+  color: #ffffff;
+  background-color: #1a6a93;
+  opacity: .9;
+  font-weight: bold;
+  text-shadow: #050344 1px 1px;
+}
+.modal-content{
+  margin-top: 180px;
+  background: linear-gradient(180deg,#1a6a93,#85adf8);
+  color: #f8f8ff;
+}
+.modal-dialog{
+  width: 350px;
+}
