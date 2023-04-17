@@ -18,7 +18,8 @@ body {
   background: var(--body-color);  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #5bbbab, #5bbbab);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #5bbbab, #5bbbab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
   color: var(--body-font-color);
   overflow-x: hidden;
 }
@@ -356,7 +357,7 @@ footer ul a:hover {
 }
 
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 992px) {
 /* Header */
   .header-container {
     padding: 0 0 0 18px;

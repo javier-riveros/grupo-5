@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", loadListeners);
 
 window.addEventListener('resize', () => {
-  if(window.innerWidth < 576) {
+  if(window.innerWidth < 992) {
     closeMenu();
   };
 });
