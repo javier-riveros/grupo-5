@@ -4,7 +4,6 @@ body {
   background: linear-gradient(to bottom, #5bbbab, #5bbbab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
   color: #000000; 
-  font-size: 18px;
 }
 
 /* Header */
@@ -78,6 +77,14 @@ nav a {
   color: #ffffff;
 }
 
+nav a:hover {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #41a80a;
+  border-radius: 10px;
+}
+
 /* El wave, la onda de la pagina su margen y anchura */
 
 .wave{
@@ -131,7 +138,7 @@ nav a {
   }
 }
 .header-button{
-  color: #481d3b;
+  color: #ffffff;
   font-size: 32px;
 }
 
@@ -207,12 +214,7 @@ header nav a {
 .presentation-container p {
   line-height: 2;
 }
-/* 
-.wave{
-  margin-top: -65px;
-  width: 100%;
- 
-} */
+
 .we-need-you {
   color: #382929;
   background-color: rgba(255, 255, 255, 0.6);
@@ -240,11 +242,7 @@ header nav a {
   text-decoration: none;
 }
 
-.fa-otter{
-  font-size: 40px;
-  color: #000000;
-}
-.fa-solid{
+.fa-otter, .fa-solid{
   font-size: 40px;
   color: #000000;
 }
