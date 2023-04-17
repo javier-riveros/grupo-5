@@ -8,21 +8,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="integrantes.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
         <div class="container mx-auto header-container">
-            <a href="index.html">LOGO</a>
+            <a href="index.html"><img class="logo" src="images-logo/eco.png" alt="logo" width="300" height="180"></a>
             <div id="menu-container">
               <div id="container-close-menu">
                 <i id="close-menu-button" class="header-button bi bi-x-lg" onclick="closeMenu()"></i>
               </div>
               <nav>
                 <ul>
-                  <li><a href="">SECCION1</a></li>
-                  <li><a href="ayudar.html" target="_blank" >AYUDAR</a></li>
-                  <li><a href="integrantes.html">INTEGRANTES</a></li>
-                  <li><a href="">SUMATE</a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="Que-hacemos.html">¿Que Hacemos?</a></li>
+                  <li><a href="integrantes.html">¿Quienes Somos?</a></li>
+                  <li><a href="infoAnimales.html">Animales</a></li>
+                  <li><a href="">Contacto</a></li>
+                  <li><a href="donacion.html">Sumate</a></li>
                 </ul>
               </nav>
             </div>
@@ -31,7 +36,13 @@
       </header>
     <main>
       <div id="integrantes" class="container">
-        <div id="integrantes__row" class="row justify-content-center row-cols-1 row-cols-md-2 g-4">
+        <div class="row negro__row justify-content-center">
+          <div class="col titulo">
+            <h1>Somos el grupo 5</h1>
+            <p>Compartimos una breve descripcion sobre nuestras impreciones del curso Argentina Programa 4.0</p>
+          </div>
+        </div>
+        <div id="integrantes__row" class="row negro__row justify-content-center row-cols-1 row-cols-md-2 g-5">
           <div class="col">
             <div class="card align-items-center">
               <div class="redondo">
@@ -40,7 +51,27 @@
               <div class="card-body">
                 <h5 class="card-title"><mark>Ariel</mark></h5>
                 <p class="card-text">El curso me ayudo a entender como funciona HTML, CSS y javascript. Adicionalmente aprendí a consultar APIs y utilizar Github que siempre lo había escuchado, pero nunca lo había usado</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal__correo" data-bs-whatever="Ariel">Contactame</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal__correo" data-bs-whatever="Ariel"><i class="bi bi-envelope-check-fill"></i></button>
+                <a href="https://facebook.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-facebook"></i></button></a>
+                <a href="https://instagram.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-instagram"></i></button></a>
+                <a href="https://twitter.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-twitter"></i></button></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-whatsapp"></i></button></a>                  
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card align-items-center">
+              <div class="redondo">
+                <img id="" class="foto__persona" src="https://i.imgur.com/jA6vShZ.jpg"  alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><mark>Nombre</mark></h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal__correo" data-bs-whatever="Ariel"><i class="bi bi-envelope-check-fill"></i></button>
+                <a href="https://facebook.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-facebook"></i></button></a>
+                <a href="https://instagram.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-instagram"></i></button></a>
+                <a href="https://twitter.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-twitter"></i></button></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-whatsapp"></i></button></a>
               </div>
             </div>
           </div>
@@ -52,7 +83,11 @@
               <div class="card-body">
                 <h5 class="card-title"><mark>Nombre</mark></h5>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tenetur at voluptas ducimus distinctio accusamus accusantium sint! Ratione culpa illum perferendis repudiandae architecto doloribus, saepe tempore laboriosam quo qui voluptatibus!</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal__correo" data-bs-whatever="nombre@2">Contactame</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal__correo" data-bs-whatever="Ariel"><i class="bi bi-envelope-check-fill"></i></button>
+                <a href="https://facebook.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-facebook"></i></button></a>
+                <a href="https://instagram.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-instagram"></i></button></a>
+                <a href="https://twitter.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-twitter"></i></button></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-whatsapp"></i></button></a>
               </div>
             </div>
           </div>
@@ -64,7 +99,11 @@
               <div class="card-body">
                 <h5 class="card-title"><mark>Nombre</mark></h5>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tenetur at voluptas ducimus distinctio accusamus accusantium sint! Ratione culpa illum perferendis repudiandae architecto doloribus, saepe tempore laboriosam quo qui voluptatibus!</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal__correo" data-bs-whatever="nombre@3">Contactame</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal__correo" data-bs-whatever="Ariel"><i class="bi bi-envelope-check-fill"></i></button>
+                <a href="https://facebook.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-facebook"></i></button></a>
+                <a href="https://instagram.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-instagram"></i></button></a>
+                <a href="https://twitter.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-twitter"></i></button></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-whatsapp"></i></button></a>
               </div>
             </div>
           </div>
@@ -76,11 +115,15 @@
               <div class="card-body">
                 <h5 class="card-title"><mark>Nombre</mark></h5>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tenetur at voluptas ducimus distinctio accusamus accusantium sint! Ratione culpa illum perferendis repudiandae architecto doloribus, saepe tempore laboriosam quo qui voluptatibus!</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal__correo" data-bs-whatever="nombre@4">Contactame</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal__correo" data-bs-whatever="Ariel"><i class="bi bi-envelope-check-fill"></i></button>
+                <a href="https://facebook.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-facebook"></i></button></a>
+                <a href="https://instagram.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-instagram"></i></button></a>
+                <a href="https://twitter.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-twitter"></i></button></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-whatsapp"></i></button></a>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col invi">
             <div class="card align-items-center">
               <div class="redondo">
                 <img id="" class="foto__persona" src="https://i.imgur.com/jA6vShZ.jpg"  alt="...">
@@ -88,19 +131,11 @@
               <div class="card-body">
                 <h5 class="card-title"><mark>Nombre</mark></h5>
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tenetur at voluptas ducimus distinctio accusamus accusantium sint! Ratione culpa illum perferendis repudiandae architecto doloribus, saepe tempore laboriosam quo qui voluptatibus!</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal__correo" data-bs-whatever="nombre@5">Contactame</button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card align-items-center">
-              <div class="redondo">
-                <img id="" class="foto__persona" src="https://i.imgur.com/jA6vShZ.jpg"  alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><mark>Nombre</mark></h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tenetur at voluptas ducimus distinctio accusamus accusantium sint! Ratione culpa illum perferendis repudiandae architecto doloribus, saepe tempore laboriosam quo qui voluptatibus!</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal__correo" data-bs-whatever="nombre@6">Contactame</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal__correo" data-bs-whatever="Ariel"><i class="bi bi-envelope-check-fill"></i></button>
+                <a href="https://facebook.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-facebook"></i></button></a>
+                <a href="https://instagram.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-instagram"></i></button></a>
+                <a href="https://twitter.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-twitter"></i></button></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><button type="button" class="btn btn-primary"><i class="bi bi-whatsapp"></i></button></a>
               </div>
             </div>
           </div>
@@ -132,8 +167,13 @@
           </div>
         </div>
       </div>
+      <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ffff" fill-opacity="0.6" preserveAspectRatio="none"
+          d="M0,160L48,149.3C96,139,192,117,288,117.3C384,117,480,139,576,170.7C672,203,768,245,864,266.7C960,288,1056,288,1152,272C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+      </svg>
       <div class="we-need-you">
-        <div id="div__carrusel" class="container mx-auto">
+        <div id="div__carrusel" class="">
           <div id="carrusel__footer" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carrusel__footer" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

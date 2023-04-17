@@ -2,8 +2,51 @@
 ::-webkit-scrollbar{
 	display: none;
 }
+body{
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+}
+#negro{
+	background-color: #5bbbab;
+}
+.boceto__img{
+	background-color: #dedede;
+}
+.texto h1{
+	font-size: 2rem;
+	font-weight: bold;
+}
+.texto h2{
+	font-size: 2rem;
+	font-weight: bold;
+}
+.texto p{
+	font-size: 1.2rem;
+}
+h4{
+	font-weight: bold;
+}
+.explicacion p{
+	font-size: 1.2rem;
+}
+mark{
+	color: #000000;
+	font-weight: bold;
+}
+.aside__ico i{
+	color: #000000;
+}
 /*header*/
 
+.logo{
+	margin-top: 1.2%;
+	padding-right: 5%;
+  }
+  @media screen and (max-width: 420px) {
+	.logo{
+	  margin-left: -75px;
+	}
+	}
 .header-container {
 		height: 60px;
 		display: flex;
@@ -17,7 +60,7 @@
 		font-size: 28px;
 	}
 	header{
-		background-color: #181818;
+		background-color: #2C3639;
 		position: fixed;
 		width: 100%;
 		z-index: 2;
@@ -27,7 +70,7 @@
 		top: 0;
 		right: -70%;
 		width: 70%;
-		background-color: #181818;
+		background-color: #2C3639;
 		border-radius: 0 0 0 10px;
 		transition: all 0.5s;
 	}
@@ -85,61 +128,84 @@
 		}
 	}
 	.header-button{
-		color: #1d2c48;
+		color: #ffffff;
 		font-size: 32px;
 	}
 	
 	/*main*/
 
 	#negro{
-		padding: 40px 0;			
-		background: linear-gradient(180deg,#d6cfcf,#93a6af);
+		padding-top: 40px;
+		/*background-image: url(img/fondos/sunbeams-gb051a7a5a_1280.jpg);
+    background-size: cover;*/				
+		/*background: linear-gradient(180deg,#d6cfcf,#93a6af);*/
 	}
-	.row{
+	.negro__row{
 			margin-top: 20px;
 			margin-bottom: 20px;
 	}
 	#div__aside{
-			position: fixed;
-			width: 100px;
-			height: 500px;
-			top: 0%;
-			right: 0%;
-			z-index: 1;
 			padding-top: 60px;
 	}
+	#div__aside aside ul li a i:hover{
+		color: #24744d;
+	  }
 	a{
 		text-decoration: none;
-		color: #181818;
 	}
 	#div__aside aside ul li a i{
 		font-size: 20px;
-		color: #181818;
 	}
 	ul{			
 		list-style: none;
+	}	
+	.cajon {
+  	position: fixed;
+		width: 155px;
+		top: 0%;
+		right: 1%;
+		border-left: 10px;
+		border-right: 10px;
+  	z-index: 1;
+		box-shadow: #666565 1px 1px 2px;
+	}
+	.cajoncaja {
+  	padding: 10px;
+		width: 155px;
+		height: 350px;
 	}
 	mark{
 		background: none;
 	}
+	.bi-hand-index-thumb-fill{
+		font-size: 25px;		
+  	cursor: move;
+	}
 	.texto{
 		text-align: center;
 		margin-top: 40px;
-		height: 100px;
+		margin-bottom: 20px;
 		min-width: 240px;
-		background-color: #dedede;
 		border-radius: 10px;
 	}
 	.boceto__img{	
-		min-width: 275px;
+		cursor: zoom-in;
+		min-width: 175px;
 		position: relative;
-		background-color: #dedede;
+		/*background-color: #dedede;*/
 		border: #4f5052 solid 1px;
 		box-shadow: #181818 5px 10px 15px;
 		margin: 20px;
 		border-radius: 5px;
 		text-align: center;
 		padding-top: 10px;
+		padding-bottom: 15px;
+		transition: transform 1s;
+		transition-delay: .1s;
+	}
+	.boceto__img:active{
+		transform: scale(1.5,1.5);
+		z-index: 2;
 	}
 	.boceto__img a button{
 		position: absolute;
@@ -151,16 +217,23 @@
 		font-size: 8px;
 		padding: 0;
 	}
-	img{
+	.img__main{
 		width: 100%;
 	}
 	@media screen and (max-width: 656px) {
 				#div__aside {
 					position: fixed;
+					width: 100px;
+					top: 0%;
+					right: 0%;
+					z-index: 1;
 					width: 100%;
 					height: 140px;
 					border-left: 10px;
 					border-right: 10px;
+				}
+				.cajon{
+					box-shadow: none;
 				}
 				aside ul{
 					display: inline-flex;
@@ -172,44 +245,39 @@
 					padding-right: 3px;
 					padding-left: 3px;
 				}
+				.bi-hand-index-thumb-fill{
+					display: none;
+				}
 			}
 
 	/*pre-footer*/
 
 	.we-need-you {
 		color: #000000;
-		background-color: #9f9fa3;
-		background-image: url(img/background-g62873116f_1280.jpg);
-		background-repeat: repeat;
-		background-size: 5%;
+		background-color: #1a6a93;
 		text-align: center;
-		padding: 10px 0;
 		height: 265px;
-		opacity: .8;
 	}
-	#div_acordion{
-		max-width: 1222px;
+	.carousel-item{
+		height: 265px;
 	}
-	#acordion__footer{
-		margin: 0px 40px;
-		border: #7d7d7d solid 1px;
-		box-shadow: #4f5052 1px 1px 10px;
-		border-radius: 5px;
+	.carousel-control-prev{
+		left: 13%;
 	}
-	.accordion-body{
-		background-color: #bdd3dd;
+	.carousel-control-next{
+		right: 13%;
+	}
+	.natu{
+		max-width: 100%;
+		height: 100%;
+		margin: auto;
 	}
 	
 	/*footer*/
 	
 	footer {
-		background-color: #181818;
-		width: 100%;
-		bottom: 0%;
-	}
-	#footer__bajo{
-			margin: 0;
-		padding: 25px 0px;
+		background-color: #2C3639;
+		padding: 25px 0;
 	}
 	footer ul {
 		list-style: none;
