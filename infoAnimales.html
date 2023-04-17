@@ -1,71 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="integrantes.css" type="text/css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="css/infoAnimales.css" type="text/css" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.6.4.js"
-      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="container mx-auto header-container">
-        <a href="index.html">LOGO</a>
-        <div id="menu-container">
-          <div id="container-close-menu">
-            <i id="close-menu-button" class="bi bi-x-lg"></i>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="">SECCION1</a></li>
-              <li><a href="ayudar.html" target="_blank">AYUDAR</a></li>
-              <li>
-                <a href="integrantes.html" target="_blank">INTEGRANTES</a>
-              </li>
-              <li><a href="">SUMATE</a></li>
-            </ul>
-          </nav>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/3b1efa2a45.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container mx-auto header-container">
+      <img class="logo" src="images-logo/eco-logo.png" alt="logo" width="300" height="180">
+      <div id="menu-container">
+        <div id="container-close-menu">
+          <i id="close-menu-button" class="bi bi-x-lg"></i>
         </div>
-        <i id="responsive-menu-button" class="bi bi-list"></i>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Que-hacemos.html">¿Que Hacemos?</a></li>
+            <li><a href="integrantes.html">¿Quienes Somos?</a></li>
+            <li><a href="infoAnimales.html">Animales</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="donacion.html">Sumate</a></li>
+          </ul>
+        </nav>
       </div>
-    </header>
+      <i id="responsive-menu-button" class="bi bi-list"></i>
+    </div>
+  </header>
 
-    <main>
-      
-      <br><br><br><br>                        <!-- AGREGO ESTO PARA NO TOCAR EL CSS DE JAVIER, DESPUES SE PODRIA SACAR  \--> 
-      
+  <main>
 
-      <div class="container row mx-auto">
-        <div class="col-lg-12 presentation-container">
-          <h2>Especies protegidas</h2>
-          <h5>Protegemos diversas especies en todos los continentes. Obtene informacion de ellos!!</h5>
+
+    <div class="container row mx-auto">
+      <div class="col-lg-12 presentation-container">
+        <h2>Especies protegidas</h2>
+        <p>Protegemos diversas especies en todos los continentes. Obtene informacion de ellos!!</p>
 
           <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01"
-              >Continente</label
-            >
+            <label class="input-group-text" for="inputGroupSelect01">Continente</label>
 
-            <select
-              class="form-select"
-              id="continentSelectedId"
-              onchange="continentSelected()"
-            >
+            <select class="form-select" id="continentSelectedId" onchange="continentSelected()">
               <option value="North-America">America del Norte</option>
               <option value="South-America">America del Sur</option>
               <option value="Central-America">America Central</option>
@@ -75,169 +60,145 @@
               <option value="Asia">Asia</option>
             </select>
           </div>
-        </div>
       </div>
+    </div>
 
-      <div class="container row mx-auto">
-        <div class="col" id="cuadroInformativoId1" style="display: inline">
-          <div class="card align-items-center">
-            <div class="redondo">
-              <img
-                class="foto__persona"
-                id="fotoAnimal1"
-                src="https://i.imgur.com/8nMUtGD.png"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title" id="nombreAnimal1"><mark>Europa</mark></h5>
-              <p class="card-text" id="infoAnimal1">Protegemos 27 especies en Europa</p>
-            </div>
+    <div class="container row mx-auto">
+      <div class="col" id="cuadroInformativoId1" style="display: inline">
+        <div class="card align-items-center">
+          <div class="redondo">
+            <img class="foto__persona" id="fotoAnimal1" src="https://i.imgur.com/8nMUtGD.png" alt="..." />
           </div>
-        </div>
-
-        <div class="col" id="cuadroInformativoId2" style="display: inline">
-          <div class="card align-items-center">
-            <div class="redondo">
-              <img
-                class="foto__persona"
-                id="fotoAnimal2"
-                src="https://i.imgur.com/9lV3RUg.png"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title" id="nombreAnimal2"><mark>America del Norte</mark></h5>
-              <p class="card-text" id="infoAnimal2">Protegemos 104 especies en America del Norte</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col" id="cuadroInformativoId3" style="display: inline">
-          <div class="card align-items-center">
-            <div class="redondo">
-              <img
-              class="foto__persona"
-                id="fotoAnimal3"
-                src="https://i.imgur.com/6R7b8l0.png"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title" id="nombreAnimal3"><mark>America del Sur</mark></h5>
-              <p class="card-text" id="infoAnimal3">Protegemos 70 especies America del Sur</p>
-            </div>
+          <div class="card-body">
+            <h5 class="card-title" id="nombreAnimal1">Europa</h5>
+            <p class="card-text" id="infoAnimal1">Protegemos 27 especies en Europa</p>
           </div>
         </div>
       </div>
 
-      <div class="container row mx-auto"> . </div>   <!-- AGREGO ESTO PARA NO TOCAR EL CSS DE JAVIER, DESPUES SE PODRIA SACAR  \--> 
-
-      <div class="container row mx-auto">
-        <div class="col" id="cuadroInformativoId4" style="display: inline">
-          <div class="card align-items-center">
-            <div class="redondo">
-              <img
-              class="foto__persona"
-                id="fotoAnimal4"
-                src="https://i.imgur.com/KX8u2Ey.png"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title" id="nombreAnimal4"><mark>Oceania</mark></h5>
-              <p class="card-text" id="infoAnimal4">Protegemos 33 especies en Oceania</p>
-            </div>
+      <div class="col" id="cuadroInformativoId2" style="display: inline">
+        <div class="card align-items-center">
+          <div class="redondo">
+            <img class="foto__persona" id="fotoAnimal2" src="https://i.imgur.com/9lV3RUg.png" alt="..." />
           </div>
-        </div>
-
-        <div class="col" id="cuadroInformativoId5" style="display: inline">
-          <div class="card align-items-center">
-            <div class="redondo">
-              <img
-                class="foto__persona"
-                id="fotoAnimal5"
-                src="https://i.imgur.com/Hi8pmHm.png"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title" id="nombreAnimal5"><mark>Africa</mark></h5>
-              <p class="card-text" id="infoAnimal5">Protegemos 177 especies en Africa</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col" id="cuadroInformativoId6" style="display: inline">
-          <div class="card align-items-center">
-            <div class="redondo">
-              <img
-                class="foto__persona"
-                id="fotoAnimal6"
-                src="https://i.imgur.com/qvDFvGS.png"
-                alt="..."
-              />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title" id="nombreAnimal6"><mark>Asia</mark></h5>
-              <p class="card-text" id="infoAnimal6">Protegemos 82 especies en Asia</p>
-            </div>
+          <div class="card-body">
+            <h5 class="card-title" id="nombreAnimal2">America del Norte</h5>
+            <p class="card-text" id="infoAnimal2">Protegemos 104 especies en America del Norte</p>
           </div>
         </div>
       </div>
+
+      <div class="col" id="cuadroInformativoId3" style="display: inline">
+        <div class="card align-items-center">
+          <div class="redondo">
+            <img class="foto__persona" id="fotoAnimal3" src="https://i.imgur.com/6R7b8l0.png" alt="..." />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" id="nombreAnimal3">America del Sur</h5>
+            <p class="card-text" id="infoAnimal3">Protegemos 70 especies America del Sur</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container row mx-auto">
+      <div class="col" id="cuadroInformativoId4" style="display: inline">
+        <div class="card align-items-center">
+          <div class="redondo">
+            <img class="foto__persona" id="fotoAnimal4" src="https://i.imgur.com/KX8u2Ey.png" alt="..." />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" id="nombreAnimal4">Oceania</h5>
+            <p class="card-text" id="infoAnimal4">Protegemos 33 especies en Oceania</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" id="cuadroInformativoId5" style="display: inline">
+        <div class="card align-items-center">
+          <div class="redondo">
+            <img class="foto__persona" id="fotoAnimal5" src="https://i.imgur.com/Hi8pmHm.png" alt="..." />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" id="nombreAnimal5">Africa</h5>
+            <p class="card-text" id="infoAnimal5">Protegemos 177 especies en Africa</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" id="cuadroInformativoId6" style="display: inline">
+        <div class="card align-items-center">
+          <div class="redondo">
+            <img class="foto__persona" id="fotoAnimal6" src="https://i.imgur.com/qvDFvGS.png" alt="..." />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title" id="nombreAnimal6">Asia</h5>
+            <p class="card-text" id="infoAnimal6">Protegemos 82 especies en Asia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
       
-      <div class="container row mx-auto"> . </div> <!-- AGREGO ESTO PARA NO TOCAR EL CSS DE JAVIER, DESPUES SE PODRIA SACAR  \--> 
+    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffff" fill-opacity="0.6" preserveAspectRatio="none"
+        d="M0,160L48,149.3C96,139,192,117,288,117.3C384,117,480,139,576,170.7C672,203,768,245,864,266.7C960,288,1056,288,1152,272C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+    <div class="we-need-you">
+      <div class="container mx-auto">
 
-      <div class="we-need-you">
-        <div class="container mx-auto">
-          <h2>Te necesitamos!!</h2>
-          <p>
-            Como organización dedicada a la conservación del medio ambiente y la protección de los animales, hay muchos animales en peligro de extinción que podemos ayudar a salvar con tu donación. Colabora ahora!
-          </p>
-          <button>Súmate</button>
-        </div>
-        
+       
+
+        <h2>¡¡Ayudanos a ayudarlos!!</h2>
+        <i class="fa-solid fa-otter"></i>
+        <p>
+          Sé parte importante de nuestra organización sin fines de lucro, conviertete en un héroe sin capa.
+        </p>
+        <a href="donacion.html"><button>Dona</button></a>
+       
       </div>
 
 
-    </main>
-    <footer>
-      <div class="container mx-auto row">
-        <div class="col-lg-4 link-container">
-          <ul>
-            <li><a href="">¿Que hacemos?</a></li>
-            <li><a href="">¿Quienes somos?</a></li>
-            <li><a href="">Contacto</a></li>
-            <li><a href="">Sumate</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4 link-container">
-          <ul>
-            <li><a href="">Preguntas Frecuentes</a></li>
-            <li><a href="">Terminos y Condiciones</a></li>
-            <li><a href="">xxxxx</a></li>
-            <li><a href="">xxxx</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4 iconos">
-          <button type="button" class="btn btn-primary">
-            <i class="bi bi-facebook"></i>
-          </button>
-          <button type="button" class="btn btn-secondary">
-            <i class="bi bi-instagram"></i>
-          </button>
-          <button type="button" class="btn btn-success">
-            <i class="bi bi-whatsapp"></i>
-          </button>
-          <button type="button" class="btn btn-danger">
-            <i class="bi bi-youtube"></i>
-          </button>
-        </div>
+  </main>
+  <footer>
+    <div class="container mx-auto row">
+      <div class="col-lg-4 link-container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+            <li><a href="Que-hacemos.html">¿Que Hacemos?</a></li>
+            <li><a href="integrantes.html">¿Quienes Somos?</a></li>
+            <li><a href="infoAnimales.html">Animales</a></li>
+        </ul>
       </div>
-    </footer>
+      <div class="col-lg-4 link-container">
+        <ul>
+          <li><a href="">Preguntas Frecuentes</a></li>
+          <li><a href="">Terminos y Condiciones</a></li>
+          <li><a href="">Contacto</a></li>
+          <li><a href="donacion.html">Sumate</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 iconos">
+        <button type="button" class="btn btn-primary">
+          <i class="bi bi-facebook"></i>
+        </button>
+        <button type="button" class="btn btn-secondary">
+          <i class="bi bi-instagram"></i>
+        </button>
+        <button type="button" class="btn btn-success">
+          <i class="bi bi-whatsapp"></i>
+        </button>
+        <button type="button" class="btn btn-danger">
+          <i class="bi bi-youtube"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
 
-    <script src="infoAnimales.js" type="text/javascript"></script>
+  <script src="js/infoAnimales.js" type="text/javascript"></script>
+  <script src="index.js" type="text/javascript"></script>
+</body>
 
-    <script src="index.js" type="text/javascript"></script>
-  </body>
 </html>

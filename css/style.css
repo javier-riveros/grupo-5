@@ -1,21 +1,25 @@
 :root {
-  --body-color: #000000;
-  --header-color: transparent;
-  --footer-color: #181818;
-  --menu-color: #f8f8ff;
+  --body-color: #a8ff78;
+  --header-color: #2c3639;
+  --footer-color: #2c3639;
+  --menu-color: #2c3639;
   --primary-color: #f8f8ff;
   --body-font-color: #000000;
   --header-font-color: #ffffff;
-  --menu-font-color: #000000;
+  --menu-font-color: #ffffff;
   --footer-font-color: #ffffff;
   --grey: rgb(197, 196, 196);
-  --button-color: #91FBB4;
+  --button-color: #a0cbc3;
   --button-hover-color: #74cf92;
   --input-color: #dcdcdc;
 }
 
 body {
-  background-color: var(--body-color);
+  background: var(--body-color);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #5bbbab, #5bbbab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #5bbbab, #5bbbab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
   color: var(--body-font-color);
   overflow-x: hidden;
 }
@@ -25,22 +29,21 @@ body {
 header {
   background-color: var(--header-color);
   color: var(--header-font-color);
-  /* position: sticky;
-  top: 0; */
+  position: sticky;
+  top: 0;
+  z-index: 9;
 }
 
 .header-container {
-  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0px 30px;
 }
 
-.header-container > a {
-  text-decoration: none;
-  color: var(--header-font-color);
-  font-size: 28px;
+.header-container img {
+ height: 40px;
+ margin: 10px 0;
 }
 
 .header-container > i {
@@ -84,11 +87,10 @@ header nav a {
 /* Main de Home */
 
 .presentation-container {
-  color: var(--footer-font-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px;
+  padding: 40px 30px 0px 30px;
 }
 
 .presentation-container h2 {
@@ -100,11 +102,12 @@ header nav a {
 }
 
 #guepardo {
+  margin-top: 80px;
   width: 100%;
 }
 
 .we-need-you {
-  background-color: var(--primary-color);
+  background-color: #BDE4DD;
   text-align: center;
   padding: 50px 0;
 }
@@ -115,11 +118,20 @@ header nav a {
 }
 
 .we-need-you button {
-  background-color: var(--grey);
-  border-radius: 25px;
+  background-color: #03D02D;
+  border-radius: 5px;
   padding: 10px 50px;
   border: none;
   color: var(--body-font-color);
+}
+
+.fa-otter{
+  font-size: 40px;
+  color: #000000;
+}
+.fa-solid{
+  font-size: 40px;
+  color: #000000;
 }
 
 /* Footer */
@@ -162,7 +174,7 @@ footer ul a:hover {
   background-color: var(--primary-color);
   color: var(--body-font-color);
   border-radius: 25px;
-  margin: 50px auto;
+  margin: 50px auto 0 auto;
   padding: 50px 50px;
 }
 
@@ -194,7 +206,7 @@ footer ul a:hover {
 }
 
 #progress {
-  background-color: #91FBB4;
+  background-color: var(--button-color);
   width: 0%;
   transition: 0.3s;
 }
@@ -238,6 +250,7 @@ footer ul a:hover {
   flex-direction: column;
   flex: auto;
   justify-content: space-between;
+  padding-top: 10px;
 }
 
 @keyframes animate {
@@ -308,6 +321,14 @@ footer ul a:hover {
   justify-content: space-between;
 }
 
+.btns-group a {
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .button {
   border: none;
   background-color: var(--button-color);
@@ -354,7 +375,7 @@ footer ul a:hover {
 }
 
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 992px) {
 /* Header */
   .header-container {
     padding: 0 0 0 18px;

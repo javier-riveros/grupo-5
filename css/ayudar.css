@@ -1,0 +1,236 @@
+/*general*/
+::-webkit-scrollbar{
+    display: none;
+  }
+  html{
+    min-width: 280px;
+  }
+  body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+  }
+  h2{
+    color: #12360e;  
+    font-size: 3rem;
+  }
+  h3{
+    color: #12360e;
+    font-size: 2.5rem;  
+  }
+  .parrafo{
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: .9;
+  }
+  #negro{
+    background-color: #5bbbab;
+  }
+
+    /*main*/
+
+		#negro{
+			padding-top: 40px;
+			border-top: #181818 solid 5px;	
+		}    
+    @media screen and (max-width:578px){
+      .container{
+        max-width: 540px;
+      }      
+    }
+    #principal{
+        padding-top: 130px;
+        padding-bottom: 140px;
+    }
+    #fondo{
+      margin: 0;
+      padding: 0;
+      background-image: url(../img/monkey-g7b16b801d_1280.jpg);
+      background-repeat: no-repeat;
+      background-position: 0% 5%;
+
+    }
+    .negro__row{
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+    #linea{
+      margin-bottom: 0;
+    }
+    #div__formulario{
+        max-width: 330px;        
+        min-width: 330px;
+        height: 464px;
+				border-radius: 20px;
+        background-color: #000000;
+				opacity: .9;
+				color: #ffffff;
+    }
+    #div__aside{
+        position: fixed;
+        width: 100px;
+        height: 500px;
+        top: 0%;
+        right: 0%;
+        z-index: 1;
+        padding-top: 60px;
+    }
+		a{
+			text-decoration: none;
+			color: #15723c;
+		}
+		#div__aside aside ul li a i{
+			font-size: 20px;
+			color: #15723c;
+		}
+    #div__aside aside ul li a i:hover{
+      color: #dedede;
+    }
+		ul{			
+  		list-style: none;
+		}
+    .reverse{
+      flex-wrap: wrap-reverse;
+    }
+    .reverse .texto img{
+      position: absolute;
+      right: 5px;
+    }
+    .texto{
+			position: relative;
+        height: 430px;
+        min-width: 430px;
+        border-radius: 10px 0 0 10px;
+        padding: 5px;
+        text-align: center;
+        display: flex;
+    }
+    .texto div{
+      margin: auto;
+    }
+    .derecha{
+      text-align: center;
+      padding: 5px;
+    }
+    .texto img{
+      border-radius: 5px;
+      width: 420px;
+      height: 420px;
+    }
+    @media screen and (max-width: 420px) {
+      .texto img{
+        width: 300px;
+        height: 300px;
+      }
+      }
+    .texto0{
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;   
+      min-width: 280px;
+    }
+    .texto2{
+      border-radius: 0 10px 10px 0;
+    }
+    @media screen and (max-width: 767px){
+      .texto{
+        border-radius: 10px 10px 0 0;
+      }
+      .texto2{
+        border-radius: 0 0 10px 10px;
+      }
+      .reverse .texto{
+        border-radius: 0 0 10px 10px;
+      }
+      .reverse .texto2{
+        border-radius: 10px 10px 0 0;
+      }
+    }
+		.texto a button{
+      position: absolute;
+      bottom: 5%;
+      left: 45%;
+			width: 13%;
+			height: 25px;
+			border-radius: 20px;
+      font-size: 14px;
+      padding: 0;
+      padding-bottom: 2px;
+		}
+    @media screen and (max-width: 688px) {
+          #div__aside {
+            display: none;
+            position: relative;
+          }
+          #div__formulario{
+            position: relative;
+            margin: auto;
+          }
+        }
+    form{
+      padding: 20px;
+    }
+		.valores{
+			margin: 5px 0;
+		}
+		input{
+			padding: 5px;
+		}
+		#montos{
+			padding: 10px 0;
+		}
+		#montos button{
+			margin: 0;
+			width: 32.4%;
+			height: 30px;
+			border-radius: 10px;
+		}
+    #nombre,#apellido,#telefono,#email{
+      width: 100%;
+    }
+		#juntos{
+			display: flex;
+		}  
+    #codigo{
+			width: 99%;
+    }
+		#voluntad{
+			width: 60%;
+		}
+    .bi-heart-fill{
+      font-size: 10px;
+    }
+		.valores button{			
+			margin: 0;
+      margin-bottom: 3px;
+			width: 38.4%;
+			height: 40px;
+			border-radius: 10px;
+		}
+    .toast-header{
+      background-color: #137727;
+      color: #000000;
+    }
+    .toast-header img{
+      padding: 0;
+      margin: 0;
+      height: 40px;
+    }
+    #aca__esta{
+      background-color: #7db92f;
+      color: #000000;
+      opacity: .8;
+    }
+    .modal-content{
+      margin-top: 100px;
+      background: linear-gradient(180deg,#12360e,#4f6138);
+      color: #f8f8ff;
+    }
+    #modal__img{
+      height: 350px;
+      background-image: url(../img/AyeAye.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
