@@ -1,24 +1,28 @@
 :root {
-    --body-color: #000000;
-    --header-color: transparent;
-    --footer-color: #181818;
-    --menu-color: #f8f8ff;
-    --primary-color: #f8f8ff;
-    --body-font-color: #000000;
-    --header-font-color: #ffffff;
-    --menu-font-color: #000000;
-    --footer-font-color: #ffffff;
-    --grey: rgb(197, 196, 196);
-    --button-color: #91FBB4;
-    --button-hover-color: #74cf92;
-    --input-color: #dcdcdc;
-  }
-  
-  body {
-    background-color: var(--body-color);
-    color: var(--body-font-color);
-    overflow-x: hidden;
-  }
+  --body-color: #a8ff78;
+  --header-color: #2c3639;
+  --footer-color: #2c3639;
+  --menu-color: #2c3639;
+  --primary-color: #f8f8ff;
+  --body-font-color: #000000;
+  --header-font-color: #ffffff;
+  --menu-font-color: #ffffff;
+  --footer-font-color: #ffffff;
+  --grey: rgb(197, 196, 196);
+  --button-color: #91FBB4;
+  --button-hover-color: #74cf92;
+  --input-color: #dcdcdc;
+}
+
+body {
+  background: var(--body-color);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #5bbbab, #5bbbab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #5bbbab, #5bbbab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: var(--body-font-color);
+  overflow-x: hidden;
+}
   
   /* Header */
   
@@ -125,8 +129,8 @@
     border-radius: 25px;
     margin: 50px left;
     padding: 50px 50px;
-    margin-top: 60px;
-    margin-bottom: 100px;
+    margin-top: 80px;
+    margin-bottom: 5px;
   }
   
   .form-container {
@@ -317,4 +321,8 @@
     width: 280px;
     height: 230px;
     margin-top: 2%;
+  }
+
+  .img-container {
+    
   }
