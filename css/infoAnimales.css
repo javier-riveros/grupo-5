@@ -236,10 +236,11 @@ footer ul a:hover {
 
 
 .logo{
-  /*width: 150px;*/
-  /*height: 50px;*/
-  margin-top: 1.2%;
-  padding-right: 5%;
+  width: 150px;
+  height: 50px;
+  /*margin-top: 1.2%;*/
+  margin-left: 12px;
+  /*padding-right: 5%;*/
 }
 
 .wave{
@@ -254,7 +255,6 @@ footer ul a:hover {
   text-align: center;
   padding: 20px 0;
   /*margin-top: -50px;*/
-
 }
 
 .we-need-you p {
@@ -264,7 +264,7 @@ footer ul a:hover {
 }
 
 .we-need-you button {
-  background-color: #1075f8;
+  background-color: #03D02D;
   border-radius: 25px;
   padding: 10px 50px;
   border: none;
@@ -281,7 +281,14 @@ footer ul a:hover {
 }
 
 .presentation-container{
+  margin-top: 80px !important;
+}
 
-margin-top: 80px !important;
 
+h2{
+  text-align: center;
+}
+
+p{
+  text-align: center;
 }
