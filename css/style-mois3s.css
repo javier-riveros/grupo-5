@@ -304,6 +304,10 @@ footer ul a:hover {
   height: 40px;
 }
 
+.carousel{
+  margin: 10px 0;
+}
+
   @media screen and (min-width: 800px) {
       nav ul {
       flex-direction: row;
@@ -344,7 +348,8 @@ footer ul a:hover {
       color: #ffffff;
     }
   }
-@media screen and (min-width: 576px) {
+
+  @media screen and (min-width: 576px) {
 /* Header */
   h1{
     margin-top: 6%;
@@ -385,5 +390,8 @@ footer ul a:hover {
     margin-top: -100px;
     width: 100%;
    
+  }
+  .carousel{
+    margin-bottom: 50px;
   }
 }
