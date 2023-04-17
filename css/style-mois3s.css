@@ -1,26 +1,87 @@
+:root {
+  --body-color: #a8ff78;
+  --header-color: #2c3639;
+  --footer-color: #2c3639;
+  --menu-color: #2c3639;
+  --primary-color: #f8f8ff;
+  --body-font-color: #000000;
+  --header-font-color: #ffffff;
+  --menu-font-color: #ffffff;
+  --footer-font-color: #ffffff;
+  --grey: rgb(197, 196, 196);
+  --button-color: #a0cbc3;
+  --button-hover-color: #74cf92;
+  --input-color: #dcdcdc;
+}
+
 body {
-  background: #a8ff78;  /* fallback for old browsers */
+  background: var(--body-color);  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #5bbbab, #5bbbab);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #5bbbab, #5bbbab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-  color: #000000; 
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: var(--body-font-color);
+  overflow-x: hidden;
 }
 
 /* Header */
 
-/*general*/
-::-webkit-scrollbar{
-  display: none;
+header {
+  background-color: var(--header-color);
+  color: var(--header-font-color);
+  position: sticky;
+  top: 0;
+  z-index: 9;
 }
 
-/*header*/
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+}
 
+.header-container img {
+ height: 40px;
+ margin: 10px 0;
+}
 
-/* tamaño logotipo */
+.header-container > i {
+  font-size: x-large;
+}
 
-.logo{
-  height: 230px;
-  margin-top: 2%;
+#menu-container {
+  position: absolute;
+  top: 0;
+  right: -71%;
+  width: 70%;
+  background-color: var(--menu-color);
+  border-radius: 0 0 0 10px;
+  transition: all 0.5s;
+  z-index: 10;
+}
+
+#container-close-menu {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 30px;
+  color: var(--menu-font-color);
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0 0 0 -32px;
+}
+
+header nav a {
+  border-top: 1px solid var(--grey);
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  text-decoration: none;
+  color: var(--menu-font-color);
 }
 
 .header-container {
@@ -95,49 +156,6 @@ nav a:hover {
 }
 
 
-@media screen and (min-width: 800px) {
-    nav ul {
-    flex-direction: row;
-    margin: 0;
-  }
-  h1{
-    margin-top: -36%;
-    text-align: center;
-  }
-  nav li {
-    border: none;
-    padding: 0 10px;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .header-container {
-    padding: 0;
-  }
-  #responsive-menu-button {
-    display: none;
-  }
-  #menu-container {
-    position: static;
-    width: auto;
-    background-color: transparent;
-    border-radius: 0;
-  }
-  #container-close-menu {
-    display: none;
-  }
-  nav ul {
-    flex-direction: row;
-    margin: 0;
-  }
-  nav li {
-    border: none;
-    padding: 0 20px;
-  }
-  nav a {
-    color: #ffffff;
-  }
-}
 .header-button{
   color: #ffffff;
   font-size: 32px;
@@ -286,8 +304,58 @@ footer ul a:hover {
   height: 40px;
 }
 
-@media screen and (min-width: 576px) {
+.carousel{
+  margin: 10px 0;
+}
+
+  @media screen and (min-width: 800px) {
+      nav ul {
+      flex-direction: row;
+      margin: 0;
+    }
+
+    nav li {
+      border: none;
+      padding: 0 10px;
+    }
+  }
+  
+  @media screen and (min-width: 576px) {
+    .header-container {
+      padding: 0;
+    }
+    #responsive-menu-button {
+      display: none;
+    }
+    #menu-container {
+      position: static;
+      width: auto;
+      background-color: transparent;
+      border-radius: 0;
+    }
+    #container-close-menu {
+      display: none;
+    }
+    nav ul {
+      flex-direction: row;
+      margin: 0;
+    }
+    nav li {
+      border: none;
+      padding: 0 20px;
+    }
+    nav a {
+      color: #ffffff;
+    }
+  }
+
+  @media screen and (min-width: 576px) {
 /* Header */
+  h1{
+    margin-top: 6%;
+    text-align: center;
+ }
+
   .header-container {
     padding: 0 0 0 18px;
   }
@@ -317,5 +385,13 @@ footer ul a:hover {
     color: #ffffff;
     padding: 5px 15px;
     margin: 0 3px;
+  }
+  .wave{
+    margin-top: -100px;
+    width: 100%;
+   
+  }
+  .carousel{
+    margin-bottom: 50px;
   }
 }
