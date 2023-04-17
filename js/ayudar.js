@@ -35,8 +35,10 @@ if (toastTrigger) {
   toastTrigger.addEventListener('click', () => {    
     agregar();
       setTimeout(() => { 
-      if(a==0)
+      if(a==0){
       toastBootstrap.show()
+      document.getElementById("super").reset();
+      }
   }, 500);
   })
 }
