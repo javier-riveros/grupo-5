@@ -125,6 +125,8 @@
     border-radius: 25px;
     margin: 50px left;
     padding: 50px 50px;
+    margin-top: 60px;
+    margin-bottom: 100px;
   }
   
   .form-container {
@@ -311,7 +313,7 @@
       padding: 60px 60px;
     }
   }
-  #milogo{
+  #milogo {
     width: 280px;
     height: 230px;
     margin-top: 2%;
