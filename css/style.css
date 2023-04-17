@@ -438,7 +438,7 @@ footer ul a:hover {
   margin: 0 auto;
   width: 15%;
   height: 15%;
-  background-color: var(--button-hover-color);
+  background-color: var(--button-color);
   border-radius: 100%;
   -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
           animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
