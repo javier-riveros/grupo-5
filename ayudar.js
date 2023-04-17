@@ -116,27 +116,27 @@ function validacion(){
   a=0;
   nombre=document.getElementById("nombre").value;
   nombre=nombre.toString();
-  patron[0]=/(^[a-zA-Z ]{2,20})\s?$/;
+  patron[0]=/^[a-zA-Z ]{4,25}$/;
   respuesta[0]=patron[0].test(nombre);
   apellido=document.getElementById("apellido").value;
   apellido=apellido.toString();
-  patron[1]=/(^[a-zA-Z ]{2,20})\s?$/;
+  patron[1]=/^[a-zA-Z ]{4,25}$/;
   respuesta[1]=patron[1].test(apellido);
   codigo=document.getElementById("codigo").value;
   codigo=codigo.toString();
-  patron[2]=/^\(?([0-9]{2,3})\)?([- ]){1}([0-9]{4})([- ]){1}([0-9]{4})$/;
+  patron[2]=/^((\(([0-9]{2,3})\))?(([0-9]{2,3}))?)([- ]){1}([0-9]{4})([- ]){1}([0-9]{4})$/;
   respuesta[2]=patron[2].test(codigo);
   telefono=document.getElementById("telefono").value;
   telefono=telefono.toString();
-  patron[3]=/^\(?([0-9]{3,4})\)?([- ]){1}([0-9]{3})([- ]){1}([0-9]{4})$/;
+  patron[3]=/^((\(([0-9]{3,4})\))?(([0-9]{3,4}))?)([- ]){1}([0-9]{3})([- ]){1}([0-9]{4})$/;
   respuesta[3]=patron[3].test(telefono);
   email=document.getElementById("email").value;
   email=email.toString();
-  patron[4]=/^([\da-zA-Z_-]+)@([\da-z-])+\.([a-z]{2,6})+(\.([a-z]{2,6})+)?$/;
+  patron[4]=/^([\da-zA-Z_-]{4,20})@([\da-z-]){4,10}\.([a-z]{2,6})(\.([a-z]{2,6}))?$/;
   respuesta[4]=patron[4].test(email);
   voluntad=document.getElementById("voluntad").value;
   voluntad=voluntad.toString();
-  patron[5]=/(^[a-zA-Z]{4,20})\s?$/;
+  patron[5]=/^[a-zA-Z ]{4,25}$/;
   respuesta[5]=patron[5].test(voluntad);
   if(!respuesta[0]){
     a=-1;
@@ -153,21 +153,21 @@ function validacion(){
     document.getElementById("apellido").style.borderColor="#181818";
   if(!respuesta[2]){
     a=-1;  
-  alert("Celular incorrecto debe tener el formato (xxxx)-xxxx-xxxx o xxx xxxx xxxx");
+  alert("Celular incorrecto debe tener el formato (xxx)-xxxx-xxxx o xxx xxxx xxxx");
   document.getElementById("codigo").style.borderColor="#d34434";
   }
   else
     document.getElementById("codigo").style.borderColor="#181818";
   if(!respuesta[3]){
     a=-1;  
-    alert("Telefono incorrecto debe tener el formato (xxx)-xxx-xxxx o xxx xxx xxxx");
+    alert("Telefono incorrecto debe tener el formato (xxxx)-xxx-xxxx o xxxx xxx xxxx");
     document.getElementById("telefono").style.borderColor="#d34434";
   }
   else
     document.getElementById("telefono").style.borderColor="#181818";
   if(!respuesta[4]){
     a=-1; 
-    alert("Correo incorrecto debe tener el formato nombrecorreo@nombre.xxx(.xxx)");
+    alert("Correo incorrecto debe tener el formato xx_-+@xxx_+.xx(.xx)");
     document.getElementById("email").style.borderColor="#d34434";
   }
   else
