@@ -159,7 +159,7 @@ const handleErrors = () => {
   }, {
     name: 'cardholder',
     display: 'Nombre del titular',
-    rules: 'required'
+    rules: 'required|alpha'
   }, {
     name: 'expiration',
     display: 'Vencimiento',
