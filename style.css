@@ -1,7 +1,7 @@
 :root {
-  --body-color: #000000;
-  --header-color: transparent;
-  --footer-color: #181818;
+  --body-color: #a8ff78;
+  --header-color: #2c3639;
+  --footer-color: #2c3639;
   --menu-color: #f8f8ff;
   --primary-color: #f8f8ff;
   --body-font-color: #000000;
@@ -15,7 +15,11 @@
 }
 
 body {
-  background-color: var(--body-color);
+  background: var(--body-color);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #5bbbab, #5bbbab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #5bbbab, #5bbbab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
   color: var(--body-font-color);
   overflow-x: hidden;
 }
@@ -25,22 +29,21 @@ body {
 header {
   background-color: var(--header-color);
   color: var(--header-font-color);
-  /* position: sticky;
-  top: 0; */
+  position: sticky;
+  top: 0;
+  z-index: 9;
 }
 
 .header-container {
-  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0px 30px;
 }
 
-.header-container > a {
-  text-decoration: none;
-  color: var(--header-font-color);
-  font-size: 28px;
+.header-container img {
+ height: 40px;
+ margin: 10px 0;
 }
 
 .header-container > i {
@@ -354,7 +357,7 @@ footer ul a:hover {
 }
 
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 992px) {
 /* Header */
   .header-container {
     padding: 0 0 0 18px;
