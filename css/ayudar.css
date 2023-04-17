@@ -46,7 +46,7 @@
     #fondo{
       margin: 0;
       padding: 0;
-      background-image: url(img/monkey-g7b16b801d_1280.jpg);
+      background-image: url(../img/monkey-g7b16b801d_1280.jpg);
       background-repeat: no-repeat;
       background-position: 0% 5%;
 
@@ -229,7 +229,7 @@
     }
     #modal__img{
       height: 350px;
-      background-image: url(img/AyeAye.png);
+      background-image: url(../img/AyeAye.png);
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;

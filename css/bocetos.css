@@ -41,9 +41,6 @@ mark{
 
 	#negro{
 		padding-top: 40px;
-		/*background-image: url(img/fondos/sunbeams-gb051a7a5a_1280.jpg);
-    background-size: cover;*/				
-		/*background: linear-gradient(180deg,#d6cfcf,#93a6af);*/
 	}
 	.negro__row{
 			margin-top: 20px;
@@ -97,7 +94,6 @@ mark{
 		cursor: zoom-in;
 		min-width: 175px;
 		position: relative;
-		/*background-color: #dedede;*/
 		border: #4f5052 solid 1px;
 		box-shadow: #181818 5px 10px 15px;
 		margin: 20px;
