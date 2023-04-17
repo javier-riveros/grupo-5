@@ -7,6 +7,7 @@
     <title>Donación</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.min.js" integrity="sha512-8GLIg5ayTvD6F9ML/cSRMD19nHqaLPWxISikfc5hsMJyX7Pm+IIbHlhBDY2slGisYLBqiVNVll+71CYDD5RBqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
@@ -31,7 +32,7 @@
     </header>
     <main>
       <div class="container">
-        <form action="" class="col-sm-11 col-md-10 col-lg-8 col-xl-7 col-xxl-6 form">
+        <form id="donation-form" name="donation-form" class="col-sm-11 col-md-10 col-lg-8 col-xl-7 col-xxl-6 form">
           <div class="form-container">
             <div class="progress-bar">
               <div id="progress"></div>
@@ -39,87 +40,162 @@
               <div class="progress-step" data-title="Causa"></div>
               <div class="progress-step" data-title="Tarjeta"></div>
               <div class="progress-step" data-title="Donar"></div>
+              <div class="progress-step" data-title="Gracias"></div>
             </div>
             <fieldset class="form-step form-step-active">
               <legend>Información Personal</legend>
-              <input type="text" id="nombre" class="input-style" placeholder="Nombre">
-              <input type="text" id="apellido" class="input-style" placeholder="Apellido">
-              <input type="text" id="cuit-number" maxlength="13" class="input-style" placeholder="CUIT">
-              <input type="email" class="input-style" placeholder="E-mail">
+              <label class="relative">
+                <input type="text" id="name" class="input-style" placeholder="Nombre">
+                <p id="error-name" class="error-message"></p>
+              </label>
+              <label class="relative">
+                <input type="text" id="lastName" class="input-style" placeholder="Apellido">
+                <p id="error-lastName" class="error-message"></p>
+              </label>
+              <label class="relative">
+                <input type="text" id="cuit" maxlength="13" class="input-style" placeholder="CUIT">
+                <p id="error-cuit" class="error-message"></p>
+              </label>
+              <label class="relative">
+                <input type="text" id="email" class="input-style" placeholder="E-mail">
+                <p id="error-email" class="error-message"></p>
+              </label>
               <div>
-                <button type="button" class="button btn-next width-2 ml-auto">Siguiente</button>
+                <button type="submit" class="button width-2 ml-auto btn-next">Siguiente</button>
               </div>
             </fieldset>
             <fieldset class="form-step">
               <legend>¿A qué causa querés aportar?</legend>
-              <select id="causa" class="input-style">
-                <option value="" selected>Elegir causa</option>
-                <option value="animales" >Salvar animales</option>
-                <option value="contaminacion" >Combatir la contaminación</option>
-                <option value="risiduos">Reducción de residuos</option>
-              </select>
-              <select id="tipo" class="input-style">
-                <option value="" selected>Elegir tipo de donación</option>
-                <option value="unica" >Única vez</option>
-                <option value="mensual" >Mensual</option>
-                <option value="anual">Anual</option>
-              </select>
-              <select id="valor" class="input-style">
-                <option value="" selected>Elegir valor</option>
-                <option value="1000" >$1.000</option>
-                <option value="2000" >$2.000</option>
-                <option value="5000">$5.000</option>
-                <option value="10000">$10.000</option>
-              </select>
+              <div class="relative">
+                <select id="cause" class="input-style">
+                  <option value="" selected>Elegir causa</option>
+                  <option value="animales" >Salvar animales</option>
+                  <option value="contaminacion" >Combatir la contaminación</option>
+                  <option value="risiduos">Reducción de residuos</option>
+                </select>
+                <p id="error-cause" class="error-message"></p>
+              </div>
+              <div class="relative">
+                <select id="type" class="input-style">
+                  <option value="" selected>Elegir tipo de donación</option>
+                  <option value="unica" >Única vez</option>
+                  <option value="mensual" >Mensual</option>
+                  <option value="anual">Anual</option>
+                </select>
+                <p id="error-type" class="error-message"></p>
+              </div>
+              <div class="relative">
+                <select id="amount" class="input-style">
+                  <option value="" selected>Elegir valor</option>
+                  <option value="1000" >$1.000</option>
+                  <option value="2000" >$2.000</option>
+                  <option value="5000">$5.000</option>
+                  <option value="10000">$10.000</option>
+                </select>
+                <p id="error-amount" class="error-message"></p>
+              </div>
               <div class="check-container">
                 <label for="check-recibir">Recibir e-mails sobre esta causa:</label>
                 <input type="checkbox" id="check-recibir" value="recibir">
               </div>
               <div class="btns-group">
-                <button type="button" class="button btn-prev width-2">Volver</button>
-                <button type="button" class="button btn-next width-2">Siguiente</button>
+                <button type="button" class="button width-2 btn-prev">Volver</button>
+                <button type="submit" class="button width-2 btn-next">Siguiente</button>
               </div>
             </fieldset>
             <fieldset class="form-step">
               <legend>Datos de tarjeta de crédito</legend>
-              <select id="tarjeta" class="input-style">
-                <option value="" selected>Elegir tarjeta</option>
-                <option value="mastercard" >Tarjeta Mastercard</option>
-                <option value="american" >Tarjeta American Express</option>
-                <option value="visa">Tarjeta Visa</option>
-              </select>
-              <input type="text" id="card-number" maxlength="19" class="input-style" placeholder="Número de tarjeta">
-              <input type="text" class="input-style" placeholder="Nombre del titular (Igual que tarjeta)">
-              <div class="inline-input">
-                <input 
-                  type="text" 
-                  id="card-expiration" 
-                  maxlength="5" 
-                  class="input-style width-2" 
-                  placeholder="Vencimiento"
+              <div class="relative">
+                <select id="card" class="input-style">
+                  <option value="" selected>Elegir tarjeta</option>
+                  <option value="mastercard" >Tarjeta Mastercard</option>
+                  <option value="american" >Tarjeta American Express</option>
+                  <option value="visa">Tarjeta Visa</option>
+                </select>
+                <p id="error-card" class="error-message"></p>
+              </div>
+              <label class="relative">
+                <input
+                  type="text"
+                  id="cardNumber"
+                  maxlength="19"
+                  class="input-style"
+                  placeholder="Número de tarjeta"
                 >
-                <input type="text" maxlength="3" class="input-style width-2" placeholder="CCV">
+                <p id="error-cardNumber" class="error-message"></p>
+              </label>
+              <label class="relative">
+                <input 
+                  id="cardholder" 
+                  type="text" 
+                  class="input-style" 
+                  placeholder="Nombre del titular (Igual que tarjeta)"
+                >
+                <p id="error-cardholder" class="error-message"></p>
+              </label>
+              <div class="inline-input">
+                <label class="relative width-2">
+                  <input
+                    type="text"
+                    id="expiration"
+                    maxlength="5"
+                    class="input-style"
+                    placeholder="Vencimiento"
+                  >
+                  <p id="error-expiration" class="error-message"></p>
+                </label>
+                <label class="relative width-2">
+                  <input id="ccv" type="text" maxlength="3" class="input-style" placeholder="CCV">
+                  <p id="error-ccv" class="error-message"></p>
+                </label>
               </div>
               <div class="check-container">
                 <label for="check-terminos">Acepto <a href="">Términos y Condiciones</a>:</label>
                 <input type="checkbox" id="check-terminos" value="recibir">
               </div>
               <div class="btns-group">
-                <button type="button" class="button btn-prev width-2">Volver</button>
-                <button type="button" class="button btn-next width-2">Siguiente</button>
+                <button type="button" class="button width-2 btn-prev">Volver</button>
+                <button type="submit" class="button width-2 btn-next">Siguiente</button>
               </div>
             </fieldset>
             <fieldset class="form-step">
-              <legend>Resumen:</legend>
-              <div id="resumen">
-                <p><b>Nombre completo:</b></p>
-                <p><b>Donación:</b></p>
-                <p><b>Causa:</b></p>
-                <p><b>Medio de pago:</b></p>
+              <div id="donation-summary-wrapper">
+                <legend>Resumen:</legend>
+                <div id="resumen">
+                  <p><b>Nombre completo:</b></p>
+                  <p><b>Donación:</b></p>
+                  <p><b>Causa:</b></p>
+                  <p><b>Medio de pago:</b></p>
+                </div>
+                <div class="btns-group">
+                  <button type="button" class="button width-2 btn-prev">Volver</button>
+                  <button type="submit" class="button width-2 btn-next">Donar</button>
+                </div>
+              </div>
+              <div id="spinner-wrapper">
+                <div class="sk-circle">
+                  <div class="sk-circle1 sk-child"></div>
+                  <div class="sk-circle2 sk-child"></div>
+                  <div class="sk-circle3 sk-child"></div>
+                  <div class="sk-circle4 sk-child"></div>
+                  <div class="sk-circle5 sk-child"></div>
+                  <div class="sk-circle6 sk-child"></div>
+                  <div class="sk-circle7 sk-child"></div>
+                  <div class="sk-circle8 sk-child"></div>
+                  <div class="sk-circle9 sk-child"></div>
+                  <div class="sk-circle10 sk-child"></div>
+                  <div class="sk-circle11 sk-child"></div>
+                  <div class="sk-circle12 sk-child"></div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="form-step">
+              <div id="thank-you">
+                <h5>Gracias por tu colaboboración!!</h5>
               </div>
               <div class="btns-group">
-                <button type="button" class="button btn-prev width-2">Volver</button>
-                <button type="submit" class="button width-2">Donar</button>
+                <button type="button" class="button width-2">Ir a Home</button>
+                <button type="button" class="button width-2">Descargar comprobante</button>
               </div>
             </fieldset>
           </div>
