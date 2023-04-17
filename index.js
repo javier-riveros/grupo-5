@@ -9,6 +9,7 @@ window.addEventListener('resize', () => {
 //VARIABLES
 let formStepsNum = 0;
 let donationFormErrors;
+let jsPdf;
 
 
 function loadListeners() {
@@ -25,6 +26,10 @@ function loadListeners() {
   document.querySelector('#cuit')?.addEventListener('input', formatCuitNumber);
   handleErrors();
   document.querySelector('#donation-form')?.addEventListener('submit', submit);
+  document.querySelector('#download').addEventListener('click', downloadPdf);
+
+  const { jsPDF } = window.jspdf;
+  jsPdf = jsPDF;
 };
 
 
@@ -299,3 +304,28 @@ const generateSummary = () => {
                     
   resumenContainer.innerHTML = template;
 };
+
+
+const downloadPdf = () => {
+  const name = document.querySelector('#name').value;
+  const lastName = document.querySelector('#lastName').value;
+  const amount = document.querySelector('#amount').value;
+  const type = document.querySelector('#type').value;
+  const cause = document.querySelector('#cause').value;
+  const card = document.querySelector('#card').value;
+  const typeText = `${type === 'unica'? 'por única vez' : type === 'mensual'? 'mensuales' : 'anuales'}`
+  const causeText = `${cause === 'animales'? 'Salvar animales' : cause === 'risiduos'? 'Reducción de residuos' : 'Combatir la contaminación'}`;
+  const textoTarjeta = `${card === 'mastercard'? 'Mastercard' : card === 'visa'? 'Visa' : 'American Express'}`;
+
+  const doc = new jsPdf();
+  doc.setFontSize(20)
+  doc.text("COMPROBANTE DE DONACIÓN", 50, 20);
+  doc.setFontSize(12)
+  doc.text(`Nombre completo: ${name} ${lastName}`, 10, 30);
+  doc.text(`Donación: $${amount} ${typeText}`, 10, 40);
+  doc.text(`Causa: ${causeText}`, 10, 50);
+  doc.text(`Medio de pago: Tarjeta de crédito ${textoTarjeta}`, 10, 60);
+
+  doc.save("donacion.pdf");
+
+}
