@@ -95,49 +95,6 @@ nav a:hover {
 }
 
 
-@media screen and (min-width: 800px) {
-    nav ul {
-    flex-direction: row;
-    margin: 0;
-  }
-  h1{
-    margin-top: -36%;
-    text-align: center;
-  }
-  nav li {
-    border: none;
-    padding: 0 10px;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .header-container {
-    padding: 0;
-  }
-  #responsive-menu-button {
-    display: none;
-  }
-  #menu-container {
-    position: static;
-    width: auto;
-    background-color: transparent;
-    border-radius: 0;
-  }
-  #container-close-menu {
-    display: none;
-  }
-  nav ul {
-    flex-direction: row;
-    margin: 0;
-  }
-  nav li {
-    border: none;
-    padding: 0 20px;
-  }
-  nav a {
-    color: #ffffff;
-  }
-}
 .header-button{
   color: #ffffff;
   font-size: 32px;
@@ -286,8 +243,53 @@ footer ul a:hover {
   height: 40px;
 }
 
+  @media screen and (min-width: 800px) {
+      nav ul {
+      flex-direction: row;
+      margin: 0;
+    }
+
+    nav li {
+      border: none;
+      padding: 0 10px;
+    }
+  }
+  
+  @media screen and (min-width: 576px) {
+    .header-container {
+      padding: 0;
+    }
+    #responsive-menu-button {
+      display: none;
+    }
+    #menu-container {
+      position: static;
+      width: auto;
+      background-color: transparent;
+      border-radius: 0;
+    }
+    #container-close-menu {
+      display: none;
+    }
+    nav ul {
+      flex-direction: row;
+      margin: 0;
+    }
+    nav li {
+      border: none;
+      padding: 0 20px;
+    }
+    nav a {
+      color: #ffffff;
+    }
+  }
 @media screen and (min-width: 576px) {
 /* Header */
+  h1{
+    margin-top: 6%;
+    text-align: center;
+ }
+
   .header-container {
     padding: 0 0 0 18px;
   }
@@ -317,5 +319,10 @@ footer ul a:hover {
     color: #ffffff;
     padding: 5px 15px;
     margin: 0 3px;
+  }
+  .wave{
+    margin-top: -100px;
+    width: 100%;
+   
   }
 }
