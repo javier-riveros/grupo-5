@@ -13,17 +13,19 @@
   <body>
     <header>
       <div class="container mx-auto header-container">
-        <a href="index.html">LOGO</a>
+        <a href="index.html"><img src="images-logo/eco-logo.png" alt="imagen logo"></a>
         <div id="menu-container">
           <div id="container-close-menu">
             <i id="close-menu-button" class="bi bi-x-lg"></i>
           </div>
           <nav>
             <ul>
-              <li><a href="">SECCION1</a></li>
-              <li><a href="">SECCION2</a></li>
-              <li><a href="">SECCION3</a></li>
-              <li><a href="">SUMATE</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Que-hacemos.html">¿Que Hacemos?</a></li>
+              <li><a href="integrantes.html">¿Quienes Somos?</a></li>
+              <li><a href="infoAnimales.html">Animales</a></li>
+              <li><a href="">Contacto</a></li>
+              <li><a href="donacion.html">Sumate</a></li>
             </ul>
           </nav>
         </div>
@@ -194,8 +196,8 @@
                 <h5>Gracias por tu colaboboración!!</h5>
               </div>
               <div class="btns-group">
-                <button type="button" class="button width-2">Ir a Home</button>
-                <button type="button" class="button width-2">Descargar comprobante</button>
+                <a href="index.html"><button type="button" class="button width-2">Ir a Home</button></a>
+                <button id="download" type="button" class="button width-2">Descargar comprobante</button>
               </div>
             </fieldset>
           </div>
@@ -249,6 +251,7 @@
     </footer>
 
     <script src="index.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
   </body>
 </html>
