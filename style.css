@@ -1,7 +1,7 @@
 :root {
-  --body-color: #000000;
-  --header-color: transparent;
-  --footer-color: #181818;
+  --body-color: #a8ff78;
+  --header-color: #2c3639;
+  --footer-color: #2c3639;
   --menu-color: #f8f8ff;
   --primary-color: #f8f8ff;
   --body-font-color: #000000;
@@ -15,7 +15,10 @@
 }
 
 body {
-  background-color: var(--body-color);
+  background: var(--body-color);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #5bbbab, #5bbbab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #5bbbab, #5bbbab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 18px;
   color: var(--body-font-color);
   overflow-x: hidden;
 }
@@ -27,6 +30,7 @@ header {
   color: var(--header-font-color);
   position: sticky;
   top: 0;
+  z-index: 9;
 }
 
 .header-container {
@@ -37,10 +41,8 @@ header {
   padding: 0 30px;
 }
 
-.header-container > a {
-  text-decoration: none;
-  color: var(--header-font-color);
-  font-size: 28px;
+.header-container img {
+ height: 50px;
 }
 
 .header-container > i {
