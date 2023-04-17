@@ -3,7 +3,7 @@
 	display: none;
 }
 #negro{
-	background-color: #dedede;
+	background-color: #5bbbab;
 }
 .boceto__img{
 	background-color: #dedede;
@@ -34,6 +34,12 @@ mark{
 }
 /*header*/
 
+.logo{
+	/*width: 150px;*/
+	/*height: 50px;*/
+	margin-top: 1.2%;
+	padding-right: 5%;
+  }
 .header-container {
 		height: 60px;
 		display: flex;
@@ -47,7 +53,7 @@ mark{
 		font-size: 28px;
 	}
 	header{
-		background-color: #181818;
+		background-color: #2C3639;
 		position: fixed;
 		width: 100%;
 		z-index: 2;
@@ -57,7 +63,7 @@ mark{
 		top: 0;
 		right: -70%;
 		width: 70%;
-		background-color: #181818;
+		background-color: #2C3639;
 		border-radius: 0 0 0 10px;
 		transition: all 0.5s;
 	}
@@ -115,7 +121,7 @@ mark{
 		}
 	}
 	.header-button{
-		color: #1d2c48;
+		color: #ffffff;
 		font-size: 32px;
 	}
 	
@@ -204,7 +210,7 @@ mark{
 		font-size: 8px;
 		padding: 0;
 	}
-	img{
+	.img__main{
 		width: 100%;
 	}
 	@media screen and (max-width: 656px) {
@@ -263,7 +269,7 @@ mark{
 	/*footer*/
 	
 	footer {
-		background-color: #181818;
+		background-color: #2C3639;
 		padding: 25px 0;
 	}
 	footer ul {
