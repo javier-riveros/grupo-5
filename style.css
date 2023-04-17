@@ -2,11 +2,11 @@
   --body-color: #a8ff78;
   --header-color: #2c3639;
   --footer-color: #2c3639;
-  --menu-color: #f8f8ff;
+  --menu-color: #2c3639;
   --primary-color: #f8f8ff;
   --body-font-color: #000000;
   --header-font-color: #ffffff;
-  --menu-font-color: #000000;
+  --menu-font-color: #ffffff;
   --footer-font-color: #ffffff;
   --grey: rgb(197, 196, 196);
   --button-color: #91FBB4;
@@ -87,11 +87,10 @@ header nav a {
 /* Main de Home */
 
 .presentation-container {
-  color: var(--footer-font-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px;
+  padding: 40px 30px 30px 30px;
 }
 
 .presentation-container h2 {
@@ -103,11 +102,12 @@ header nav a {
 }
 
 #guepardo {
+  margin-top: 80px;
   width: 100%;
 }
 
 .we-need-you {
-  background-color: var(--primary-color);
+  background-color: #BDE4DD;
   text-align: center;
   padding: 50px 0;
 }
@@ -123,6 +123,15 @@ header nav a {
   padding: 10px 50px;
   border: none;
   color: var(--body-font-color);
+}
+
+.fa-otter{
+  font-size: 40px;
+  color: #000000;
+}
+.fa-solid{
+  font-size: 40px;
+  color: #000000;
 }
 
 /* Footer */
@@ -165,7 +174,7 @@ footer ul a:hover {
   background-color: var(--primary-color);
   color: var(--body-font-color);
   border-radius: 25px;
-  margin: 50px auto;
+  margin: 50px auto 0 auto;
   padding: 50px 50px;
 }
 
