@@ -15,7 +15,6 @@
   }
   
   body {
-    height: 100%;
     background-color: var(--body-color);
     color: var(--body-font-color);
     overflow-x: hidden;
@@ -311,4 +310,9 @@
     .form {
       padding: 60px 60px;
     }
+  }
+  #milogo{
+    width: 280px;
+    height: 230px;
+    margin-top: 2%;
   }
