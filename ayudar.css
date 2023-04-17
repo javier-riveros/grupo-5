@@ -5,6 +5,25 @@
   html{
     min-width: 280px;
   }
+  h2{
+    color: #12360e;  
+    font-size: 3rem;
+  }
+  h3{
+    color: #12360e;
+    font-size: 2.5rem;  
+  }
+  .parrafo{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: .9;
+  }
+  #negro{
+    background-color: #93b4af;
+  }
+
   /*header*/
   
   .header-container {
@@ -59,7 +78,12 @@
       text-decoration: none;
       color: #ffffff;
     }
-    @media screen and (min-width: 576px) {
+    @media screen and (max-width:578px){
+      .container{
+        max-width: 540px;
+      }      
+    }
+    @media screen and (min-width: 578px) {
       .header-container {
         padding: 0;
       }
@@ -94,24 +118,32 @@
     
     /*main*/
 
-		main{		
-			background-color: #12360e;
-			background-image: url(img/rio.jpg);
-			background-repeat: no-repeat;
-		}
 		#negro{
-			padding: 40px 0;			
-			background: linear-gradient(180deg,#d6cfcf,#1a6a93);
+			padding: 40px 0;
+      /*background-image: url(img/fondos/forest-ge636ca080_1280.jpg);
+      background-size: cover;*/
+			/*background: linear-gradient(180deg,#bacabe,#31799e);*/
+      /*background-color: #93b4af;*/
 			border-top: #181818 solid 5px;	
 		}
     #principal{
         padding-top: 130px;
         padding-bottom: 140px;
-        margin-bottom: 20px;
     }
-    .row{
+    #fondo{
+      margin: 0;
+      padding: 0;
+      background-image: url(img/monkey-g7b16b801d_1280.jpg);
+      background-repeat: no-repeat;
+      background-position: 0% 5%;
+
+    }
+    .negro__row{
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 100px;
+    }
+    #linea{
+      margin-bottom: 0;
     }
     #div__formulario{
         max-width: 350px;        
@@ -133,38 +165,73 @@
     }
 		a{
 			text-decoration: none;
-			color: #181818;
+			color: #15723c;
 		}
 		#div__aside aside ul li a i{
 			font-size: 20px;
-			color: #181818;
+			color: #15723c;
 		}
+    #div__aside aside ul li a i:hover{
+      color: #dedede;
+    }
 		ul{			
   		list-style: none;
 		}
+    .reverse{
+      flex-wrap: wrap-reverse;
+    }
+    .reverse .texto img{
+      position: absolute;
+      right: 5px;
+    }
     .texto{
 			position: relative;
-        height: 200px;
-        min-width: 240px;
-        background-color: #dedede;
-        border: #6885bb solid 1px;
+        height: 430px;
+        min-width: 430px;
         border-radius: 10px 0 0 10px;
+        padding: 5px;
+        text-align: center;
+        display: flex;
+    }
+    .texto div{
+      margin: auto;
+    }
+    .derecha{
+      text-align: center;
+      padding: 5px;
+    }
+    .texto img{
+      border-radius: 5px;
+      width: 420px;
+      height: 420px;
     }
     .texto0{
-      border-radius: 10px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;   
+      min-width: 280px;
     }
     .texto2{
       border-radius: 0 10px 10px 0;
     }
-    @media screen and (max-width: 479px){
+    @media screen and (max-width: 767px){
       .texto{
-        border-radius: 10px;
+        border-radius: 10px 10px 0 0;
+      }
+      .texto2{
+        border-radius: 0 0 10px 10px;
+      }
+      .reverse .texto{
+        border-radius: 0 0 10px 10px;
+      }
+      .reverse .texto2{
+        border-radius: 10px 10px 0 0;
       }
     }
 		.texto a button{
-			position: absolute;
-			bottom: 10%;
-			right: 10%;
+      position: absolute;
+      bottom: 5%;
+      left: 45%;
 			width: 13%;
 			height: 25px;
 			border-radius: 20px;
@@ -176,6 +243,10 @@
           #div__aside {
             display: none;
             position: relative;
+          }
+          #div__formulario{
+            position: relative;
+            margin: auto;
           }
         }
     form{
@@ -196,23 +267,14 @@
 			height: 30px;
 			border-radius: 10px;
 		}
-    #nombre{
+    #nombre,#apellido,#telefono,#email{
       width: 100%;
-    }
-    #apellido{
-			width: 100%;
     }
 		#juntos{
 			display: flex;
 		}  
     #codigo{
 			width: 99%;
-    }
-    #telefono{
-			width: 100%;
-    }
-    #email{
-			width: 100%;
     }
 		#voluntad{
 			width: 60%;
@@ -236,39 +298,38 @@
       color: #000000;
       opacity: .8;
     }
+    
     /*pre-footer*/
     
     .modal-content{
-      margin-top: 140px;
+      margin-top: 100px;
       background: linear-gradient(180deg,#12360e,#4f6138);
       color: #f8f8ff;
     }
     #modal__img{
       height: 350px;
-      background-image: url(img/guepardo-img.jpeg);
+      background-image: url(img/AyeAye.png);
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
     }
     .we-need-you {
       color: #000000;
-      background-color: #f8f8ff;
-      background-image: url(img/background-ge7313af80_1280.jpg);
+      background-color: #1a6a93;
       text-align: center;
-      padding: 50px 0;
       height: 265px;
     }
     .carousel-item{
-      height: 170px;
+      height: 265px;
     }
-    #prev{
-      left: 10%;
+    .carousel-control-prev{
+      left: 13%;
     }
-    #next{
-      right: 10%;
+    .carousel-control-next{
+      right: 13%;
     }
     .natu{
-      max-width: 882px;
+      max-width: 100%;
       height: 100%;
       margin: auto;
     }
@@ -277,12 +338,7 @@
     
     footer {
       background-color: #181818;
-      width: 100%;
-      bottom: 0%;
-    }
-    #footer__bajo{
-        margin: 0;
-      padding: 25px 0px;
+      padding: 25px 0;
     }
     footer ul {
       list-style: none;

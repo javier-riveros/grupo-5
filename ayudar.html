@@ -30,64 +30,66 @@
         </div>
       </header>
     <main>
-      	<div id="principal" class="container">
-					<div id="principal__form" class="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-md-start justify-content-center">
+    <div id="fondo">
+      <div id="principal" class="container">
+					<div id="principal__form" class="row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-md-start justify-content-sd-center">
 						<div id="div__formulario" class="col">
 							<form action="">
 								<div>
-									<h2>Adopcion virtual</h2>
+									<h1>Adopcion virtual</h1>
 									<p>Participe en el concurso para ponerle un nombre, a uno de los ejemplares rescatados recientemente.</p>
 								</div>
 								<div class="valores">
-									<input id="nombre" type="text" placeholder="Ingrese su nombre">
+									<input id="nombre" type="text" placeholder="Ingrese su nombre" size="37">
 								</div>
 								<div class="valores">
-									<input id="apellido" type="text" placeholder="Ingrese su apellido">
+									<input id="apellido" type="text" placeholder="Ingrese su apellido" size="37">
 								</div>				
 								<div id="juntos">
 									<div class="valores">
-										<input id="codigo" type="number" placeholder="Codigo de area">
+										<input id="codigo" type="tel" placeholder="Celular" size="15">
 									</div>
 									<div class="valores">
-										<input id="telefono" type="tel" placeholder="Telefono">
+										<input id="telefono" type="tel" placeholder="Telefono de linea" size="14">
 									</div>
 								</div>
 								<div class="valores">
-									<input id="email" type="email" placeholder="Correo electronico">
+									<input id="email" type="email" placeholder="Correo electronico" size="37">
 								</div>
 								<div id="montos">
 									<h5>Elija el nombre</h4>
-                  <button type="button" class="btn btn btn-success" data-bs-toggle="modal" data-bs-target="#modal__imagen" data-bs-whatever="tigre">Vealo</button>
-                  <button type="button" class="btn btn btn-success" data-bs-toggle="modal" data-bs-target="#modal__descripcion" data-bs-whatever="tigre">Descripcion</button>
-                  <button type="button" class="btn btn btn-success" data-bs-toggle="modal" data-bs-target="#modal__Abitad" data-bs-whatever="tigre">Abitad</button>
+                  <button type="button" class="btn btn btn-success" data-bs-toggle="modal" data-bs-target="#modal__imagen" data-bs-whatever="Aye-Aye">Vealo</button>
+                  <button type="button" class="btn btn btn-success" data-bs-toggle="modal" data-bs-target="#modal__descripcion" data-bs-whatever="Aye-Aye">Descripcion</button>
+                  <button type="button" class="btn btn btn-success" data-bs-toggle="modal" data-bs-target="#modal__Abitad" data-bs-whatever="Aye-Aye">Abitad</button>
 								</div>
 								<div class="valores">
 									<input id="voluntad" type="text" placeholder="Nombre del adoptado">
-									<button type="button" id="contribuir" class="btn btn-success">Poner nombre<i class="bi bi-heart-fill"></i></button>
+									<button type="button" id="contribuir" class="btn btn-success" onclick="validacion()">Poner nombre<i class="bi bi-heart-fill"></i></button>
 								</div>
 							</form>
 						</div>
 					</div>
-				</div>				
-				<div id="div__aside">
+			</div>
+    </div>				
+			<div id="div__aside">
 					<aside>
 						<ul>
 							<li>
-								<a href="#col0"><i class="bi bi-1-square-fill"></i>Razon</a>
+								<a href="#col0"><i class="bi bi-1-square-fill"></i></a>
 							</li>
 							<li>
-								<a href="#col1"><i class="bi bi-2-square-fill"></i>Razon</a>
+								<a href="#col1"><i class="bi bi-2-square-fill"></i></a>
 							</li>
 							<li>
-								<a href="#col2"><i class="bi bi-3-square-fill"></i>Razon</a>
+								<a href="#col2"><i class="bi bi-3-square-fill"></i></a>
 							</li>	
 							<li>
-								<a href="#col3"><i class="bi bi-4-square-fill"></i>Razon</a>
+								<a href="#col3"><i class="bi bi-4-square-fill"></i></a>
 							</li>
 						</ul>
 					</aside>
-				</div>
-        <div class="modal fade" id="modal__imagen" tabindex="-1" aria-labelledby="modal__titulo" aria-hidden="true">
+			</div>
+      <div class="modal fade" id="modal__imagen" tabindex="-1" aria-labelledby="modal__titulo" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -102,8 +104,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="modal fade" id="modal__descripcion" tabindex="-1" aria-labelledby="modal__titulo" aria-hidden="true">
+      </div>
+      <div class="modal fade" id="modal__descripcion" tabindex="-1" aria-labelledby="modal__titulo" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -113,7 +115,7 @@
               <div class="modal-body">
                 <div id="modal__descripcion">
                   <h4>Descripcion</h4>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequuntur rem sunt, tempore sed, minima accusantium qui natus aut corporis illum aliquam porro illo eligendi consequatur delectus autem voluptates nisi.</p>
+                  <p>El aye-aye es un primate estrepsirrino endémico de Madagascar, emparentado con los lémures. Su estrafalaria apariencia hace que se le considere el principal responsable del origen de la palabra "lémur", que quiere decir en latín "espiritu nocturno"</p>
                 </div>
               </div>
               <div class="modal-footer">
@@ -121,18 +123,18 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="modal fade" id="modal__Abitad" tabindex="-1" aria-labelledby="modal__titulo" aria-hidden="true">
+      </div>
+      <div class="modal fade" id="modal__Abitad" tabindex="-1" aria-labelledby="modal__titulo" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="modal__titulo">Abitad</h1>
+                <h1 class="modal-title fs-5" id="modal__titulo">Habitad</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <div id="modal__Abitad">
-                  <h4>Abitad</h4>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequuntur rem sunt, tempore sed, minima accusantium qui natus aut corporis illum aliquam porro illo eligendi consequatur delectus autem voluptates nisi.</p>
+                  <h4>Habitad</h4>
+                  <p>El hábitat del aye-aye lo constituye la selva tropical que cubre el este de Madagascar, donde se localiza en la parte más alta de los arboles. Su diaeta de larvas de insectos es completada a veces con la ingesta de algunas hojas y frutos.</p>
                 </div>
               </div>
               <div class="modal-footer">
@@ -140,8 +142,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      </div>
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
           <div id="aca__esta" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
               <img src="..." class="rounded me-2" alt="EcoPlanet">
@@ -153,106 +155,110 @@
               Muchas gracias, en breve nos comunicaremos con usted en caso de ganar el concurso para poner un nombre.
             </div>
           </div>
-        </div>
-				<div id="negro">
+      </div>
+			<div id="negro">
 				<div id="razones" class="container">
-					<div class="row justify-content-center">
-						<div class=" texto texto0 col-3">
-							<h3 id="col0">razones generales</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi voluptatibus vero illo saepe quas ad repudiandae quos rerum similique quis? Vel labore sit temporibus blanditiis facilis? Obcaecati architecto sequi temporibus!</p>
+					<div id="linea" class="row negro__row justify-content-center">
+						<div class="texto0 col-5">
+							<h2 id="col0">El problema de los animales huerfanos</h2>
+								<p class="parrafo"> Los animales sociales huérfanos pueden sufrir soledad al ser privados de interacción social. Los seres humanos podemos ayudarlos, al rescatarlos y suministrarles los cuidados que necesiten</p>
 						</div>
 					</div>	
-					<div class="row justify-content-center">
-						<div class=" texto col-3">
-							<h4>razon 1</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi voluptatibus vero illo saepe quas ad repudiandae quos rerum similique quis? Vel labore sit temporibus blanditiis facilis? Obcaecati architecto sequi temporibus!</p>
+					<div class="row negro__row justify-content-center">
+						<div class="texto col-4">
+								<img src="https://imgs.search.brave.com/OapeoOVOZdGL1qV4RZTm-Zm3UB6ONuYV6CmdUSVY4Q4/rs:fit:200:200:1/g:ce/aHR0cHM6Ly93d3cu/Z3JlZmEub3JnL2lt/YWdlcy9ub3RpY2lh/cy8yMDEzL25vdmll/bWJyZS9pbmZvcm1l/X2h1ZXJmYW5vczEz/XzAwLmpwZw" alt="">
 						</div>
-						<div class="texto texto2 col-3">
-							<h4 id="col1">ejemplo</h2>
-								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, odit. Animi magnam laborum voluptatem vitae inventore suscipit accusamus molestias mollitia sunt recusandae obcaecati, culpa asperiores corrupti dolor. Natus, soluta eveniet.</p>
-								<a href="#principal"><button type="button" class="btn btn-primary"><i class="bi bi-house-door"></i></button></a>
+						<div class="derecha texto texto2 col-4">
+              <div>
+							<h3 id="col1">Pollitos</h3>
+								<p class="parrafo">Durante los meses de primavera y verano, son muchos los pollitos y crías “huérfanos” que ingresan en nuestro centro de recuperación por diferentes motivos: se caen de los nidos, son volantones y aún inexpertos en sus vuelos, son abandonados por sus padres.</p>
+              </div>
+								<a href="#principal"><button type="button" class="btn btn-success"><i class="bi bi-house-door"></i></button></a>
 						</div>
 					</div>	
-					<div class="row justify-content-center">
-						<div class="texto col-3">
-							<h4>razon 2</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium animi saepe fugiat eum perferendis minima iusto, corporis vitae officia aut accusamus ipsum est? Ullam, possimus non voluptate quidem incidunt quam?</p>
+					<div class="row negro__row reverse justify-content-center">
+						<div class="texto col-4">
+              <div>
+							<h3 id="col2">Peresosos</h3>
+								<p class="parrafo"> La mayoría de los animales que llegan a las instalaciones son perezosos, en “más del 30 %, esto a incrementado en gran manera como consecuencia de los incedios forestales.</p>
+              </div>
+								<a href="#principal"><button type="button" class="btn btn-success"><i class="bi bi-house-door"></i></button></a>
 						</div>
-						<div class="texto texto2 col-3">
-							<h4 id="col2">ejemplo</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eum praesentium dolorum quos aperiam eligendi eaque cumque magnam dicta quas, rem maxime non architecto, laudantium fuga excepturi eveniet optio! Ipsum?</p>
-								<a href="#principal"><button type="button" class="btn btn-primary"><i class="bi bi-house-door"></i></button></a>
+						<div class="texto texto2 col-4">
+              <img src="https://imgs.search.brave.com/OwH0KNLFh9s7pYwupIDt9Jwrj1dvaCtns2_REC2LEUg/rs:fit:200:200:1/g:ce/aHR0cHM6Ly9zdGF0/aWMuZWxkaWFyaW8u/ZXMvY2xpcC8zMzgx/ZDBhMy1jZjY3LTQw/NmMtOWVlMy04MjM4/N2Q0MDY4NGJfMTYt/OS1hc3BlY3QtcmF0/aW9fZGVmYXVsdF8w/LmpwZw" alt="">
 					  </div>
 					</div>
-					<div class="row justify-content-center">
-						<div class="texto col-3">
-							<h4>razon 3</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque earum culpa architecto fuga! Aliquid nihil sint impedit soluta officia neque tenetur odit exercitationem, temporibus quod quibusdam, odio deleniti accusamus maxime.</p>
+					<div class="row negro__row justify-content-center">
+						<div class="texto col-4">
+              <img src="https://imgs.search.brave.com/VyiB6S1nN2vSpy5Pet1gUNkNTTxomcB9jUToU1JYl7w/rs:fit:200:200:1/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9jL2M0L0Fm/cmljYW5fY3Jlc3Rl/ZF9Qb3JjdXBpbmVf/LUh5c3RyaXhfY3Jp/c3RhdGEtLmpwZy82/NDBweC1BZnJpY2Fu/X2NyZXN0ZWRfUG9y/Y3VwaW5lXy1IeXN0/cml4X2NyaXN0YXRh/LS5qcGc" alt="">
 						</div>
-						<div class="texto texto2 col-3">
-							<h4 id="col3">ejemplo</h2>
-								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, quas. Illum asperiores blanditiis nulla. Necessitatibus, consequatur non? Deserunt excepturi ab repellat vero repellendus, quod quo sit, nam sequi, molestias ex.</p>
-								<a href="#principal"><button type="button" class="btn btn-primary"><i class="bi bi-house-door"></i></button></a>
+						<div class="derecha texto texto2 col-4">
+              <div>
+							<h3 id="col3">Zarigueyas y puercoespines</h3>
+								<p class="parrafo"> los segundos son casos con aves, como búhos, y ardillas que se caen de los nidos, y ahora nos están llegando las zarigüeyas o puercospines.</p>
+              </div>
+								<a href="#principal"><button type="button" class="btn btn-success"><i class="bi bi-house-door"></i></button></a>
 					  </div>
 					</div>
-					<div class="row justify-content-center">
-						<div class="texto col-3">
-							<h4>razon 4</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, nemo aut obcaecati consequatur, placeat maiores fuga ipsum deleniti, nisi vero nobis quaerat error beatae numquam culpa minus! Porro, consectetur ratione.</p>
+					<div class="row negro__row reverse justify-content-center">
+						<div class="texto col-4">
+              <div>
+							<h3>Fauna en general</h3>
+								<p class="parrafo"> Se da la circunstancia de que en plena temporada reproductora para la fauna silvestre, entran en estas instalaciones gran cantidad de polluelos de aves y crías de otros animales, que han dejado de ser atendidos por sus progenitores y son aún demasiado pequeños para volar o desenvolverse .</p>
+              </div>
+								<a href="#principal"><button type="button" class="btn btn-success"><i class="bi bi-house-door"></i></button></a>
 						</div>
-						<div class="texto texto2 col-3">
-							<h4>ejemplo</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quia ipsum velit nobis possimus vel reiciendis debitis ducimus reprehenderit aut maiores, rem quasi aspernatur quam? Quis quam in velit suscipit.</p>
-								<a href="#principal"><button type="button" class="btn btn-primary"><i class="bi bi-house-door"></i></button></a>
+						<div class="texto texto2 col-4">
+              <img src="https://imgs.search.brave.com/nOorwFhnd3cfKrCnIq4Bl0-5uIfd-ObOTh2u0dkyptM/rs:fit:200:200:1/g:ce/aHR0cHM6Ly9idXNj/b3BhZHJpbm8uZ3Jl/ZmEub3JnL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDE2LzA0L0NF/UlZBVElMTE8yLmpw/Zw" alt="">
 					  </div>
 					</div>
 				</div>
-				</div>
-    </main>
-    <footer>
-        <div id="footer__alto" class="we-need-you">
-            <div id="div__carrusel" class="container mx-auto">
-              <div id="carrusel__footer" class="carousel slide">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carrusel__footer" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carrusel__footer" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carrusel__footer" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+      <div class="we-need-you">
+        <div id="div__carrusel" class="">
+          <div id="carrusel__footer" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carrusel__footer" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carrusel__footer" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carrusel__footer" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/natu01.jpg" class="natu d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Quienes somos</h5>
+                  <p>Somos un grupo de profesionales apasionados y dedicados que comparten un compromiso común de preservar la biodiversidad y proteger a las especies en peligro de extinción.</p>
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="img/natu01.jpg" class="natu d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Quienes somos</h5>
-                      <p>Somos un grupo de profesionales apasionados y dedicados que comparten un compromiso común de preservar la biodiversidad y proteger a las especies en peligro de extinción.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/natu02.jpg" class="natu d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Que hacemos</h5>
-                      <p>Cada uno de nosotros aporta su experiencia y conocimiento para llevar a cabo proyectos y acciones que promuevan un mundo más sostenible y justo para todas las especies.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/natu03.jpg" class="natu d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Por que lo hacemos</h5>
-                      <p>Por que uestro equipo está comprometido en trabajar de manera conjunta con otras organizaciones, empresas y gobiernos para lograr un cambio positivo a gran escala.</p>
-                    </div>
-                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/natu02.jpg" class="natu d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Que hacemos</h5>
+                  <p>Cada uno de nosotros aporta su experiencia y conocimiento para llevar a cabo proyectos y acciones que promuevan un mundo más sostenible y justo para todas las especies.</p>
                 </div>
-                <button id="prev" class="carousel-control-prev" type="button" data-bs-target="#carrusel__footer" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Anterior</span>
-                </button>
-                <button id="next" class="carousel-control-next" type="button" data-bs-target="#carrusel__footer" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Siguiente</span>
-                </button>
+              </div>
+              <div class="carousel-item">
+                <img src="img/natu03.jpg" class="natu d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Por que lo hacemos</h5>
+                  <p>Por que uestro equipo está comprometido en trabajar de manera conjunta con otras organizaciones, empresas y gobiernos para lograr un cambio positivo a gran escala.</p>
+                </div>
               </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrusel__footer" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrusel__footer" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
           </div>
-      <div id="footer__bajo" class="container mx-auto row">
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container mx-auto row">
         <div class="col-lg-4 link-container">
           <ul>
             <li><a href="">¿Que hacemos?</a></li>

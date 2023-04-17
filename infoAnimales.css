@@ -2,31 +2,7 @@
 ::-webkit-scrollbar{
   display: none;
 }
-body{   
-  background-color: #85adf8;
-}
-h1{
-  color: #050344;
-  font-weight: bold;
-  margin-bottom: 12px;
-  font-size: 3rem;
-}
-.titulo p{
-  color: #f8f8ff;
-  text-shadow: #050344 1px 1px;
-  font-size: 1.5rem;
-  opacity: .9;
-}
-.card{
-  background-color: #1a6a93;
-}
-.card-title{
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-.card-text{
-  font-size: 1.1rem;
-}
+
 /*header*/
 
 .header-container {
@@ -42,11 +18,14 @@ h1{
   font-size: 28px;
 }
 header{
-  background-color: #181818;
+  background-color: #2C3639;
+  color: #ffffff;
   position: fixed;
   width: 100%;
   z-index: 1;
 }
+
+
 #menu-container {
   position: absolute;
   top: 0;
@@ -116,56 +95,53 @@ nav a {
 
 /*main*/
 
-.titulo{
-  text-align: center;
-  margin-top: 15px;
-}
 #integrantes{
-  padding-top: 100px;
-  padding-bottom: 0px;
+  padding: 80px;
+}
+#integrantes__row{
+  padding-top: 40px;
 }
 main{
   position: relative;
 }
-.negro__row{
+/* body{    
+  background-color: #0c121c;
+  background-image: url(img/background-gc5ba777b1_1280.jpg);
+  background-size: 50%;
+*/
+
+body {
+    background: #a8ff78;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #5bbbab, #5bbbab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #5bbbab, #5bbbab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    color: #000000; 
+    font-size: 18px;
+}
+
+.row{
   width: 100%;
   margin: auto;
-}
-#integrantes__row{
-  margin-bottom: 36px;
+  /*padding-bottom: 20px;*/
 }
 .col{
-  padding: 0;
   max-width: 450px;
-  min-width: 336px;
-  text-align: -webkit-center;
-}
-.invi{
-  opacity: 0;
-}
-@media screen and (max-width: 767px) {
-  .invi{
-    display: none;
-  }
+  min-width: 300px;
+  padding-bottom: 20px;
 }
 .card{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-bottom: 70px;
-  max-width: 336px;
-  /*background-color: #1a6a93;*/
+  padding: 30px;
+  background-color: #1a6a93;
   opacity: .9;
   box-shadow: #1d2c48 0px 0px 20px;
+  border-image: url(img/background-ge7313af80_1280.jpg) 30 round;
   border-width: 5px;
 }
 .foto__persona{
   height: 260px;
   border-radius: 50%;
   border: 2px solid #000000;
-  transition: height .8s, margin-top .8s, margin-bottom .8s, transform .8s;
-}
-.foto__persona:active{
-  transform:rotatey(180deg);
+  transition: height .8s, margin-top .8s, margin-bottom .8s;
 }
 .foto__persona:hover{
   height: 330px;
@@ -179,14 +155,12 @@ main{
   text-align: center;  
 }
 .card-body button{
-  background-color: #181818;
-  color: #f8f8ff;
-  opacity: 1;
+  position: absolute;
+  bottom: 2%;
+  left: 40%;
 }
 .card-text{
   overflow: hidden;
-  min-height: 82px;
-  max-height: 82px;
 }
 mark{
   margin-top: 2px;
@@ -194,37 +168,36 @@ mark{
   color: #ffffff;
   background-color: #1a6a93;
   opacity: .9;
-  font-weight: bold;
-  text-shadow: #050344 1px 1px;
 }
 
 /*pre-footer*/
 
 .modal-content{
   margin-top: 180px;
-  background: linear-gradient(180deg,#1a6a93,#85adf8);
+  background: linear-gradient(180deg,#1d2c48,#1a6a93);
   color: #f8f8ff;
 }
-.modal-dialog{
-  width: 350px;
-}
-.we-need-you {
+
+/*.we-need-you {
   color: #000000;
-  background-color: #1a6a93;
+  background-color: #f8f8ff;
+  background-image: url(img/background-ge7313af80_1280.jpg);
   text-align: center;
+  padding: 50px 0;
   height: 265px;
 }
+*/
 .carousel-item{
-  height: 265px;
+  height: 170px;
 }
 .carousel-control-prev{
-  left: 13%;
+  left: 10%;
 }
 .carousel-control-next{
-  right: 13%;
+  right: 10%;
 }
 .natu{
-  max-width: 100%;
+  max-width: 882px;
   height: 100%;
   margin: auto;
 }
@@ -232,7 +205,7 @@ mark{
 /*footer*/
 
 footer {
-  background-color: #181818;
+  background-color: #2C3639;
   padding: 25px 0;
 }
 footer ul {
@@ -256,4 +229,59 @@ footer ul a:hover {
 }
 .iconos button {
   height: 40px;
+}
+
+
+/* CAMBIOS ARIEL, TOMADOS DE MOISES */
+
+
+.logo{
+  /*width: 150px;*/
+  /*height: 50px;*/
+  margin-top: 1.2%;
+  padding-right: 5%;
+}
+
+.wave{
+  margin-top: -230px;
+  width: 100%;
+ 
+}
+
+.we-need-you {
+  color: #382929;
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 20px 0;
+  /*margin-top: -50px;*/
+
+}
+
+.we-need-you p {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.we-need-you button {
+  background-color: #1075f8;
+  border-radius: 25px;
+  padding: 10px 50px;
+  border: none;
+  color: #ffffff;
+}
+
+.fa-otter{
+  font-size: 40px;
+  color: #000000;
+}
+.fa-solid{
+  font-size: 40px;
+  color: #000000;
+}
+
+.presentation-container{
+
+margin-top: 80px !important;
+
 }

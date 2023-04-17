@@ -214,7 +214,7 @@ function continentSelected() {
 
     
     for (let i = 5; i >= animalesEnContinente.length; i--) {                                  // 
-        $(`#cuadroInformativoId${i+1}`).hide();                                               // OCULTO CUADROS NO NECESARIOS CON JQUERY
+        $(`#cuadroInformativoId${i+1}`).hide();                                               // OCULTO CUADROS NO NECESARIOS CON JQUERY     
     }                                                                                         //
 
    
@@ -233,7 +233,7 @@ function continentSelected() {
         showAnimalInfo(animalesEnContinente[i].name, animalesEnContinente[i].id);       // LLAMO A LA FUNCION QUE CONSULTA A LA API, LE PASO NOMBRE DEL ANIMAL Y ID PARA GUARDAR LOS DATOS EN LA POSICION CORRECTA DEL ARRAY
 
         $(`#cuadroInformativoId${i+1}`).show();                                           //MUESTRO CUADROS NECESARIOS CON JQUERY
-
+        document.getElementById(`fotoAnimal${i+1}`).src = "https://i.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.webp";  // CARGO IMAGEN DE CARGA MIENTRAS
 
         
 
@@ -256,7 +256,7 @@ function continentSelected() {
 
 
                     document.getElementById(`fotoAnimal${i+1}`).src = arrayDeAnimales[animalesEnContinente[i].id].img;                                              // CARGO LA IMAGEN DEL ANIMAL EN EL CUADRO CORRESPONDIENTE
-                    $(`#fotoAnimal${i+1}`).html(arrayDeAnimales[animalesEnContinente[i].id].img);
+                    //$(`#fotoAnimal${i+1}`).html(arrayDeAnimales[animalesEnContinente[i].id].img);
 
                     //document.getElementById(`nombreAnimal${i+1}`).innerHTML = arrayDeAnimales[animalesEnContinente[i].id].nameEs;                                   // PONGO EL NOMBRE DEL ANIMAL EN EL CUADRO CORRESPONDIENTE
                     $(`#nombreAnimal${i+1}`).html(arrayDeAnimales[animalesEnContinente[i].id].nameEs);                                                                // PONGO EL NOMBRE DEL ANIMAL EN EL CUADRO CORRESPONDIENTE CON JQUERY
@@ -270,7 +270,7 @@ function continentSelected() {
                 }, 500);
 
 
-        }, 2200);
+        }, 2500);
 
     }
 
