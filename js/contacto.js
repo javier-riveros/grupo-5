@@ -72,7 +72,8 @@ const submitContacto = (e) => {
   };
 
   if(errors === 0) {
-    console.log('Formulario enviado con exito!!');
+    const resultado = document.querySelector('#resultado');
+    resultado.innerText = "FORMULARIO ENVIADO CON ÉXITO!!!"
   }
 
 }
