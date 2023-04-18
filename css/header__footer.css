@@ -1,8 +1,9 @@
 /*header*/
 
 .logo{
-  margin-top: 1.2%;
-  padding-right: 5%;
+  margin-left: -24px;
+  margin-top: 18px;
+  width: 217px;
 }
 @media screen and (max-width: 420px) {
   .logo{
