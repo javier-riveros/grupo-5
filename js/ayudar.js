@@ -37,7 +37,7 @@ if (toastTrigger) {
       setTimeout(() => { 
       if(a==0){
       toastBootstrap.show()
-      document.getElementById("super").reset();
+      document.getElementById("super").reset(); //aca resolvi lo que me pidio profesor sobre que el formulario se resete
       }
   }, 500);
   })
