@@ -139,6 +139,11 @@ header nav a {
   color: #000000;
 }
 
+.carousel{
+  text-align: center;
+  font-weight: 700;
+}
+
 /* Footer */
 
 footer {
