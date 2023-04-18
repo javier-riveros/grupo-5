@@ -126,6 +126,11 @@ header nav a {
   color: var(--body-font-color);
 }
 
+.we-need-you button a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .fa-otter{
   font-size: 40px;
   color: #000000;
@@ -133,6 +138,11 @@ header nav a {
 .fa-solid{
   font-size: 40px;
   color: #000000;
+}
+
+.carousel{
+  text-align: center;
+  font-weight: 700;
 }
 
 /* Footer */
