@@ -125,6 +125,11 @@ header nav a {
   color: var(--body-font-color);
 }
 
+.we-need-you button a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .fa-otter{
   font-size: 40px;
   color: #000000;
